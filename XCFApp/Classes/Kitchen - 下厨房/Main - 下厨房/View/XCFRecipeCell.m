@@ -67,9 +67,6 @@
     if (!_videoIcon) {
         _videoIcon = [[UIImageView alloc] init];
         _videoIcon.image = [UIImage imageNamed:@"playButton"];
-        
-        // 添加点击事件
-        
         [self.image addSubview:_videoIcon];
         [_videoIcon mas_makeConstraints:^(MASConstraintMaker *make) {
             make.center.equalTo(self.image);
