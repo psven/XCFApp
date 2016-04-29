@@ -23,13 +23,17 @@ static NSMutableArray *_addressInfos;
 
 + (XCFAddressInfo *)currentSelectedAddress {
     XCFAddressInfo *currentAddress;
+    BOOL hasSelectedAddress = NO;
     if ([self totalAddressInfo].count) {
         for (XCFAddressInfo *info in _addressInfos) {
             // 遍历数组内的收货地址数据，是选中就返回
-            if (info.state == XCFAddressInfoCellStateSelected) currentAddress = info;
-            break;
+            if (info.state == XCFAddressInfoCellStateSelected) {
+                currentAddress = info;
+                hasSelectedAddress = YES;
+                break;
+            }
         }
-    } else {
+    } else if ([self totalAddressInfo].count == 0 || hasSelectedAddress) {
         currentAddress = nil;
     }
     return currentAddress;
@@ -40,10 +44,13 @@ static NSMutableArray *_addressInfos;
 }
 
 + (void)updateInfoAfterDeleted {
+    // 如果当前没有选中的收货地址，就设置第0个为选中的收货地址
     if (_addressInfos.count) {
-        XCFAddressInfo *info = [XCFAddressInfoTool totalAddressInfo][0];
-        info.state = XCFAddressInfoCellStateSelected;
-        [XCFAddressInfoTool updateInfoAtIndex:0 withInfo:info];
+        if (![self currentSelectedAddress]) {
+            XCFAddressInfo *info = [XCFAddressInfoTool totalAddressInfo][0];
+            info.state = XCFAddressInfoCellStateSelected;
+            [XCFAddressInfoTool updateInfoAtIndex:0 withInfo:info];
+        }
     }
 }
 

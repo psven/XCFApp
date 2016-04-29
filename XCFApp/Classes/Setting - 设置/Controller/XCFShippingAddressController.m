@@ -30,7 +30,6 @@ static NSString *const addressCellIdentifier = @"addressCellIdentifier";
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     // 编辑完成pop回来刷新界面，刷新 纪录的收货地址（默认选中第一个）
-    self.selectedRow = 0;
     [XCFAddressInfoTool updateInfoAfterDeleted];
     [self.tableView reloadData];
 }
