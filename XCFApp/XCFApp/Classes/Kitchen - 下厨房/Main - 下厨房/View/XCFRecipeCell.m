@@ -286,7 +286,9 @@
     return self;
 }
 
-
+/**
+ *  这个界面是项目开始的时候写的，频繁的判断调整应该是导致界面卡顿的原因。
+ */
 #pragma mark - item模型
 - (void)setItem:(XCFItems *)item {
     _item = item;
