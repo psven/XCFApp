@@ -47,11 +47,15 @@ static NSString *const atUserReuseIdentifier = @"atUserCell";
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    // 监听键盘
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWillChangeFrame:)
                                                  name:UIKeyboardWillChangeFrameNotification
                                                object:nil];
 }
+
+
+#pragma mark - table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSInteger count = 0;
@@ -66,11 +70,11 @@ static NSString *const atUserReuseIdentifier = @"atUserCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell;
-    if (tableView == self.cmtTableView) {
+    if (tableView == self.cmtTableView) { // 评价界面
         XCFCommentCell *cmtCell = [tableView dequeueReusableCellWithIdentifier:cmtReuseIdentifier];
         cmtCell.comment = self.cmtArray[indexPath.row];
         cell = cmtCell;
-    } else if (tableView == self.atUsersTableView) {
+    } else if (tableView == self.atUsersTableView) { // @用户界面
         cell = [tableView dequeueReusableCellWithIdentifier:atUserReuseIdentifier];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.contentView.backgroundColor = XCFGlobalBackgroundColor;
@@ -139,25 +143,31 @@ static NSString *const atUserReuseIdentifier = @"atUserCell";
     WeakSelf;
     XCFAddCommentView *addCmtView = [XCFAddCommentView addCommentViewWithEditingTextBlock:^(NSString *comment) {
          // 根据textView内容动态改变Y、height
-        CGFloat height = [comment getSizeWithTextSize:CGSizeMake(XCFScreenWidth-115, MAXFLOAT) fontSize:14].height;
-        CGFloat displayHeight = height + 30;
-        weakSelf.addCmtView.frame = CGRectMake(0, XCFScreenHeight-283.5-displayHeight, XCFScreenWidth, displayHeight);
+//        if (comment.length) {
+            CGFloat height = [comment getSizeWithTextSize:CGSizeMake(XCFScreenWidth-115, MAXFLOAT) fontSize:14].height;
+            CGFloat displayHeight = height + 30;
+            weakSelf.addCmtView.frame = CGRectMake(0, XCFScreenHeight-283.5-displayHeight, XCFScreenWidth, displayHeight);
+//        }
         
     } sendCmtBlock:^(NSString *comment, NSArray *atUsers) { // 发送评论回调
         // 新建一个评论数据
-        XCFTopicComment *newCmt = [XCFTopicComment commentWithContent:comment
-                                                              atUsers:atUsers
-                                                             byAuthor:[XCFAuthor me]];
-        
-        // 添加评论到本地数据（模拟效果）
-        [XCFCommentTool addComment:newCmt];
-        [weakSelf.view endEditing:YES];
-        [weakSelf.cmtTableView reloadData];
-        // 滚动到最下面
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:weakSelf.cmtArray.count-1 inSection:0];
-        [weakSelf.cmtTableView scrollToRowAtIndexPath:indexPath
-                                     atScrollPosition:UITableViewScrollPositionBottom
-                                             animated:YES];
+        if (comment.length) {
+            XCFTopicComment *newCmt = [XCFTopicComment commentWithContent:comment
+                                                                  atUsers:atUsers
+                                                                 byAuthor:[XCFAuthor me]];
+            
+            // 添加评论到本地数据（模拟效果）
+            [XCFCommentTool addComment:newCmt];
+            [weakSelf.view endEditing:YES];
+            [weakSelf.cmtTableView reloadData];
+            // 滚动到最下面
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:weakSelf.cmtArray.count-1 inSection:0];
+            [weakSelf.cmtTableView scrollToRowAtIndexPath:indexPath
+                                         atScrollPosition:UITableViewScrollPositionBottom
+                                                 animated:YES];
+        } else {
+            [UILabel showStats:@"请输入评论！" atView:weakSelf.view];
+        }
     }];
     
     addCmtView.atUserBlock = ^(NSString *lastString) { // 判断是否有字符“@”， 有就显示用户列表

@@ -29,7 +29,9 @@ static NSString *const reuseIdentifier = @"forumCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"社区";
-    self.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonRightItemWithImageName:@"notification" target:self action:@selector(notification)];
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonRightItemWithImageName:@"notification"
+                                                                                       target:self
+                                                                                       action:@selector(notification)];
     [self setupTableView];
     [self addFeedbackButton];
     [self loadNewData];

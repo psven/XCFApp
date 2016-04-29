@@ -38,7 +38,7 @@
                                                      target:self
                                                      action:@selector(collectButtonClicked)
                                               clipsToBounds:YES];
-        [_uploadButton setImage:[UIImage imageNamed:@"recipeDetailPortraitCameraIcon"] forState:UIControlStateNormal];
+//        [_uploadButton setImage:[UIImage imageNamed:@"recipeDetailPortraitCameraIcon"] forState:UIControlStateNormal];
         [self addSubview:_uploadButton];
         [_uploadButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self).offset(20);

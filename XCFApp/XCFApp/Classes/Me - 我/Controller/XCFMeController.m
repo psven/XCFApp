@@ -27,7 +27,6 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.tableView.scrollEnabled = NO;
     self.view.backgroundColor = XCFGlobalBackgroundColor;
     [self setupNavigationBar];
     [self setupCollectionView];
