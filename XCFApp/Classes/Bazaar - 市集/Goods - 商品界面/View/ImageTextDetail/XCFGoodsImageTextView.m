@@ -6,6 +6,8 @@
 //  Copyright © 2016年 Joey. All rights reserved.
 //
 
+// 未解决webView导致的内存泄漏问题
+
 #import "XCFGoodsImageTextView.h"
 #import "XCFGoodsAttrsViewCell.h"
 #import "XCFGoods.h"
@@ -119,9 +121,6 @@ static NSString * const attrsCellIdentifier = @"attrsCell";
     return  cell;
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-    [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"WebKitCacheModelPreferenceKey"];
-}
 
 #pragma mark - UIScrollViewDelegate
 

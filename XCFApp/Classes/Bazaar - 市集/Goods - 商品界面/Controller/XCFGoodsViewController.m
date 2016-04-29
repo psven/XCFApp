@@ -170,6 +170,8 @@ static NSString * const headerIdentifier = @"header";
         [UIView animateWithDuration:0.5 animations:^{
             self.tableView.transform = CGAffineTransformMakeTranslation(0, -(self.view.bounds.size.height-44-64));
             self.imageTextView.transform = CGAffineTransformMakeTranslation(0, -(self.view.bounds.size.height-44));
+        } completion:^(BOOL finished) {
+            [UILabel showStats:@"未解决webView导致的内存泄漏问题" atView:self.view];
         }];
     }
 }

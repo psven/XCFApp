@@ -25,10 +25,10 @@
     XCFShop *shop = goods.shop;
     
     // 测试
-    NSMutableArray *array = [NSMutableArray arrayWithArray:shop.promotion_text_list];
-    [array addObject:@"最后一天，挥泪甩卖"];
-    [array addObject:@"不要钱"];
-    shop.promotion_text_list = array;
+//    NSMutableArray *array = [NSMutableArray arrayWithArray:shop.promotion_text_list];
+//    [array addObject:@"最后一天，挥泪甩卖"];
+//    [array addObject:@"不要钱"];
+//    shop.promotion_text_list = array;
     
     // 店铺优惠
     if (shop.promotion_text_list.count) { // 如果有店铺优惠
