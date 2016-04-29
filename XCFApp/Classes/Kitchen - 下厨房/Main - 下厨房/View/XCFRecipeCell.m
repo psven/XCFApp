@@ -6,6 +6,9 @@
 //  Copyright © 2016年 Joey. All rights reserved.
 //
 
+/**
+ *  这是项目开始时写的第一个界面，不合理的地方（根据数据内容动态改变布局）导致了卡顿，没什么参考性，界面搭建也比较简单
+ */
 
 #import "XCFRecipeCell.h"
 #import "XCFItems.h"
@@ -58,128 +61,6 @@
 
 @implementation XCFRecipeCell
 
-#pragma  mark - 懒加载
-
-/**
- *  视频播放按钮
- */
-- (UIImageView *)videoIcon {
-    if (!_videoIcon) {
-        _videoIcon = [[UIImageView alloc] init];
-        _videoIcon.image = [UIImage imageNamed:@"playButton"];
-        [self.image addSubview:_videoIcon];
-        [_videoIcon mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.center.equalTo(self.image);
-            make.size.mas_equalTo(CGSizeMake(30, 30));
-        }];
-    }
-    return _videoIcon;
-}
-
-/**
- *  coverView
- */
-- (UIView *)coverView {
-    if (!_coverView) {
-        _coverView = [[UIView alloc] init];
-        _coverView.backgroundColor = XCFCoverViewColor;
-        [self.image addSubview:_coverView];
-        [_coverView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.center.equalTo(self.image);
-            make.size.equalTo(self.image);
-        }];
-    }
-    return _coverView;
-}
-
-/**
- *  大标题
- */
-- (UILabel *)firstTitleLabel {
-    if (!_firstTitleLabel) {
-        _firstTitleLabel = [UILabel labelWithFont:[UIFont systemFontOfSize:XCFRecipeCellFontSizeFirstTitle]
-                                        textColor:XCFLabelColorWhite
-                                    numberOfLines:0
-                                    textAlignment:NSTextAlignmentCenter];
-        [self.image addSubview:_firstTitleLabel];
-        [_firstTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.width.equalTo(self.image.mas_width).offset(- XCFRecipeCellMarginFirstTitle*2);
-            make.centerX.equalTo(self.image.mas_centerX);
-            make.bottom.equalTo(self.image.mas_centerY).offset(-10);
-        }];
-    }
-    return _firstTitleLabel;
-}
-
-/**
- *  小标题
- */
-- (UILabel *)secondTitleLabel {
-    if (!_secondTitleLabel) {
-        _secondTitleLabel = [UILabel labelWithFont:[UIFont systemFontOfSize:XCFRecipeCellFontSizeSecondTitle]
-                                        textColor:XCFLabelColorWhite
-                                    numberOfLines:0
-                                    textAlignment:NSTextAlignmentCenter];
-        [self.image addSubview:_secondTitleLabel];
-        [_secondTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerX.equalTo(self.image.mas_centerX);
-            make.top.equalTo(self.firstTitleLabel.mas_bottom).offset(20);
-        }];
-    }
-    return _secondTitleLabel;
-}
-
-/**
- *  模板4标题
- */
-- (UILabel *)whisperLabel {
-    if (!_whisperLabel) {
-        _whisperLabel = [UILabel labelWithFont:[UIFont systemFontOfSize:XCFRecipeCellFontSizeFirstTitle]
-                                         textColor:XCFLabelColorWhite
-                                     numberOfLines:0
-                                     textAlignment:NSTextAlignmentCenter];
-        [self.image addSubview:_whisperLabel];
-        [_whisperLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.center.equalTo(self.image);
-        }];
-    }
-    return _whisperLabel;
-}
-
-/**
- *  作者头像
- */
-- (UIImageView *)authorIcon {
-    if (!_authorIcon) {
-        _authorIcon = [[UIImageView alloc] init];
-        _authorIcon.userInteractionEnabled = YES;
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(authorIconClick)];
-        [_authorIcon addGestureRecognizer:tap];
-        [self.contentView addSubview:_authorIcon];
-        [_authorIcon mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.mas_equalTo(CGSizeMake(XCFAuthorHeaderWidth, XCFAuthorHeaderWidth));
-            make.top.equalTo(self.image.mas_bottom).offset(- XCFAuthorHeaderWidth*0.5);
-            make.right.equalTo(self.contentView.mas_right).offset(-10);
-        }];
-    }
-    return _authorIcon;
-}
-
-/**
- *  做过的人数
- */
-- (UILabel *)cookedLabel {
-    if (!_cookedLabel) {
-        _cookedLabel = [UILabel labelWithFont:[UIFont systemFontOfSize:XCFRecipeCellFontSizeDesc]
-                                    textColor:XCFThemeColor
-                                numberOfLines:1
-                                textAlignment:NSTextAlignmentRight];
-        [self.bottomView addSubview:_cookedLabel];
-    }
-    return _cookedLabel;
-}
-
-
 #pragma mark - 构造方法
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -196,7 +77,7 @@
             make.top.equalTo(self.contentView.mas_top);
             make.height.equalTo(@(230));
         }];
-
+        
         
         // 遮盖
         _coverView = [[UIView alloc] init];
@@ -224,6 +105,11 @@
         _titleLabel.font = [UIFont systemFontOfSize:16];
         _titleLabel.numberOfLines = 0;
         [self.bottomView addSubview:_titleLabel];
+        [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.bottomView.mas_left).offset(15);
+            make.right.equalTo(self.bottomView.mas_right).offset(-15);
+            make.top.equalTo(self.bottomView.mas_top).offset(10);
+        }];
         
         
         // 底部描述详情
@@ -279,6 +165,97 @@
             make.top.left.equalTo(self.contentView).offset(10);
             make.size.mas_equalTo(CGSizeMake(40, 20));
         }];
+        
+        /********************************/
+        
+        /**
+         *  视频播放按钮
+         */
+        _videoIcon = [[UIImageView alloc] init];
+        _videoIcon.image = [UIImage imageNamed:@"playButton"];
+        [self.image addSubview:_videoIcon];
+        [_videoIcon mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.equalTo(self.image);
+            make.size.mas_equalTo(CGSizeMake(30, 30));
+        }];
+        
+        /**
+         *  coverView
+         */
+        _coverView = [[UIView alloc] init];
+        _coverView.backgroundColor = XCFCoverViewColor;
+        [self.image addSubview:_coverView];
+        [_coverView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.equalTo(self.image);
+            make.size.equalTo(self.image);
+        }];
+        
+        /**
+         *  大标题
+         */
+        _firstTitleLabel = [UILabel labelWithFont:[UIFont systemFontOfSize:XCFRecipeCellFontSizeFirstTitle]
+                                        textColor:XCFLabelColorWhite
+                                    numberOfLines:0
+                                    textAlignment:NSTextAlignmentCenter];
+        [self.image addSubview:_firstTitleLabel];
+        [_firstTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.equalTo(self.image.mas_width).offset(- XCFRecipeCellMarginFirstTitle*2);
+            make.centerX.equalTo(self.image.mas_centerX);
+            make.bottom.equalTo(self.image.mas_centerY).offset(-10);
+        }];
+        
+        /**
+         *  小标题
+         */
+        _secondTitleLabel = [UILabel labelWithFont:[UIFont systemFontOfSize:XCFRecipeCellFontSizeSecondTitle]
+                                         textColor:XCFLabelColorWhite
+                                     numberOfLines:0
+                                     textAlignment:NSTextAlignmentCenter];
+        [self.image addSubview:_secondTitleLabel];
+        [_secondTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(self.image.mas_centerX);
+            make.top.equalTo(self.firstTitleLabel.mas_bottom).offset(20);
+        }];
+        
+        /**
+         *  模板4标题
+         */
+        _whisperLabel = [UILabel labelWithFont:[UIFont systemFontOfSize:XCFRecipeCellFontSizeFirstTitle]
+                                     textColor:XCFLabelColorWhite
+                                 numberOfLines:0
+                                 textAlignment:NSTextAlignmentCenter];
+        [self.image addSubview:_whisperLabel];
+        [_whisperLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.equalTo(self.image);
+        }];
+        
+        /**
+         *  作者头像
+         */
+        _authorIcon = [[UIImageView alloc] init];
+        _authorIcon.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(authorIconClick)];
+        [_authorIcon addGestureRecognizer:tap];
+        [self.contentView addSubview:_authorIcon];
+        [_authorIcon mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.size.mas_equalTo(CGSizeMake(XCFAuthorHeaderWidth, XCFAuthorHeaderWidth));
+            make.top.equalTo(self.image.mas_bottom).offset(- XCFAuthorHeaderWidth*0.5);
+            make.right.equalTo(self.contentView.mas_right).offset(-10);
+        }];
+        
+        /**
+         *  做过的人数
+         */
+        _cookedLabel = [UILabel labelWithFont:[UIFont systemFontOfSize:XCFRecipeCellFontSizeDesc]
+                                    textColor:XCFThemeColor
+                                numberOfLines:1
+                                textAlignment:NSTextAlignmentRight];
+        [self.bottomView addSubview:_cookedLabel];
+        [self.cookedLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.bottom.equalTo(self.descLabel.mas_bottom);
+            make.right.equalTo(self.bottomView.mas_right).offset(-12);
+        }];
+        
     }
     return self;
 }
@@ -289,7 +266,7 @@
 #pragma mark - item模型
 - (void)setItem:(XCFItems *)item {
     _item = item;
-
+    
     // 接收到模型数据后设置图片，图片高度
     [self.image sd_setImageWithURL:[NSURL URLWithString:item.contents.image.url] placeholderImage:nil];
     [self.image mas_updateConstraints:^(MASConstraintMaker *make) {
@@ -319,12 +296,12 @@
         self.descLabel.hidden = NO;
         self.descLabel.text = item.contents.desc;
         self.titleLabel.text =  item.contents.title;
-
-        [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.bottomView.mas_left).offset(XCFRecipeCellMarginTitle);
-            make.right.equalTo(self.bottomView.mas_right).offset(-XCFRecipeCellMarginTitle);
-            make.top.equalTo(self.bottomView.mas_top).offset(10);
-        }];
+        //
+        //        [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        //            make.left.equalTo(self.bottomView.mas_left).offset(XCFRecipeCellMarginTitle);
+        //            make.right.equalTo(self.bottomView.mas_right).offset(-XCFRecipeCellMarginTitle);
+        //            make.top.equalTo(self.bottomView.mas_top).offset(10);
+        //        }];
         
         if (item.template == XCFCellTemplateRecipe) { // 模板5菜谱
             self.videoIcon.hidden = !item.contents.video_url.length;
@@ -332,11 +309,11 @@
             self.authorIcon.hidden = NO;
             [self.authorIcon setHeaderWithURL:[NSURL URLWithString:item.contents.author.photo]];
             self.cookedLabel.text = [NSString stringWithFormat:@"%zd人做过", item.contents.n_cooked];
-            
-            [self.cookedLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.bottom.equalTo(self.descLabel.mas_bottom);
-                make.right.equalTo(self.bottomView.mas_right).offset(-12);
-            }];
+            //
+            //            [self.cookedLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+            //                make.bottom.equalTo(self.descLabel.mas_bottom);
+            //                make.right.equalTo(self.bottomView.mas_right).offset(-12);
+            //            }];
         }
         
     } else if (item.template == XCFCellTemplateRecipeList) { // 模板2菜单
@@ -354,7 +331,7 @@
     } else if (item.template == XCFCellTemplateWeeklyMagazine) { // 模板6
         
     }
-
+    
 }
 
 
@@ -372,18 +349,18 @@
     
     // 图片、头像
     self.image.contentMode = UIViewContentModeScaleToFill;
-    if (recipe.photo526.length) [self.image sd_setImageWithURL:[NSURL URLWithString:recipe.photo526] placeholderImage:nil];
+    if (recipe.photo526.length) [self.image sd_setImageWithURL:[NSURL URLWithString:recipe.photo526]];
     self.authorIcon.hidden = NO;
     [self.authorIcon setHeaderWithURL:[NSURL URLWithString:recipe.author.photo]];
     
     // 标题、标题行数、设置图片标题右边约束
     self.titleLabel.text = recipe.name;
     self.titleLabel.numberOfLines = 1;
-    [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.bottomView.mas_left).offset(XCFRecipeCellMarginTitle);
-        make.right.equalTo(self.authorIcon.mas_left).offset(-10);
-        make.top.equalTo(self.bottomView.mas_top).offset(10);
-    }];
+    //    [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+    //        make.left.equalTo(self.bottomView.mas_left).offset(15);
+    //        make.right.equalTo(self.authorIcon.mas_left).offset(-10);
+    //        make.top.equalTo(self.bottomView.mas_top).offset(10);
+    //    }];
     
     // 作者名称
     self.authorName.text = recipe.author.name;
@@ -391,10 +368,10 @@
     // 做过的人数、调整位置
     self.cookedLabel.textColor = [UIColor grayColor];
     self.cookedLabel.text = [NSString stringWithFormat:@"%@人做过", recipe.stats.n_cooked];
-    [self.cookedLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.titleLabel.mas_bottom).offset(XCFRecipeCellMarginTitle2Desc);
-        make.left.equalTo(self.scoreLabel.mas_right).offset(XCFRecipeCellMarginTitle2Desc);
-    }];
+    //    [self.cookedLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+    //        make.top.equalTo(self.titleLabel.mas_bottom).offset(8);
+    //        make.left.equalTo(self.scoreLabel.mas_right).offset(8);
+    //    }];
     
     
     self.scoreLabel.hidden = YES;
@@ -403,10 +380,10 @@
         self.scoreLabel.hidden = NO;
         self.scoreLabel.text = [NSString stringWithFormat:@"%@分", recipe.score];
     } else {
-        [self.cookedLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.titleLabel.mas_bottom).offset(XCFRecipeCellMarginTitle2Desc);
-            make.left.equalTo(self.titleLabel.mas_left);
-        }];
+        //        [self.cookedLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+        //            make.top.equalTo(self.titleLabel.mas_bottom).offset(XCFRecipeCellMarginTitle2Desc);
+        //            make.left.equalTo(self.titleLabel.mas_left);
+        //        }];
     }
     
 }

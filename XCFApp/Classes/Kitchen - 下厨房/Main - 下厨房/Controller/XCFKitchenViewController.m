@@ -89,9 +89,10 @@ static NSString *const recipeHeaderIdentifier = @"RecipeHeader";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    XCFRecipeCell *cell = [tableView dequeueReusableCellWithIdentifier:recipeCellIdentifier forIndexPath:indexPath];
+    XCFRecipeCell *cell = [tableView dequeueReusableCellWithIdentifier:recipeCellIdentifier];
     if (!cell) {
-        cell = [[XCFRecipeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:recipeCellIdentifier];
+        cell = [[XCFRecipeCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                    reuseIdentifier:recipeCellIdentifier];
     }
     XCFIssues *issues = self.issuesArray[indexPath.section];
     XCFItems *item = issues.items[indexPath.row];

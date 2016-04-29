@@ -66,8 +66,7 @@ static NSString * const recipeListCellIdentifier = @"RecipeListCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    XCFRecipeCell *cell = [tableView dequeueReusableCellWithIdentifier:recipeListCellIdentifier
-                                                          forIndexPath:indexPath];
+    XCFRecipeCell *cell = [tableView dequeueReusableCellWithIdentifier:recipeListCellIdentifier];
     XCFRecipe *recipe = self.recipeList.sample_recipes[indexPath.row];
     cell.recipe = recipe;
     WeakSelf;
