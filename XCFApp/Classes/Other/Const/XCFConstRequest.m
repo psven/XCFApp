@@ -19,7 +19,7 @@ NSString * const XCFRequestKitchenNav = @"http://api.xiachufang.com/v2/init_page
 /** 下厨房 - 早餐 */
 NSString * const XCFRequestKitchenBreakfast = @"http://api.xiachufang.com/v2/events/show.json?version=5.1.1&id=100112278&api_sign=b456f8072ac5ebc748ff4ffee949c4ec&api_key=0f9f79be1dac5f003e7de6f876b17c00&origin=iphone&sk=7UnwJ-JkQ36hbfrMRoL0fA";
 /** 下厨房 - 早餐 - 作品数据 */
-NSString * const XCFRequestKitchenBreakfastDishes = @"http://api.xiachufang.com/v2/events/100114703/dishes_order_by_hot.json?offset=0&detail=true&origin=iphone&api_sign=db13cce725dceac552a1bd41c745b64f&sk=7UnwJ-JkQ36hbfrMRoL0fA&limit=18&version=5.1.1&timestamp=1461900269&api_key=0f9f79be1dac5f003e7de6f876b17c00";
+NSString * const XCFRequestKitchenBreakfastDishes = @"http://api.xiachufang.com/v2/events/100114704/dishes_order_by_hot.json?offset=0&detail=true&origin=iphone&api_sign=181fa96605c796ba8e1e66b90afdc464&sk=7UnwJ-JkQ36hbfrMRoL0fA&limit=18&version=5.1.1&timestamp=1461943166&api_key=0f9f79be1dac5f003e7de6f876b17c00";
 /** 下厨房 - 排行榜 */
 NSString * const XCFRequestKitchenTopList = @"http://www.xiachufang.com/page/top-list/";
 /** 下厨房 - 看视频 */

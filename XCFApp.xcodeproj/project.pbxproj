@@ -1066,7 +1066,7 @@
 			isa = PBXGroup;
 			children = (
 				D407531F1CD2378000811CDF /* Main - 下厨房 */,
-				D40753781CD2378000811CDF /* Nav - 导航 */,
+				D40753781CD2378000811CDF /* Nav - 导航部分 */,
 				D40752D71CD2378000811CDF /* BuyList - 菜篮子 */,
 				D40752EA1CD2378000811CDF /* CreateRecipe - 创建菜谱 */,
 				D40753A41CD2378000811CDF /* Search - 搜索 */,
@@ -1437,13 +1437,14 @@
 			path = "RecipeList - 菜单";
 			sourceTree = "<group>";
 		};
-		D40753781CD2378000811CDF /* Nav - 导航 */ = {
+		D40753781CD2378000811CDF /* Nav - 导航部分 */ = {
 			isa = PBXGroup;
 			children = (
 				D40753791CD2378000811CDF /* Controller */,
 				D407539C1CD2378000811CDF /* View */,
 				D40753801CD2378000811CDF /* Model */,
 			);
+			name = "Nav - 导航部分";
 			path = "Nav - 导航";
 			sourceTree = "<group>";
 		};
