@@ -17,7 +17,7 @@ typedef NS_ENUM(NSInteger, XCFAuthorType) {
 
 // 类型(他人/自己)
 @property (nonatomic, assign) XCFAuthorType type;
-// 本地头像
+// 本地头像（自己）
 @property (nonatomic, strong) UIImage *image;
 /** 头像 (尺寸60）*/
 @property (nonatomic, copy) NSString *photo;

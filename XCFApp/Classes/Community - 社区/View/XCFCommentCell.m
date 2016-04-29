@@ -23,10 +23,10 @@
 - (void)setComment:(XCFTopicComment *)comment {
     _comment = comment;
     
-    if ([comment.author.name isEqualToString:[[XCFAuthor me] name]]) {
+    if ([comment.author.name isEqualToString:[[XCFAuthor me] name]]) { // 如果是我自己，改了名就不能显示了=。=
         self.icon.image = [comment.author.image circleImage];
     } else {
-        [self.icon setHeaderWithURL:[NSURL URLWithString:comment.author.photo60]];
+        [self.icon setHeaderWithURL:[NSURL URLWithString:comment.author.photo]];
     }
     
     self.nameLabel.text = comment.author.name;
