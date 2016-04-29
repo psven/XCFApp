@@ -58,7 +58,7 @@ static NSString * const reuseIdentifier = @"Cell";
         imageView.contentMode = UIViewContentModeScaleAspectFit;
         [cell.contentView addSubview:imageView];
     }
-    NSString *imageURL = [self.authorDishArray[indexPath.item] photo60];
+    NSString *imageURL = [self.authorDishArray[indexPath.item] thumbnail_160];
     [imageView sd_setImageWithURL:[NSURL URLWithString:imageURL]];
     
     return cell;

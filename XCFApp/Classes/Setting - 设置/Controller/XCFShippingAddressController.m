@@ -29,6 +29,9 @@ static NSString *const addressCellIdentifier = @"addressCellIdentifier";
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    // 编辑完成pop回来刷新界面，刷新 纪录的收货地址（默认选中第一个）
+    self.selectedRow = 0;
+    [XCFAddressInfoTool updateInfoAfterDeleted];
     [self.tableView reloadData];
 }
 
@@ -48,6 +51,7 @@ static NSString *const addressCellIdentifier = @"addressCellIdentifier";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSArray *infoArray = [XCFAddressInfoTool totalAddressInfo];
     NSMutableArray *newArray = [NSMutableArray array];
+    // 遍历整个收货地址数组，点击哪一个，就将哪一个设置为选中，其他设置为不选中
     for (NSUInteger index=0; index<infoArray.count; index++) {
         XCFAddressInfo *info = infoArray[index];
         if (index == indexPath.row) info.state = XCFAddressInfoCellStateSelected;
