@@ -54,6 +54,13 @@
 }
 
 
+- (void)setStyle:(tableViewAdjustStyle)style {
+    _style = style;
+    self.addButton.hidden = style;
+    self.adjustButton.selected = style;
+    
+}
+
 #pragma mark - 事件处理
 
 - (void)addInstruction {
@@ -63,7 +70,7 @@
 - (void)adjustInsturction {
     self.addButton.hidden = !self.adjustButton.isSelected;
     self.adjustButton.selected = !self.adjustButton.isSelected;
-    !self.adjustBlock ? : self.adjustBlock(self.adjustButton.isSelected);
+    !self.adjustBlock ? : self.adjustBlock(self.adjustButton.isSelected); // 根据按钮状态决定编辑类型
 }
 
 

@@ -38,6 +38,7 @@
 @property (nonatomic, assign) NSInteger setImageIndex;
 @property (nonatomic, strong) NSMutableArray<XCFCreateIngredient *> *ingredientArray;       // 用料数组
 @property (nonatomic, strong) NSMutableArray<XCFCreateInstruction *> *instructionArray;     // 步骤数组
+@property (nonatomic, assign) tableViewAdjustStyle style;                                   // 做法调整按钮类型
 @end
 
 @implementation XCFCreateRecipeController
@@ -207,6 +208,7 @@ canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
 - (void)tableView:(UITableView *)tableView
 commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
 forRowAtIndexPath:(NSIndexPath *)indexPath {
+    // 如果步骤数组有数据，就删除对应位置的数据
     if (self.instructionArray.count) [self.instructionArray removeObjectAtIndex:indexPath.row];
     [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationFade];
@@ -278,6 +280,7 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
     else if (section == 1) {
         XCFCreateInstructionFooter *instructionFooter = [tableView dequeueReusableHeaderFooterViewWithIdentifier:instructionFooterIdentifier];
         instructionFooter.frame = CGRectMake(0, 0, XCFScreenWidth, 70);
+        instructionFooter.style = self.style;
         footer = instructionFooter;
         WeakSelf;
         instructionFooter.addInstructionBlock = ^{ // 增加一行
@@ -286,7 +289,8 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
             NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:1];
             [weakSelf.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationBottom];
         };
-        instructionFooter.adjustBlock = ^(tableViewAdjustStyle style) { // 调整
+        instructionFooter.adjustBlock = ^(tableViewAdjustStyle style) { // 调整回调
+            weakSelf.style = style;
             if (style == tableViewAdjustStyleNone) {
                 [weakSelf.tableView setEditing:NO animated:YES];
             } else if (style == tableViewAdjustStyleAdjusting) {
@@ -459,6 +463,7 @@ didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     NSMutableArray *newArray = [NSMutableArray array];
     for (NSInteger index=0; index<self.instructionArray.count; index++) {
         XCFCreateInstruction *instruction = self.instructionArray[index];
+        // 如果有文字或者图片，就添加到准备存储的数组中
         if (instruction.text.length || instruction.image) [newArray addObject:instruction];
     }
     self.createRecipe.ingredient = self.ingredientArray;

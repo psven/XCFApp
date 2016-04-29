@@ -15,6 +15,7 @@ typedef NS_ENUM(NSInteger, tableViewAdjustStyle) {
 
 @interface XCFCreateInstructionFooter : UITableViewHeaderFooterView
 
+@property (nonatomic, assign) tableViewAdjustStyle style; // 编辑状态
 @property (nonatomic, copy) void (^addInstructionBlock)();
 @property (nonatomic, copy) void (^adjustBlock)();
 
