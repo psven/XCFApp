@@ -54,8 +54,8 @@ static NSString * const dishViewCellIdentifier = @"dishViewCell";
         
         NSMutableArray *imageArray = [NSMutableArray array];
         [imageArray addObjectsFromArray:review.photos];
-        if (review.photos.count) {
-            NSArray *photosArray = [XCFReviewPhoto mj_objectArrayWithKeyValuesArray:review.photos];
+        if (review.additional_review_photos.count) {
+            NSArray *photosArray = [XCFReviewPhoto mj_objectArrayWithKeyValuesArray:review.additional_review_photos];
             [imageArray addObjectsFromArray:photosArray];
         }
         
@@ -100,6 +100,7 @@ static NSString * const dishViewCellIdentifier = @"dishViewCell";
 
                    // 如果位置数组数量 > 模型数据，删除多余的数据
                    if (self.imageViewCurrentLocationArray.count > self.reviewsArray.count) {
+                       // 多余的数量
                        NSUInteger length = self.imageViewCurrentLocationArray.count - self.reviewsArray.count;
                        NSRange shouldRemoveRange = NSMakeRange(self.reviewsArray.count, length);
                        [self.imageViewCurrentLocationArray removeObjectsInRange:shouldRemoveRange];

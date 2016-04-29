@@ -27,7 +27,10 @@
     [self setupTableView];
     
     if (!self.dish) { // 如果没有数据就发送网络请求
-        [[AFHTTPSessionManager manager]GET:XCFRequestKitchenDish parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [[AFHTTPSessionManager manager] GET:XCFRequestKitchenDish
+                                 parameters:nil
+                                   progress:nil
+                                    success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             self.dish = [XCFDish mj_objectWithKeyValues:responseObject[@"content"][@"dish"]];
             [self setupHeader];
             self.title = self.dish.name;

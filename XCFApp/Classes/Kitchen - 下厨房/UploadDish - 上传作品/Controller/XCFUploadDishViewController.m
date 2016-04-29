@@ -63,6 +63,7 @@ static CGFloat const mealsAndAddTagBtnViewHeight = 90;
         // 新建个属性保存文字
     };
     textPhotoView.addPhotoBlock = ^{ // 添加图片
+        [weakSelf.view endEditing:YES]; // 退出键盘
         UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
                                                                  delegate:weakSelf
                                                         cancelButtonTitle:@"取消"
