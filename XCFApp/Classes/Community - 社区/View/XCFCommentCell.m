@@ -26,7 +26,7 @@
     if ([comment.author.name isEqualToString:[[XCFAuthor me] name]]) {
         self.icon.image = [comment.author.image circleImage];
     } else {
-        [self.icon setHeaderWithURL:[NSURL URLWithString:comment.author.photo]];
+        [self.icon setHeaderWithURL:[NSURL URLWithString:comment.author.photo60]];
     }
     
     self.nameLabel.text = comment.author.name;

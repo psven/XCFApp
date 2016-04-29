@@ -87,20 +87,23 @@ static NSString *const recipeAddListFooterIdentifier       = @"RecipeAddListFoot
     UITableViewCell *cell;
     
     if (indexPath.section == 0) { // 用料
-        XCFRecipeIngredientCell *ingredientCell = [tableView dequeueReusableCellWithIdentifier:recipeIngredientCellIdentifier];
+        XCFRecipeIngredientCell *ingredientCell = [tableView dequeueReusableCellWithIdentifier:recipeIngredientCellIdentifier
+                                                                                  forIndexPath:indexPath];
         ingredientCell.ingredient = self.recipe.ingredient[indexPath.row];
         cell = ingredientCell;
     }
     
     else if (indexPath.section == 1) { // 步骤
-        XCFRecipeInstructionCell *instructionCell = [tableView dequeueReusableCellWithIdentifier:recipeInstructionCellIdentifier];
+        XCFRecipeInstructionCell *instructionCell = [tableView dequeueReusableCellWithIdentifier:recipeInstructionCellIdentifier
+                                                                                    forIndexPath:indexPath];
         instructionCell.instruction = self.recipe.instruction[indexPath.row];
         cell = instructionCell;
     }
     
     else if (indexPath.section == 2) { // 小贴士
         if (self.recipe.tips.length) {
-            UITableViewCell *tipsCell = [tableView dequeueReusableCellWithIdentifier:recipeTipsCellIdentifier];
+            UITableViewCell *tipsCell = [tableView dequeueReusableCellWithIdentifier:recipeTipsCellIdentifier
+                                                                        forIndexPath:indexPath];
             tipsCell.selectionStyle = UITableViewCellSelectionStyleNone;
             tipsCell.backgroundColor = XCFGlobalBackgroundColor;
             tipsCell.textLabel.numberOfLines = 0;
@@ -111,7 +114,8 @@ static NSString *const recipeAddListFooterIdentifier       = @"RecipeAddListFoot
     }
     
     else if (indexPath.section == 3) { // 作品
-        XCFDishShowCell *dishViewCell = [tableView dequeueReusableCellWithIdentifier:recipeDishShowCellIdentifier];
+        XCFDishShowCell *dishViewCell = [tableView dequeueReusableCellWithIdentifier:recipeDishShowCellIdentifier
+                                                                        forIndexPath:indexPath];
         WeakSelf;
         dishViewCell.type = XCFVerticalCellTypeDish;
         dishViewCell.recipe = self.recipe;
@@ -141,7 +145,8 @@ static NSString *const recipeAddListFooterIdentifier       = @"RecipeAddListFoot
     }
     
     else if (indexPath.section == 4) { // 被加入的菜单
-        XCFAddedRecipeListViewCell *addedListViewCell = [tableView dequeueReusableCellWithIdentifier:recipeAddedRecipeListCellIdentifier];
+        XCFAddedRecipeListViewCell *addedListViewCell = [tableView dequeueReusableCellWithIdentifier:recipeAddedRecipeListCellIdentifier
+                                                                                        forIndexPath:indexPath];
         addedListViewCell.addedList = self.addedList[indexPath.row];
         cell = addedListViewCell;
     }

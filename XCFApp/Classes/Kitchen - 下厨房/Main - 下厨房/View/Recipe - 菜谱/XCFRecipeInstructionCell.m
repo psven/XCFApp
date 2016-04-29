@@ -76,8 +76,8 @@
         self.image.hidden = YES;
         [self.descLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.stepLabel);
-            make.left.equalTo(self.contentView).offset(XCFRecipeCellMarginTitle * 3);
-            make.right.equalTo(self.contentView.mas_right).offset(-XCFRecipeCellMarginTitle);
+            make.left.equalTo(self.contentView).offset(45);
+            make.right.equalTo(self.contentView.mas_right).offset(-15);
         }];
     }
 }

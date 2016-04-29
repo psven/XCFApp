@@ -89,7 +89,7 @@ static NSString *const recipeHeaderIdentifier = @"RecipeHeader";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    XCFRecipeCell *cell = [tableView dequeueReusableCellWithIdentifier:recipeCellIdentifier];
+    XCFRecipeCell *cell = [tableView dequeueReusableCellWithIdentifier:recipeCellIdentifier forIndexPath:indexPath];
     if (!cell) {
         cell = [[XCFRecipeCell alloc] initWithStyle:UITableViewCellStyleDefault
                                     reuseIdentifier:recipeCellIdentifier];

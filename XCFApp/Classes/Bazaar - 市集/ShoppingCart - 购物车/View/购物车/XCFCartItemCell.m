@@ -78,8 +78,7 @@
 
 
 #pragma mark - 构造方法
-
-
+// 根据类型调整布局
 - (void)setStyle:(XCFCartViewChildControlStyle)style {
     _style = style;
     if (style == XCFCartViewChildControlStyleCart) { // 购物车
@@ -101,8 +100,6 @@
         [self.goodsImage mas_updateConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self).offset(10);
         }];
-        
-        
     }
 }
 

@@ -349,7 +349,7 @@
     
     // 图片、头像
     self.image.contentMode = UIViewContentModeScaleToFill;
-    if (recipe.photo526.length) [self.image sd_setImageWithURL:[NSURL URLWithString:recipe.photo526]];
+    if (recipe.photo80.length) [self.image sd_setImageWithURL:[NSURL URLWithString:recipe.photo80]];
     self.authorIcon.hidden = NO;
     [self.authorIcon setHeaderWithURL:[NSURL URLWithString:recipe.author.photo]];
     

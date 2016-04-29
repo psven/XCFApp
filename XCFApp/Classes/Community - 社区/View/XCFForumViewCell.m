@@ -24,7 +24,7 @@
     
     for (NSUInteger index=0; index<forum.latest_authors.count; index++) {
         UIImageView *icon = self.headView.subviews[index];
-        NSURL *url = [NSURL URLWithString:[forum.latest_authors[index] photo]];
+        NSURL *url = [NSURL URLWithString:[forum.latest_authors[index] photo60]];
         [icon sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"jamFilter2"]];
     }
     self.nameLabel.text = forum.name;

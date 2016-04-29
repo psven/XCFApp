@@ -103,7 +103,7 @@ static NSString * const imageCellIdentifier = @"imageCell";
 - (void)setDish:(XCFDish *)dish {
     _dish = dish;
     
-    [self.iconView setHeaderWithURL:[NSURL URLWithString:dish.author.photo]];
+    [self.iconView setHeaderWithURL:[NSURL URLWithString:dish.author.photo60]];
     self.authorNameLabel.text = dish.author.name;
     self.createTimeLabel.text = dish.friendly_create_time;
     self.dishNameLabel.text = dish.name;
@@ -167,7 +167,7 @@ static NSString * const imageCellIdentifier = @"imageCell";
     self.dishNameViewTopCon.constant = 30; // 更改标题view的top约束
     self.starView.rate = review.rate;      // 评分
     
-    [self.iconView setHeaderWithURL:[NSURL URLWithString:review.author.photo]];
+    [self.iconView setHeaderWithURL:[NSURL URLWithString:review.author.photo60]];
     self.authorNameLabel.text = review.author.name;
     self.createTimeLabel.text = review.friendly_create_time;
     self.dishNameLabel.text = review.commodity.goods.name;

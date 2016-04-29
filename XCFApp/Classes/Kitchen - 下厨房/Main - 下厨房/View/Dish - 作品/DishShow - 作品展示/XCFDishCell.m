@@ -91,7 +91,7 @@
 - (void)setDish:(XCFDish *)dish {
     _dish = dish;
     
-    [self.image sd_setImageWithURL:[NSURL URLWithString:dish.thumbnail]];
+    [self.image sd_setImageWithURL:[NSURL URLWithString:dish.thumbnail_160]];
     [self.iconView setHeaderWithURL:[NSURL URLWithString:dish.author.photo]];
     self.authorName.text = dish.author.name;
     self.descLabel.text = dish.desc;
@@ -110,7 +110,7 @@
     _review = review;
     
     [self.image sd_setImageWithURL:[NSURL URLWithString:review.photos[0].url]];
-    [self.iconView setHeaderWithURL:[NSURL URLWithString:review.author.photo]];
+    [self.iconView setHeaderWithURL:[NSURL URLWithString:review.author.photo60]];
     
     self.diggsButton.hidden = YES;
     [self.starView setRate:review.rate];

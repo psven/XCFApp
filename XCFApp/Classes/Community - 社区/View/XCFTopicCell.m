@@ -33,7 +33,7 @@
         self.topicLabelLeftCon.constant = 15;
     }
     
-    [self.icon setHeaderWithURL:[NSURL URLWithString:topic.author.photo]];
+    [self.icon setHeaderWithURL:[NSURL URLWithString:topic.author.photo60]];
     self.nameLabel.text = topic.author.name;
     self.topicTitle.text = topic.content;
     self.updateTime.text = [NSString stringWithFormat:@"最后回应：%@", topic.update_time];
