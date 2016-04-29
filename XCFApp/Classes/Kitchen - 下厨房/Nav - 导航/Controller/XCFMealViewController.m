@@ -66,8 +66,7 @@ static NSString * const headerIdentifier = @"mealHeader";
 
 #pragma mark - 事件处理
 - (void)uploadMyDish {
-    UINavigationController *navCon = [[UINavigationController alloc] initWithRootViewController:[[XCFUploadDishViewController alloc]
-                                                                                                 initWithStyle:UITableViewStyleGrouped]];
+    UINavigationController *navCon = [[UINavigationController alloc] initWithRootViewController:[[XCFUploadDishViewController alloc] initWithStyle:UITableViewStyleGrouped]];
     [self.navigationController presentViewController:navCon animated:YES completion:nil];
 }
 
@@ -82,7 +81,8 @@ static NSString * const headerIdentifier = @"mealHeader";
         flowLayout.minimumInteritemSpacing = 5;
         flowLayout.minimumLineSpacing = 5;
         flowLayout.headerReferenceSize = CGSizeMake(XCFScreenWidth, 120);
-        _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
+        _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds
+                                             collectionViewLayout:flowLayout];
         _collectionView.dataSource = self;
         _collectionView.delegate = self;
         _collectionView.backgroundColor = XCFGlobalBackgroundColor;
@@ -127,7 +127,8 @@ static NSString * const headerIdentifier = @"mealHeader";
                                                                  title:displayTitle
                                                         titleLabelFont:[UIFont systemFontOfSize:14]
                                                             titleColor:XCFLabelColorWhite
-                                                                target:self action:@selector(uploadMyDish) clipsToBounds:YES];
+                                                                target:self action:@selector(uploadMyDish)
+                                                         clipsToBounds:YES];
     [self.view insertSubview:uploadMyDishButton aboveSubview:self.collectionView];
     [uploadMyDishButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view).offset(5);

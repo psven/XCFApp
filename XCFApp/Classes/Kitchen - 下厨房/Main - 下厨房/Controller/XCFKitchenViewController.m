@@ -38,19 +38,12 @@
 
 
 @interface XCFKitchenViewController ()
-
 @property (nonatomic, strong) AFHTTPSessionManager *mananger;
-/** 导航空间 */
-@property (nonatomic, strong) XCFKitchenHeader *kitchenHeader;
-/** 导航数据 */
-@property (nonatomic, strong) XCFNavContent *navContent;
-/** 动态数据 */
-@property (nonatomic, strong) NSMutableArray *feedsArray;
-/** 菜谱数据 */
-@property (nonatomic, strong) NSMutableArray *issuesArray;
-/** 组数 */
-@property (nonatomic, assign) NSInteger sectionCount;
-
+@property (nonatomic, strong) XCFKitchenHeader *kitchenHeader;  // 顶部导航View
+@property (nonatomic, strong) XCFNavContent *navContent;        // 导航数据
+@property (nonatomic, strong) NSMutableArray *feedsArray;       // 动态数据
+@property (nonatomic, strong) NSMutableArray *issuesArray;      // 菜谱数据
+@property (nonatomic, assign) NSInteger sectionCount;           // 组数
 @end
 
 
@@ -76,6 +69,7 @@ static NSString *const recipeHeaderIdentifier = @"RecipeHeader";
     [super didReceiveMemoryWarning];
 }
 
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -89,22 +83,18 @@ static NSString *const recipeHeaderIdentifier = @"RecipeHeader";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    XCFRecipeCell *cell = [tableView dequeueReusableCellWithIdentifier:recipeCellIdentifier forIndexPath:indexPath];
-    if (!cell) {
-        cell = [[XCFRecipeCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                    reuseIdentifier:recipeCellIdentifier];
-    }
+    XCFRecipeCell *cell = [tableView dequeueReusableCellWithIdentifier:recipeCellIdentifier
+                                                          forIndexPath:indexPath];
     XCFIssues *issues = self.issuesArray[indexPath.section];
     XCFItems *item = issues.items[indexPath.row];
     cell.item = item;
     
     WeakSelf;
-    cell.authorIconClickedBlock = ^(){
+    cell.authorIconClickedBlock = ^{ // 头像点击回调
         UIViewController *authorViewController = [[UIViewController alloc] init];
         authorViewController.view.backgroundColor = XCFGlobalBackgroundColor;
         [weakSelf.navigationController pushViewController:authorViewController animated:YES];
     };
-    
     return cell;
 }
 
@@ -152,9 +142,6 @@ static NSString *const recipeHeaderIdentifier = @"RecipeHeader";
  */
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UITableViewHeaderFooterView *headerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:recipeHeaderIdentifier];
-    if (!headerView) {
-        headerView = [[UITableViewHeaderFooterView alloc] initWithReuseIdentifier:recipeHeaderIdentifier];
-    }
     headerView.frame = CGRectMake(0, 0, XCFScreenWidth, headerHeight);
     headerView.contentView.backgroundColor = [UIColor whiteColor];
     NSInteger tag = 10;

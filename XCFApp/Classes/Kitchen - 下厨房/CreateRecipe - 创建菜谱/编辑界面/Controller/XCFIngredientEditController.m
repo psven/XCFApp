@@ -31,7 +31,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    XCFIngredientEditCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ingredientEditCell"];
+    XCFIngredientEditCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ingredientEditCell"
+                                                                  forIndexPath:indexPath];
     
     // 设置对应的placeholder
     if (indexPath.row == 0) {
@@ -48,9 +49,10 @@
     }
     
     WeakSelf;
+    // 文本编辑回调：时刻调用（因为官方的效果也是这样）
     cell.editCallBackBlock = ^(XCFCreateIngredient *editedIngredient) {
-        
         NSUInteger count = weakSelf.ingredientArray.count;
+        // 如果编辑了当前cell的textField，就创建一个空的用料数据，否则保存的时候会导致数组越界引发崩溃
         if (count < indexPath.row+1) {
             for (NSInteger i=0; i < (indexPath.row+1-count); i++) {
                 XCFCreateIngredient *originIgt = [[XCFCreateIngredient alloc] init];
@@ -58,7 +60,9 @@
             }
         }
 //        if (editedIngredient.name.length || editedIngredient.amount.length) { // 有内容才保留
-            [weakSelf.ingredientArray replaceObjectAtIndex:indexPath.row withObject:editedIngredient];
+            // 替换文本内容到对应index的数据中，实现保存效果
+            [weakSelf.ingredientArray replaceObjectAtIndex:indexPath.row
+                                                withObject:editedIngredient];
 //        } else {
 //            [weakSelf.ingredientArray removeObjectAtIndex:indexPath.row];
 //        }
@@ -75,8 +79,11 @@
 commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
 forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        if (self.ingredientArray.count) [self.ingredientArray removeObjectAtIndex:indexPath.row];
-        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        if (self.ingredientArray.count) {
+            [self.ingredientArray removeObjectAtIndex:indexPath.row];
+        }
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath]
+                              withRowAnimation:UITableViewRowAnimationAutomatic];
     }
 }
 
@@ -117,7 +124,8 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
     footer.frame = CGRectMake(0, 0, XCFScreenWidth, 200);
     self.tableView.tableFooterView = footer;
     WeakSelf;
-    footer.addLineBlock = ^{ // 点击“增加一行”后的回调
+    // 点击“增加一行”后的回调
+    footer.addLineBlock = ^{
         [weakSelf.view endEditing:YES];
         // 添加一行空的原料
         [weakSelf.ingredientArray addObject:[[XCFCreateIngredient alloc] init]];
@@ -126,8 +134,8 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
         [weakSelf.tableView insertRowsAtIndexPaths:@[indexPath]
                                   withRowAnimation:UITableViewRowAnimationBottom];
     };
-    
-    footer.adjustBlock = ^(tableViewAdjustStyle style) { // 调整
+    // 点击调整按钮的回调
+    footer.adjustBlock = ^(tableViewAdjustStyle style) {
         if (style == tableViewAdjustStyleNone) {
             [self.tableView setEditing:NO animated:YES];
         } else if (style == tableViewAdjustStyleAdjusting) {
@@ -145,7 +153,9 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
     NSMutableArray *newArray = [NSMutableArray array];
     for (NSInteger index=0; index<self.ingredientArray.count; index++) {
         XCFCreateIngredient *ingredient = self.ingredientArray[index];
-        if (ingredient.name.length || ingredient.amount.length) [newArray addObject:ingredient];
+        if (ingredient.name.length || ingredient.amount.length) {
+            [newArray addObject:ingredient];
+        }
     }
     !self.doneEditBlock ? : self.doneEditBlock(newArray);
     [self.navigationController popViewControllerAnimated:YES];

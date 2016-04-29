@@ -25,26 +25,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupTableView];
-    
-    if (!self.dish) { // 如果没有数据就发送网络请求
-        [[AFHTTPSessionManager manager] GET:XCFRequestKitchenDish
-                                 parameters:nil
-                                   progress:nil
-                                    success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            self.dish = [XCFDish mj_objectWithKeyValues:responseObject[@"content"][@"dish"]];
-            [self setupHeader];
-            self.title = self.dish.name;
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            [SVProgressHUD showErrorWithStatus:@"请求失败"];
-        }];
-    }
+    [self loadData];
 }
 
 - (void)setupTableView {
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor clearColor];
     self.view.backgroundColor = XCFGlobalBackgroundColor;
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([XCFDishViewCell class]) bundle:nil] forCellReuseIdentifier:@"dishViewCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([XCFDishViewCell class]) bundle:nil]
+         forCellReuseIdentifier:@"dishViewCell"];
 }
 
 - (void)setupHeader {
@@ -54,7 +43,9 @@
     dishView.frame = CGRectMake(0, 0, XCFScreenWidth, self.dish.dishCellHeight + self.dish.commentViewHeight);
     
     NSMutableArray *imageArray = [NSMutableArray array];
-    if (self.dish) [imageArray addObject:self.dish.main_pic];
+    if (self.dish) {
+        [imageArray addObject:self.dish.main_pic];
+    }
     if (self.dish.extra_pics.count) {
         NSArray *extraPicArray = [XCFPicture mj_objectArrayWithKeyValuesArray:self.dish.extra_pics];
         [imageArray addObjectsFromArray:extraPicArray];
@@ -70,6 +61,20 @@
     [self setupHeader];
 }
 
+- (void)loadData {
+    if (!self.dish) { // 如果没有数据就发送网络请求
+        [[AFHTTPSessionManager manager] GET:XCFRequestKitchenDish
+                                 parameters:nil
+                                   progress:nil
+                                    success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                                        self.dish = [XCFDish mj_objectWithKeyValues:responseObject[@"content"][@"dish"]];
+                                        [self setupHeader];
+                                        self.title = self.dish.name;
+                                    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                                        [SVProgressHUD showErrorWithStatus:@"请求失败"];
+                                    }];
+    }
+}
 
 #pragma mark - 事件处理
 

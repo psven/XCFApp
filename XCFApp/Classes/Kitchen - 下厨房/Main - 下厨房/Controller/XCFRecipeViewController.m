@@ -12,7 +12,7 @@
 
 #import "XCFRecipeViewController.h"
 #import "XCFDishViewController.h"
-
+// view
 #import "XCFRecipeHeader.h"
 #import "XCFRecipeIngredientCell.h"
 #import "XCFRecipeInstructionCell.h"
@@ -21,7 +21,7 @@
 #import "XCFAddedRecipeListViewCell.h"
 #import "XCFRecipeSupplementaryFooter.h"
 #import "XCFBottomView.h"
-
+// model
 #import "XCFRecipeIngredient.h"
 #import "XCFRecipeInstruction.h"
 #import "XCFRecipe.h"
@@ -34,12 +34,12 @@
 #import <Masonry.h>
 
 @interface XCFRecipeViewController () <UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic, strong) AFHTTPSessionManager *mananger;
-@property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) XCFRecipeHeader *recipeHeader;
-@property (nonatomic, strong) XCFRecipe *recipe;
-@property (nonatomic, strong) NSMutableArray *dish;
-@property (nonatomic, strong) NSMutableArray *addedList;
+@property (nonatomic, strong) AFHTTPSessionManager  *mananger;
+@property (nonatomic, strong) UITableView           *tableView;
+@property (nonatomic, strong) XCFRecipeHeader       *recipeHeader;
+@property (nonatomic, strong) XCFRecipe             *recipe;
+@property (nonatomic, strong) NSMutableArray        *dish;
+@property (nonatomic, strong) NSMutableArray        *addedList;
 @end
 
 @implementation XCFRecipeViewController
@@ -85,22 +85,22 @@ static NSString *const recipeAddListFooterIdentifier       = @"RecipeAddListFoot
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell;
-    
-    if (indexPath.section == 0) { // 用料
+    // 用料
+    if (indexPath.section == 0) {
         XCFRecipeIngredientCell *ingredientCell = [tableView dequeueReusableCellWithIdentifier:recipeIngredientCellIdentifier
                                                                                   forIndexPath:indexPath];
         ingredientCell.ingredient = self.recipe.ingredient[indexPath.row];
         cell = ingredientCell;
     }
-    
-    else if (indexPath.section == 1) { // 步骤
+    // 步骤
+    else if (indexPath.section == 1) {
         XCFRecipeInstructionCell *instructionCell = [tableView dequeueReusableCellWithIdentifier:recipeInstructionCellIdentifier
                                                                                     forIndexPath:indexPath];
         instructionCell.instruction = self.recipe.instruction[indexPath.row];
         cell = instructionCell;
     }
-    
-    else if (indexPath.section == 2) { // 小贴士
+    // 小贴士
+    else if (indexPath.section == 2) {
         if (self.recipe.tips.length) {
             UITableViewCell *tipsCell = [tableView dequeueReusableCellWithIdentifier:recipeTipsCellIdentifier
                                                                         forIndexPath:indexPath];
@@ -112,24 +112,24 @@ static NSString *const recipeAddListFooterIdentifier       = @"RecipeAddListFoot
             cell = tipsCell;
         }
     }
-    
-    else if (indexPath.section == 3) { // 作品
+    // 作品
+    else if (indexPath.section == 3) {
         XCFDishShowCell *dishViewCell = [tableView dequeueReusableCellWithIdentifier:recipeDishShowCellIdentifier
                                                                         forIndexPath:indexPath];
         WeakSelf;
         dishViewCell.type = XCFVerticalCellTypeDish;
         dishViewCell.recipe = self.recipe;
         dishViewCell.dish = self.dish;
-        // 点击作品后弹出作品控制器
+        // 点击作品回调：弹出作品控制器
         dishViewCell.collectionViewCellClickedBlock = ^(NSInteger index) {
             XCFDishViewController *dishViewVC = [[XCFDishViewController alloc] initWithStyle:UITableViewStyleGrouped];
             dishViewVC.dish = weakSelf.dish[index];
             [weakSelf.navigationController pushViewController:dishViewVC animated:YES];
         };
-        // 点赞回调，发送网络请求给数据库，然后接收新数据，刷新界面
+        // 点赞回调：发送网络请求给数据库，然后接收新数据，刷新界面
         dishViewCell.diggsButtonClickedBlock = ^(UIButton *sender) {
         };
-        // 作品view左滑刷新 加载更多作品
+        // 作品view左滑回调：加载更多作品
         dishViewCell.refreshBlock = ^{
             [self.mananger GET:XCFRequestKitchenRecipeDish
                     parameters:nil
@@ -143,8 +143,8 @@ static NSString *const recipeAddListFooterIdentifier       = @"RecipeAddListFoot
         };
         cell = dishViewCell;
     }
-    
-    else if (indexPath.section == 4) { // 被加入的菜单
+    // 被加入的菜单
+    else if (indexPath.section == 4) {
         XCFAddedRecipeListViewCell *addedListViewCell = [tableView dequeueReusableCellWithIdentifier:recipeAddedRecipeListCellIdentifier
                                                                                         forIndexPath:indexPath];
         addedListViewCell.addedList = self.addedList[indexPath.row];
@@ -193,13 +193,14 @@ static NSString *const recipeAddListFooterIdentifier       = @"RecipeAddListFoot
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     UITableViewHeaderFooterView *footer;
+    // 作品展示的sectionFooter
     if (section == 3) {
         XCFRecipeSupplementaryFooter *supplementaryFooter = [tableView dequeueReusableHeaderFooterViewWithIdentifier:recipeSupplementaryFooterIdentifier];
         supplementaryFooter.frame = CGRectMake(0, 0, XCFScreenWidth, 200);
         WeakSelf;
-        supplementaryFooter.uploadButtonClickedBlock = ^{ // 上传作品
-            UINavigationController *navCon = [[UINavigationController alloc] initWithRootViewController:[[XCFUploadDishViewController alloc]
-                                                                                                         initWithStyle:UITableViewStyleGrouped]];
+        // 点击上传作品按钮回调：弹出上传作品界面
+        supplementaryFooter.uploadButtonClickedBlock = ^{
+            UINavigationController *navCon = [[UINavigationController alloc] initWithRootViewController:[[XCFUploadDishViewController alloc] initWithStyle:UITableViewStyleGrouped]];
             [weakSelf.navigationController presentViewController:navCon animated:YES completion:nil];
         };
         footer = supplementaryFooter;
@@ -417,7 +418,8 @@ forHeaderFooterViewReuseIdentifier:recipeAddListFooterIdentifier];      // 加�
 
 // 加入菜单
 - (void)addToList {
-    [[NSNotificationCenter defaultCenter] postNotificationName:XCFBasketListDidAddIngredientNotification object:self userInfo:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:XCFBasketListDidAddIngredientNotification
+                                                        object:self userInfo:nil];
 }
 
 - (void)dealloc {

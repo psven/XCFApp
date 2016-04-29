@@ -18,18 +18,14 @@
 #import <MJExtension.h>
 
 @interface XCFKitchenBuyViewController ()
-
 @property (nonatomic, strong) AFHTTPSessionManager *mananger;
-/** 模型数据 */
 @property (nonatomic, strong) NSMutableArray *reviewsArray;
-/** 存储cell内图片轮播器滚动位置 */
-@property (nonatomic, strong) NSMutableArray *imageViewCurrentLocationArray;
-
+@property (nonatomic, strong) NSMutableArray *imageViewCurrentLocationArray; // 存储cell内图片轮播器滚动位置
 @end
 
 @implementation XCFKitchenBuyViewController
 
-static NSString * const dishViewCellIdentifier = @"dishViewCell";
+static NSString *const dishViewCellIdentifier = @"dishViewCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -48,10 +44,12 @@ static NSString * const dishViewCellIdentifier = @"dishViewCell";
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    XCFDishViewCell *cell = [tableView dequeueReusableCellWithIdentifier:dishViewCellIdentifier forIndexPath:indexPath];
+    XCFDishViewCell *cell = [tableView dequeueReusableCellWithIdentifier:dishViewCellIdentifier
+                                                            forIndexPath:indexPath];
     if (self.reviewsArray.count) {
         XCFReview *review = self.reviewsArray[indexPath.row];
         
+        // 添加主图、附加图到要显示的图片数组
         NSMutableArray *imageArray = [NSMutableArray array];
         [imageArray addObjectsFromArray:review.photos];
         if (review.additional_review_photos.count) {
@@ -72,10 +70,10 @@ static NSString * const dishViewCellIdentifier = @"dishViewCell";
         
         cell.actionBlock = ^(DishViewAction action) {
             if (action == DishViewActionName) { // 点击了标题view
-                [weakSelf.navigationController pushViewController:[[XCFGoodsViewController alloc] init] animated:YES];
+                [weakSelf.navigationController pushViewController:[[XCFGoodsViewController alloc] init]
+                                                         animated:YES];
             }
         };
-        
     }
     return cell;
 }
@@ -110,11 +108,9 @@ static NSString * const dishViewCellIdentifier = @"dishViewCell";
                            [self.imageViewCurrentLocationArray addObject:@(0)];
                        }
                    }
-                   
                    [self.tableView reloadData];
                    
                } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                   NSLog(@"loadNewData --- failure");
                }];
 }
 
@@ -133,7 +129,6 @@ static NSString * const dishViewCellIdentifier = @"dishViewCell";
                    [self.tableView reloadData];
                    [self.tableView.mj_footer endRefreshing];
                } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                   NSLog(@"loadMoreData --- failure");
                    [self.tableView.mj_footer endRefreshing];
                }];
 }
@@ -146,7 +141,8 @@ static NSString * const dishViewCellIdentifier = @"dishViewCell";
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor clearColor];
     self.view.backgroundColor = XCFGlobalBackgroundColor;
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([XCFDishViewCell class]) bundle:nil] forCellReuseIdentifier:dishViewCellIdentifier];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([XCFDishViewCell class]) bundle:nil]
+         forCellReuseIdentifier:dishViewCellIdentifier];
 }
 
 - (void)setupRefresh {

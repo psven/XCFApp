@@ -19,13 +19,9 @@
 #import <MJExtension.h>
 
 @interface XCFFeedsViewController () <UIActionSheetDelegate>
-
 @property (nonatomic, strong) AFHTTPSessionManager *mananger;
-/** 模型数据 */
 @property (nonatomic, strong) NSMutableArray *feedsArray;
-/** 存储cell内图片轮播器滚动位置 */
-@property (nonatomic, strong) NSMutableArray *imageViewCurrentLocationArray;
-
+@property (nonatomic, strong) NSMutableArray *imageViewCurrentLocationArray; // 存储cell内图片轮播器滚动位置
 @end
 
 @implementation XCFFeedsViewController
@@ -40,6 +36,7 @@ static NSString * const dishViewCellIdentifier = @"dishViewCell";
     [self loadNewData];
 }
 
+
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -47,32 +44,34 @@ static NSString * const dishViewCellIdentifier = @"dishViewCell";
     return self.feedsArray.count;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     XCFDishViewCell *cell = [tableView dequeueReusableCellWithIdentifier:dishViewCellIdentifier forIndexPath:indexPath];
     if (self.feedsArray.count) {
         XCFFeeds *feeds = self.feedsArray[indexPath.row];
         
+        // 添加主图、附加图到要显示的图片数组
         NSMutableArray *imageArray = [NSMutableArray array];
         if (feeds.dish) [imageArray addObject:feeds.dish.main_pic];
         if (feeds.dish.extra_pics.count) {
             NSArray *extraPicArray = [XCFPicture mj_objectArrayWithKeyValuesArray:feeds.dish.extra_pics];
             [imageArray addObjectsFromArray:extraPicArray];
         }
-        
         cell.type = XCFShowViewTypeDish;
         cell.dish = feeds.dish;
         cell.imageArray = imageArray;
+        
         // 赋值每个cell对应的图片滚动位置
         cell.imageViewCurrentLocation = [self.imageViewCurrentLocationArray[indexPath.row] floatValue];
         
         WeakSelf;
-        // 防止cell的复用机制导致图片轮播器的位置错乱
+        
+        // 大图拖拽回调：防止cell的复用机制导致图片轮播器的位置错乱
         cell.imageViewDidScrolledBlock = ^(CGFloat finalContentOffsetX) {
             // 拿到最后的位置保存到数组中
             weakSelf.imageViewCurrentLocationArray[indexPath.row] = @(finalContentOffsetX);
         };
         
+        // 控件点击回调
         cell.actionBlock = ^(DishViewAction action) {
             // 标题
             if (action == DishViewActionName) {
@@ -136,7 +135,6 @@ static NSString * const dishViewCellIdentifier = @"dishViewCell";
                    [self.tableView.mj_header endRefreshing];
                    
                } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                   NSLog(@"loadNewData --- failure");
                    [self.tableView.mj_header endRefreshing];
                }];
 }
@@ -157,7 +155,6 @@ static NSString * const dishViewCellIdentifier = @"dishViewCell";
                    [self.tableView reloadData];
                    [self.tableView.mj_footer endRefreshing];
                } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                   NSLog(@"loadMoreData --- failure");
                    [self.tableView.mj_footer endRefreshing];
                }];
 }
@@ -165,8 +162,7 @@ static NSString * const dishViewCellIdentifier = @"dishViewCell";
 
 #pragma mark - 事件处理
 - (void)uploadMyDish {
-    UINavigationController *navCon = [[UINavigationController alloc] initWithRootViewController:[[XCFUploadDishViewController alloc]
-                                                                                                 initWithStyle:UITableViewStyleGrouped]];
+    UINavigationController *navCon = [[UINavigationController alloc] initWithRootViewController:[[XCFUploadDishViewController alloc] initWithStyle:UITableViewStyleGrouped]];
     [self.navigationController presentViewController:navCon animated:YES completion:nil];
 }
 
@@ -194,7 +190,8 @@ static NSString * const dishViewCellIdentifier = @"dishViewCell";
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor clearColor];
     self.view.backgroundColor = XCFGlobalBackgroundColor;
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([XCFDishViewCell class]) bundle:nil] forCellReuseIdentifier:dishViewCellIdentifier];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([XCFDishViewCell class]) bundle:nil]
+         forCellReuseIdentifier:dishViewCellIdentifier];
 }
 
 - (void)setupRefresh {
