@@ -40,7 +40,7 @@
         _headerheight = XCFRecipeListViewMarginHeadTitle + titleHeight + XCFRecipeListViewMarginHeadTitle2Name*5 + XCFRecipeListViewHeightAuthorName + XCFRecipeListViewHeightCollectButton;
     }
     
-    return _headerheight;
+    return _headerheight * 1.2;
 }
 
 /**

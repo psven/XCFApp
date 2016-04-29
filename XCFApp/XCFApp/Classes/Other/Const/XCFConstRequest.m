@@ -19,7 +19,7 @@ NSString * const XCFRequestKitchenNav = @"http://api.xiachufang.com/v2/init_page
 /** 下厨房 - 早餐 */
 NSString * const XCFRequestKitchenBreakfast = @"http://api.xiachufang.com/v2/events/show.json?version=5.1.1&id=100112278&api_sign=b456f8072ac5ebc748ff4ffee949c4ec&api_key=0f9f79be1dac5f003e7de6f876b17c00&origin=iphone&sk=7UnwJ-JkQ36hbfrMRoL0fA";
 /** 下厨房 - 早餐 - 作品数据 */
-NSString * const XCFRequestKitchenBreakfastDishes = @"http://api.xiachufang.com/v2/events/100112280/dishes_order_by_hot.json?offset=0&detail=true&origin=iphone&api_sign=a9edd217ec04bf7c3b8e4fc576dc8d26&sk=7UnwJ-JkQ36hbfrMRoL0fA&limit=18&version=5.1.1&timestamp=1461334412&api_key=0f9f79be1dac5f003e7de6f876b17c00";
+NSString * const XCFRequestKitchenBreakfastDishes = @"http://api.xiachufang.com/v2/events/100114703/dishes_order_by_hot.json?offset=0&detail=true&origin=iphone&api_sign=db13cce725dceac552a1bd41c745b64f&sk=7UnwJ-JkQ36hbfrMRoL0fA&limit=18&version=5.1.1&timestamp=1461900269&api_key=0f9f79be1dac5f003e7de6f876b17c00";
 /** 下厨房 - 排行榜 */
 NSString * const XCFRequestKitchenTopList = @"http://www.xiachufang.com/page/top-list/";
 /** 下厨房 - 看视频 */
@@ -31,7 +31,7 @@ NSString * const XCFRequestKitchenRecipeCategory = @"http://www.xiachufang.com/p
 
 
 /** 下厨房 - cell跳转数据 - 模板2 菜单详情 */
-NSString * const XCFRequestKitchenRecipeList = @"http://api.xiachufang.com/v2/recipe_lists/show.json?origin=iphone&id=100072887&api_sign=ec3c1a93b369b4f339840abf3f2e64de&pic_size=720&sk=7UnwJ-JkQ36hbfrMRoL0fA&version=5.1.1&api_key=0f9f79be1dac5f003e7de6f876b17c00";
+NSString * const XCFRequestKitchenRecipeList = @"http://api.xiachufang.com/v2/recipe_lists/show.json?origin=iphone&id=101554496&api_sign=9b01343de4bc0f61a5b2f051227d00f9&pic_size=720&sk=7UnwJ-JkQ36hbfrMRoL0fA&version=5.1.1&api_key=0f9f79be1dac5f003e7de6f876b17c00";
 /** 下厨房 - cell跳转数据 - 模板2 菜单内菜谱理由数据 */
 NSString * const XCFRequestKitchenRecipeReason = @"http://api.xiachufang.com/v2/recipe_lists/100072887/recipes_v2.json?offset=0&origin=iphone&api_sign=2057b55a66e4d86a9284232741762f0e&sk=7UnwJ-JkQ36hbfrMRoL0fA&limit=20&version=5.1.1&api_key=0f9f79be1dac5f003e7de6f876b17c00";
 /** 下厨房 - cell跳转数据 - 模板4 作品数据 */

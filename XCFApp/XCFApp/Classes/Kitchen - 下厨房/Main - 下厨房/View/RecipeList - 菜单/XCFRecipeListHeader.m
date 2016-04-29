@@ -38,11 +38,13 @@
         self.backgroundColor = XCFGlobalBackgroundColor;
         // 菜单标题
         _nameLabel = [[UILabel alloc] init];
-        _nameLabel.font = [UIFont systemFontOfSize:XCFRecipeCellFontSizeFirstTitle];
+        _nameLabel.font = [UIFont systemFontOfSize:20];
+        _nameLabel.numberOfLines = 0;
         [self addSubview:_nameLabel];
         [_nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(self);
-            make.top.equalTo(self).offset(XCFRecipeListViewMarginHeadTitle);
+            make.top.equalTo(self).offset(20);
+            make.width.equalTo(@(XCFScreenWidth-40));
         }];
         
         
@@ -70,7 +72,7 @@
         
         
         // 菜单描述
-        _descLabel = [UILabel labelWithFont:[UIFont systemFontOfSize:XCFRecipeCellFontSizeTitle]
+        _descLabel = [UILabel labelWithFont:[UIFont systemFontOfSize:16]
                                   textColor:[UIColor blackColor]
                               numberOfLines:0
                               textAlignment:NSTextAlignmentLeft];
@@ -105,12 +107,19 @@
     _recipeList = recipeList;
     
     self.nameLabel.text = recipeList.name;
-    self.descLabel.text = recipeList.desc;
+//    self.descLabel.text = recipeList.desc;
     self.expertIcon.hidden = !recipeList.author.is_expert;
     
     NSString *displayAuthorName = [NSString stringWithFormat:@"来自：%@", recipeList.author.name];
     [self.authorNameLabel setAttributeTextWithString:displayAuthorName
                                                range:NSMakeRange(3, recipeList.author.name.length)];
+    
+    NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:recipeList.desc];
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    [paragraphStyle setLineSpacing:8];
+    [attrString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle
+                             range:NSMakeRange(0, recipeList.desc.length)];
+    [self.descLabel setAttributedText:attrString];
 }
 
 - (void)collectButtonClicked {
