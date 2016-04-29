@@ -1,0 +1,2553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		56C7E7771BBB489837FE88FD /* libPods-XCFApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B943ADB34F2252CAF87BC38 /* libPods-XCFApp.a */; };
+		D4074F831CD207E200811CDF /* XCFAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4074F821CD207E200811CDF /* XCFAppTests.m */; };
+		D4074F8E1CD207E200811CDF /* XCFAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4074F8D1CD207E200811CDF /* XCFAppUITests.m */; };
+		D407525E1CD20E5600811CDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D407525D1CD20E5600811CDF /* Assets.xcassets */; };
+		D40752601CD20E5E00811CDF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D407525F1CD20E5E00811CDF /* Info.plist */; };
+		D40754491CD2378000811CDF /* XCFBazaarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752671CD2378000811CDF /* XCFBazaarController.m */; };
+		D407544A1CD2378000811CDF /* XCFDetailReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D407526D1CD2378000811CDF /* XCFDetailReviewViewController.m */; };
+		D407544B1CD2378000811CDF /* XCFGoodsReviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D407526F1CD2378000811CDF /* XCFGoodsReviewController.m */; };
+		D407544C1CD2378000811CDF /* XCFGoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752711CD2378000811CDF /* XCFGoodsViewController.m */; };
+		D407544D1CD2378000811CDF /* XCFGoodsAttrs.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752741CD2378000811CDF /* XCFGoodsAttrs.m */; };
+		D407544E1CD2378000811CDF /* XCFGoodsKind.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752761CD2378000811CDF /* XCFGoodsKind.m */; };
+		D407544F1CD2378000811CDF /* XCFShop.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752781CD2378000811CDF /* XCFShop.m */; };
+		D40754501CD2378000811CDF /* XCFGoodsDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = D407527C1CD2378000811CDF /* XCFGoodsDetailView.m */; };
+		D40754511CD2378000811CDF /* XCFGoodsDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D407527D1CD2378000811CDF /* XCFGoodsDetailView.xib */; };
+		D40754521CD2378000811CDF /* XCFGoodsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D407527F1CD2378000811CDF /* XCFGoodsHeaderView.m */; };
+		D40754531CD2378000811CDF /* XCFGoodsShopPromotionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752811CD2378000811CDF /* XCFGoodsShopPromotionView.m */; };
+		D40754541CD2378000811CDF /* XCFGoodsShopPromotionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40752821CD2378000811CDF /* XCFGoodsShopPromotionView.xib */; };
+		D40754551CD2378000811CDF /* XCFAttrsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752851CD2378000811CDF /* XCFAttrsCell.m */; };
+		D40754561CD2378000811CDF /* XCFGoodsAttrsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752871CD2378000811CDF /* XCFGoodsAttrsViewCell.m */; };
+		D40754571CD2378000811CDF /* XCFGoodsImageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752891CD2378000811CDF /* XCFGoodsImageTextView.m */; };
+		D40754581CD2378000811CDF /* XCFDetailReviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D407528B1CD2378000811CDF /* XCFDetailReviewCell.m */; };
+		D40754591CD2378000811CDF /* XCFDetailReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D407528C1CD2378000811CDF /* XCFDetailReviewCell.xib */; };
+		D407545A1CD2378000811CDF /* XCFGoodsBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = D407528E1CD2378000811CDF /* XCFGoodsBottomView.m */; };
+		D407545B1CD2378000811CDF /* XCFGoodsFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752901CD2378000811CDF /* XCFGoodsFooterView.m */; };
+		D407545C1CD2378000811CDF /* XCFGoodsFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40752911CD2378000811CDF /* XCFGoodsFooterView.xib */; };
+		D407545D1CD2378000811CDF /* XCFGoodsShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752931CD2378000811CDF /* XCFGoodsShopCell.m */; };
+		D407545E1CD2378000811CDF /* XCFGoodsShopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40752941CD2378000811CDF /* XCFGoodsShopCell.xib */; };
+		D407545F1CD2378000811CDF /* XCFCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752981CD2378000811CDF /* XCFCartViewController.m */; };
+		D40754601CD2378000811CDF /* XCFOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D407529A1CD2378000811CDF /* XCFOrderViewController.m */; };
+		D40754611CD2378000811CDF /* XCFCartItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D407529D1CD2378000811CDF /* XCFCartItem.m */; };
+		D40754621CD2378000811CDF /* XCFCartItemTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D407529F1CD2378000811CDF /* XCFCartItemTool.m */; };
+		D40754631CD2378000811CDF /* XCFOrderAddressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752A31CD2378000811CDF /* XCFOrderAddressView.m */; };
+		D40754641CD2378000811CDF /* XCFOrderAddressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40752A41CD2378000811CDF /* XCFOrderAddressView.xib */; };
+		D40754651CD2378000811CDF /* XCFOrderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752A61CD2378000811CDF /* XCFOrderFooterView.m */; };
+		D40754661CD2378000811CDF /* XCFOrderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40752A71CD2378000811CDF /* XCFOrderFooterView.xib */; };
+		D40754671CD2378000811CDF /* XCFOrderPayView.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752A91CD2378000811CDF /* XCFOrderPayView.m */; };
+		D40754681CD2378000811CDF /* XCFOrderPayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40752AA1CD2378000811CDF /* XCFOrderPayView.xib */; };
+		D40754691CD2378000811CDF /* XCFOrderSectionFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752AC1CD2378000811CDF /* XCFOrderSectionFooter.m */; };
+		D407546A1CD2378000811CDF /* XCFOrderSectionFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40752AD1CD2378000811CDF /* XCFOrderSectionFooter.xib */; };
+		D407546B1CD2378000811CDF /* XCFCartItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752B01CD2378000811CDF /* XCFCartItemCell.m */; };
+		D407546C1CD2378000811CDF /* XCFCartItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40752B11CD2378000811CDF /* XCFCartItemCell.xib */; };
+		D407546D1CD2378000811CDF /* XCFCartItemShopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752B31CD2378000811CDF /* XCFCartItemShopView.m */; };
+		D407546E1CD2378000811CDF /* XCFCartItemShopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40752B41CD2378000811CDF /* XCFCartItemShopView.xib */; };
+		D407546F1CD2378000811CDF /* XCFCartSettlementView.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752B61CD2378000811CDF /* XCFCartSettlementView.m */; };
+		D40754701CD2378000811CDF /* XCFCartSettlementView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40752B71CD2378000811CDF /* XCFCartSettlementView.xib */; };
+		D40754711CD2378000811CDF /* XCFCommunityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752BB1CD2378000811CDF /* XCFCommunityViewController.m */; };
+		D40754721CD2378000811CDF /* XCFTopicDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752BD1CD2378000811CDF /* XCFTopicDetailController.m */; };
+		D40754731CD2378000811CDF /* XCFTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752BF1CD2378000811CDF /* XCFTopicViewController.m */; };
+		D40754741CD2378000811CDF /* XCFCommentTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752C21CD2378000811CDF /* XCFCommentTool.m */; };
+		D40754751CD2378000811CDF /* XCFForum.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752C41CD2378000811CDF /* XCFForum.m */; };
+		D40754761CD2378000811CDF /* XCFTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752C61CD2378000811CDF /* XCFTopic.m */; };
+		D40754771CD2378000811CDF /* XCFTopicComment.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752C81CD2378000811CDF /* XCFTopicComment.m */; };
+		D40754781CD2378000811CDF /* XCFAddCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752CB1CD2378000811CDF /* XCFAddCommentView.m */; };
+		D40754791CD2378000811CDF /* XCFAddCommentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40752CC1CD2378000811CDF /* XCFAddCommentView.xib */; };
+		D407547A1CD2378000811CDF /* XCFCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752CE1CD2378000811CDF /* XCFCommentCell.m */; };
+		D407547B1CD2378000811CDF /* XCFCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40752CF1CD2378000811CDF /* XCFCommentCell.xib */; };
+		D407547C1CD2378000811CDF /* XCFForumViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752D11CD2378000811CDF /* XCFForumViewCell.m */; };
+		D407547D1CD2378000811CDF /* XCFForumViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40752D21CD2378000811CDF /* XCFForumViewCell.xib */; };
+		D407547E1CD2378000811CDF /* XCFTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752D41CD2378000811CDF /* XCFTopicCell.m */; };
+		D407547F1CD2378000811CDF /* XCFTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40752D51CD2378000811CDF /* XCFTopicCell.xib */; };
+		D40754801CD2378000811CDF /* XCFIngredientListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752DA1CD2378000811CDF /* XCFIngredientListViewController.m */; };
+		D40754811CD2378000811CDF /* XCFIngredientTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752DD1CD2378000811CDF /* XCFIngredientTool.m */; };
+		D40754821CD2378000811CDF /* XCFBuyListSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752E01CD2378000811CDF /* XCFBuyListSectionHeader.m */; };
+		D40754831CD2378000811CDF /* XCFBuyListSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40752E11CD2378000811CDF /* XCFBuyListSectionHeader.xib */; };
+		D40754841CD2378000811CDF /* XCFIngredientListTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752E31CD2378000811CDF /* XCFIngredientListTopView.m */; };
+		D40754851CD2378000811CDF /* XCFIngredientListTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40752E41CD2378000811CDF /* XCFIngredientListTopView.xib */; };
+		D40754861CD2378000811CDF /* XCFIngredientListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752E61CD2378000811CDF /* XCFIngredientListViewCell.m */; };
+		D40754871CD2378000811CDF /* XCFIngredientListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40752E71CD2378000811CDF /* XCFIngredientListViewCell.xib */; };
+		D40754881CD2378000811CDF /* XCFIngredientView.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752E91CD2378000811CDF /* XCFIngredientView.m */; };
+		D40754891CD2378000811CDF /* XCFCreateRecipeInstructionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752EE1CD2378000811CDF /* XCFCreateRecipeInstructionCell.m */; };
+		D407548A1CD2378000811CDF /* XCFCreateTipsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752F01CD2378000811CDF /* XCFCreateTipsCell.m */; };
+		D407548B1CD2378000811CDF /* XCFDraftRecipeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752F21CD2378000811CDF /* XCFDraftRecipeCell.m */; };
+		D407548C1CD2378000811CDF /* XCFDraftRecipeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40752F31CD2378000811CDF /* XCFDraftRecipeCell.xib */; };
+		D407548D1CD2378000811CDF /* XCFIngredientEditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752F51CD2378000811CDF /* XCFIngredientEditCell.m */; };
+		D407548E1CD2378000811CDF /* XCFIngredientEditCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40752F61CD2378000811CDF /* XCFIngredientEditCell.xib */; };
+		D407548F1CD2378000811CDF /* XCFCreateIngredientFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752F91CD2378000811CDF /* XCFCreateIngredientFooter.m */; };
+		D40754901CD2378000811CDF /* XCFCreateInstructionFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752FB1CD2378000811CDF /* XCFCreateInstructionFooter.m */; };
+		D40754911CD2378000811CDF /* XCFIngredientEditFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752FD1CD2378000811CDF /* XCFIngredientEditFooter.m */; };
+		D40754921CD2378000811CDF /* XCFRecipeEditViewFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = D40752FF1CD2378000811CDF /* XCFRecipeEditViewFooter.m */; };
+		D40754931CD2378000811CDF /* XCFRecipeEditViewFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40753001CD2378000811CDF /* XCFRecipeEditViewFooter.xib */; };
+		D40754941CD2378000811CDF /* XCFRecipeEditViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753031CD2378000811CDF /* XCFRecipeEditViewHeader.m */; };
+		D40754951CD2378000811CDF /* XCFRecipeEditViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40753041CD2378000811CDF /* XCFRecipeEditViewHeader.xib */; };
+		D40754961CD2378000811CDF /* XCFDraftBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753081CD2378000811CDF /* XCFDraftBoxViewController.m */; };
+		D40754971CD2378000811CDF /* XCFEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = D407530A1CD2378000811CDF /* XCFEditController.m */; };
+		D40754981CD2378000811CDF /* XCFIngredientEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = D407530C1CD2378000811CDF /* XCFIngredientEditController.m */; };
+		D40754991CD2378000811CDF /* XCFCreateRecipe+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753101CD2378000811CDF /* XCFCreateRecipe+Tool.m */; };
+		D407549A1CD2378000811CDF /* XCFRecipeDraftTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753121CD2378000811CDF /* XCFRecipeDraftTool.m */; };
+		D407549B1CD2378000811CDF /* XCFCreateIngredient.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753141CD2378000811CDF /* XCFCreateIngredient.m */; };
+		D407549C1CD2378000811CDF /* XCFCreateInstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753161CD2378000811CDF /* XCFCreateInstruction.m */; };
+		D407549D1CD2378000811CDF /* XCFCreateRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753181CD2378000811CDF /* XCFCreateRecipe.m */; };
+		D407549E1CD2378000811CDF /* XCFCreateRecipeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D407531C1CD2378000811CDF /* XCFCreateRecipeController.m */; };
+		D407549F1CD2378000811CDF /* XCFRecipeCreateController.m in Sources */ = {isa = PBXBuildFile; fileRef = D407531E1CD2378000811CDF /* XCFRecipeCreateController.m */; };
+		D40754A01CD2378000811CDF /* XCFDishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753221CD2378000811CDF /* XCFDishViewController.m */; };
+		D40754A11CD2378000811CDF /* XCFKitchenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753241CD2378000811CDF /* XCFKitchenViewController.m */; };
+		D40754A21CD2378000811CDF /* XCFRecipeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753261CD2378000811CDF /* XCFRecipeListViewController.m */; };
+		D40754A31CD2378000811CDF /* XCFRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753281CD2378000811CDF /* XCFRecipeViewController.m */; };
+		D40754A41CD2378000811CDF /* XCFContent.m in Sources */ = {isa = PBXBuildFile; fileRef = D407532C1CD2378000811CDF /* XCFContent.m */; };
+		D40754A51CD2378000811CDF /* XCFContents.m in Sources */ = {isa = PBXBuildFile; fileRef = D407532E1CD2378000811CDF /* XCFContents.m */; };
+		D40754A61CD2378000811CDF /* XCFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753301CD2378000811CDF /* XCFImage.m */; };
+		D40754A71CD2378000811CDF /* XCFIssues.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753321CD2378000811CDF /* XCFIssues.m */; };
+		D40754A81CD2378000811CDF /* XCFItems.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753341CD2378000811CDF /* XCFItems.m */; };
+		D40754A91CD2378000811CDF /* XCFNav.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753371CD2378000811CDF /* XCFNav.m */; };
+		D40754AA1CD2378000811CDF /* XCFNavContent.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753391CD2378000811CDF /* XCFNavContent.m */; };
+		D40754AB1CD2378000811CDF /* XCFPopEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D407533B1CD2378000811CDF /* XCFPopEvent.m */; };
+		D40754AC1CD2378000811CDF /* XCFPopEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = D407533D1CD2378000811CDF /* XCFPopEvents.m */; };
+		D40754AD1CD2378000811CDF /* XCFAddedRecipeList.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753411CD2378000811CDF /* XCFAddedRecipeList.m */; };
+		D40754AE1CD2378000811CDF /* XCFRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753431CD2378000811CDF /* XCFRecipe.m */; };
+		D40754AF1CD2378000811CDF /* XCFRecipeContent.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753451CD2378000811CDF /* XCFRecipeContent.m */; };
+		D40754B01CD2378000811CDF /* XCFRecipeDish.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753471CD2378000811CDF /* XCFRecipeDish.m */; };
+		D40754B11CD2378000811CDF /* XCFRecipeIngredient.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753491CD2378000811CDF /* XCFRecipeIngredient.m */; };
+		D40754B21CD2378000811CDF /* XCFRecipeInstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = D407534B1CD2378000811CDF /* XCFRecipeInstruction.m */; };
+		D40754B31CD2378000811CDF /* XCFRecipeStats.m in Sources */ = {isa = PBXBuildFile; fileRef = D407534D1CD2378000811CDF /* XCFRecipeStats.m */; };
+		D40754B41CD2378000811CDF /* XCFRecipeList.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753501CD2378000811CDF /* XCFRecipeList.m */; };
+		D40754B51CD2378000811CDF /* XCFRecipeListReason.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753521CD2378000811CDF /* XCFRecipeListReason.m */; };
+		D40754B61CD2378000811CDF /* XCFDishCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753571CD2378000811CDF /* XCFDishCell.m */; };
+		D40754B71CD2378000811CDF /* XCFDishCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40753581CD2378000811CDF /* XCFDishCell.xib */; };
+		D40754B81CD2378000811CDF /* XCFDishShowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D407535A1CD2378000811CDF /* XCFDishShowCell.m */; };
+		D40754B91CD2378000811CDF /* XCFDishViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D407535C1CD2378000811CDF /* XCFDishViewCell.m */; };
+		D40754BA1CD2378000811CDF /* XCFDishViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D407535D1CD2378000811CDF /* XCFDishViewCell.xib */; };
+		D40754BB1CD2378000811CDF /* XCFDishNavDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753601CD2378000811CDF /* XCFDishNavDetailView.m */; };
+		D40754BC1CD2378000811CDF /* XCFKitchenHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753621CD2378000811CDF /* XCFKitchenHeader.m */; };
+		D40754BD1CD2378000811CDF /* XCFNavButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753641CD2378000811CDF /* XCFNavButton.m */; };
+		D40754BE1CD2378000811CDF /* XCFTopNavImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753661CD2378000811CDF /* XCFTopNavImageView.m */; };
+		D40754BF1CD2378000811CDF /* XCFAddedRecipeListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753691CD2378000811CDF /* XCFAddedRecipeListViewCell.m */; };
+		D40754C01CD2378000811CDF /* XCFAddedRecipeListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D407536A1CD2378000811CDF /* XCFAddedRecipeListViewCell.xib */; };
+		D40754C11CD2378000811CDF /* XCFRecipeHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D407536C1CD2378000811CDF /* XCFRecipeHeader.m */; };
+		D40754C21CD2378000811CDF /* XCFRecipeIngredientCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D407536E1CD2378000811CDF /* XCFRecipeIngredientCell.m */; };
+		D40754C31CD2378000811CDF /* XCFRecipeInstructionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753701CD2378000811CDF /* XCFRecipeInstructionCell.m */; };
+		D40754C41CD2378000811CDF /* XCFRecipeSupplementaryFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753721CD2378000811CDF /* XCFRecipeSupplementaryFooter.m */; };
+		D40754C51CD2378000811CDF /* XCFRecipeListHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753751CD2378000811CDF /* XCFRecipeListHeader.m */; };
+		D40754C61CD2378000811CDF /* XCFRecipeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753771CD2378000811CDF /* XCFRecipeCell.m */; };
+		D40754C71CD2378000811CDF /* XCFFeedsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D407537B1CD2378000811CDF /* XCFFeedsViewController.m */; };
+		D40754C81CD2378000811CDF /* XCFKitchenBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D407537D1CD2378000811CDF /* XCFKitchenBuyViewController.m */; };
+		D40754C91CD2378000811CDF /* XCFMealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D407537F1CD2378000811CDF /* XCFMealViewController.m */; };
+		D40754CA1CD2378000811CDF /* XCFGoods.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753831CD2378000811CDF /* XCFGoods.m */; };
+		D40754CB1CD2378000811CDF /* XCFReview.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753851CD2378000811CDF /* XCFReview.m */; };
+		D40754CC1CD2378000811CDF /* XCFReviewCommodity.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753871CD2378000811CDF /* XCFReviewCommodity.m */; };
+		D40754CD1CD2378000811CDF /* XCFReviewPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753891CD2378000811CDF /* XCFReviewPhoto.m */; };
+		D40754CE1CD2378000811CDF /* XCFComment.m in Sources */ = {isa = PBXBuildFile; fileRef = D407538C1CD2378000811CDF /* XCFComment.m */; };
+		D40754CF1CD2378000811CDF /* XCFDiggUsers.m in Sources */ = {isa = PBXBuildFile; fileRef = D407538E1CD2378000811CDF /* XCFDiggUsers.m */; };
+		D40754D01CD2378000811CDF /* XCFDish.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753901CD2378000811CDF /* XCFDish.m */; };
+		D40754D11CD2378000811CDF /* XCFEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753921CD2378000811CDF /* XCFEvents.m */; };
+		D40754D21CD2378000811CDF /* XCFFeeds.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753941CD2378000811CDF /* XCFFeeds.m */; };
+		D40754D31CD2378000811CDF /* XCFFeedsContent.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753961CD2378000811CDF /* XCFFeedsContent.m */; };
+		D40754D41CD2378000811CDF /* XCFPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753981CD2378000811CDF /* XCFPicture.m */; };
+		D40754D51CD2378000811CDF /* XCFMealInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D407539B1CD2378000811CDF /* XCFMealInfo.m */; };
+		D40754D61CD2378000811CDF /* XCFMealDishCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D407539F1CD2378000811CDF /* XCFMealDishCell.m */; };
+		D40754D71CD2378000811CDF /* XCFMealDishCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40753A01CD2378000811CDF /* XCFMealDishCell.xib */; };
+		D40754D81CD2378000811CDF /* XCFMealHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753A21CD2378000811CDF /* XCFMealHeader.m */; };
+		D40754D91CD2378000811CDF /* XCFMealHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40753A31CD2378000811CDF /* XCFMealHeader.xib */; };
+		D40754DA1CD2378000811CDF /* XCFSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753A71CD2378000811CDF /* XCFSearchResultViewController.m */; };
+		D40754DB1CD2378000811CDF /* XCFSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753A91CD2378000811CDF /* XCFSearchViewController.m */; };
+		D40754DC1CD2378000811CDF /* XCFSearchKeywordsTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753AC1CD2378000811CDF /* XCFSearchKeywordsTool.m */; };
+		D40754DD1CD2378000811CDF /* XCFSearchViewFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753AF1CD2378000811CDF /* XCFSearchViewFooter.m */; };
+		D40754DE1CD2378000811CDF /* XCFSearchViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753B11CD2378000811CDF /* XCFSearchViewHeader.m */; };
+		D40754DF1CD2378000811CDF /* XCFAddTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753B51CD2378000811CDF /* XCFAddTagViewController.m */; };
+		D40754E01CD2378000811CDF /* XCFUploadDishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753B71CD2378000811CDF /* XCFUploadDishViewController.m */; };
+		D40754E11CD2378000811CDF /* XCFUploadDataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753BA1CD2378000811CDF /* XCFUploadDataTool.m */; };
+		D40754E21CD2378000811CDF /* XCFMealsAndTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753BD1CD2378000811CDF /* XCFMealsAndTagsView.m */; };
+		D40754E31CD2378000811CDF /* XCFMealsAndTagsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40753BE1CD2378000811CDF /* XCFMealsAndTagsView.xib */; };
+		D40754E41CD2378000811CDF /* XCFPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753C01CD2378000811CDF /* XCFPhotoView.m */; };
+		D40754E51CD2378000811CDF /* XCFPhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40753C11CD2378000811CDF /* XCFPhotoView.xib */; };
+		D40754E61CD2378000811CDF /* XCFTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753C31CD2378000811CDF /* XCFTagView.m */; };
+		D40754E71CD2378000811CDF /* XCFTagView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40753C41CD2378000811CDF /* XCFTagView.xib */; };
+		D40754E81CD2378000811CDF /* XCFTextAndPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753C61CD2378000811CDF /* XCFTextAndPhotoView.m */; };
+		D40754E91CD2378000811CDF /* XCFTextAndPhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40753C71CD2378000811CDF /* XCFTextAndPhotoView.xib */; };
+		D40754F31CD2378000811CDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753DE1CD2378000811CDF /* AppDelegate.m */; };
+		D40754F41CD2378000811CDF /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753E11CD2378000811CDF /* NSDate+Extension.m */; };
+		D40754F51CD2378000811CDF /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753E31CD2378000811CDF /* NSString+Extension.m */; };
+		D40754F61CD2378000811CDF /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753E51CD2378000811CDF /* UIBarButtonItem+Extension.m */; };
+		D40754F71CD2378000811CDF /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753E71CD2378000811CDF /* UIButton+Extension.m */; };
+		D40754F81CD2378000811CDF /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753E91CD2378000811CDF /* UIImage+Extension.m */; };
+		D40754F91CD2378000811CDF /* UIImageView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753EB1CD2378000811CDF /* UIImageView+Extension.m */; };
+		D40754FA1CD2378000811CDF /* UILabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753ED1CD2378000811CDF /* UILabel+Extension.m */; };
+		D40754FB1CD2378000811CDF /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753EF1CD2378000811CDF /* UIViewController+Extension.m */; };
+		D40754FC1CD2378000811CDF /* XCFConst.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753F21CD2378000811CDF /* XCFConst.m */; };
+		D40754FD1CD2378000811CDF /* XCFConstRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753F41CD2378000811CDF /* XCFConstRequest.m */; };
+		D40754FE1CD2378000811CDF /* XCFConstString.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753F61CD2378000811CDF /* XCFConstString.m */; };
+		D40754FF1CD2378000811CDF /* XCFImageShowController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753F91CD2378000811CDF /* XCFImageShowController.m */; };
+		D40755001CD2378000811CDF /* XCFNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753FB1CD2378000811CDF /* XCFNavigationController.m */; };
+		D40755011CD2378000811CDF /* XCFTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753FD1CD2378000811CDF /* XCFTabBarController.m */; };
+		D40755021CD2378000811CDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D40753FE1CD2378000811CDF /* main.m */; };
+		D40755031CD2378000811CDF /* XCFCity.m in Sources */ = {isa = PBXBuildFile; fileRef = D40754021CD2378000811CDF /* XCFCity.m */; };
+		D40755041CD2378000811CDF /* XCFDetailArea.m in Sources */ = {isa = PBXBuildFile; fileRef = D40754041CD2378000811CDF /* XCFDetailArea.m */; };
+		D40755051CD2378000811CDF /* XCFDetailCity.m in Sources */ = {isa = PBXBuildFile; fileRef = D40754061CD2378000811CDF /* XCFDetailCity.m */; };
+		D40755061CD2378000811CDF /* XCFDetailLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = D40754081CD2378000811CDF /* XCFDetailLocation.m */; };
+		D40755071CD2378000811CDF /* XCFLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = D407540A1CD2378000811CDF /* XCFLocation.m */; };
+		D40755081CD2378000811CDF /* XCFAddMark.m in Sources */ = {isa = PBXBuildFile; fileRef = D407540D1CD2378000811CDF /* XCFAddMark.m */; };
+		D40755091CD2378000811CDF /* XCFBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = D407540F1CD2378000811CDF /* XCFBottomView.m */; };
+		D407550A1CD2378000811CDF /* XCFCartIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = D40754111CD2378000811CDF /* XCFCartIcon.m */; };
+		D407550B1CD2378000811CDF /* XCFCartIcon.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40754121CD2378000811CDF /* XCFCartIcon.xib */; };
+		D407550C1CD2378000811CDF /* XCFImageShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = D40754141CD2378000811CDF /* XCFImageShowView.m */; };
+		D407550D1CD2378000811CDF /* XCFSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D40754161CD2378000811CDF /* XCFSearchBar.m */; };
+		D407550E1CD2378000811CDF /* XCFStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D40754181CD2378000811CDF /* XCFStarView.m */; };
+		D407553C1CD2380900811CDF /* XCFMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D407552B1CD2380900811CDF /* XCFMeController.m */; };
+		D407553D1CD2380900811CDF /* XCFAuthor.m in Sources */ = {isa = PBXBuildFile; fileRef = D407552E1CD2380900811CDF /* XCFAuthor.m */; };
+		D407553E1CD2380900811CDF /* XCFAuthorDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = D40755301CD2380900811CDF /* XCFAuthorDetail.m */; };
+		D407553F1CD2380900811CDF /* XCFMeInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D40755331CD2380900811CDF /* XCFMeInfoView.m */; };
+		D40755401CD2380900811CDF /* XCFMeInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40755341CD2380900811CDF /* XCFMeInfoView.xib */; };
+		D40755411CD2380900811CDF /* XCFMeSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = D40755361CD2380900811CDF /* XCFMeSwitchView.m */; };
+		D40755421CD2380900811CDF /* XCFMyLocateNDescView.m in Sources */ = {isa = PBXBuildFile; fileRef = D40755381CD2380900811CDF /* XCFMyLocateNDescView.m */; };
+		D40755431CD2380900811CDF /* XCFMyLocateNDescView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40755391CD2380900811CDF /* XCFMyLocateNDescView.xib */; };
+		D40755441CD2380900811CDF /* XCFMyViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D407553B1CD2380900811CDF /* XCFMyViewHeader.m */; };
+		D40755751CD2381100811CDF /* XCFAddressEditingController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40755481CD2381100811CDF /* XCFAddressEditingController.m */; };
+		D40755761CD2381100811CDF /* XCFProfileEditingController.m in Sources */ = {isa = PBXBuildFile; fileRef = D407554A1CD2381100811CDF /* XCFProfileEditingController.m */; };
+		D40755771CD2381100811CDF /* XCFSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D407554C1CD2381100811CDF /* XCFSettingViewController.m */; };
+		D40755781CD2381100811CDF /* XCFShippingAddressController.m in Sources */ = {isa = PBXBuildFile; fileRef = D407554E1CD2381100811CDF /* XCFShippingAddressController.m */; };
+		D40755791CD2381100811CDF /* XCFAddressInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D40755511CD2381100811CDF /* XCFAddressInfo.m */; };
+		D407557A1CD2381100811CDF /* XCFAddressInfoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D40755531CD2381100811CDF /* XCFAddressInfoTool.m */; };
+		D407557B1CD2381100811CDF /* XCFMyInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D40755551CD2381100811CDF /* XCFMyInfo.m */; };
+		D407557C1CD2381100811CDF /* XCFEditingBirthAndGenderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D40755591CD2381100811CDF /* XCFEditingBirthAndGenderCell.m */; };
+		D407557D1CD2381100811CDF /* XCFEditingBirthAndGenderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D407555A1CD2381100811CDF /* XCFEditingBirthAndGenderCell.xib */; };
+		D407557E1CD2381100811CDF /* XCFEditingDescCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D407555C1CD2381100811CDF /* XCFEditingDescCell.m */; };
+		D407557F1CD2381100811CDF /* XCFEditingDescCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D407555D1CD2381100811CDF /* XCFEditingDescCell.xib */; };
+		D40755801CD2381100811CDF /* XCFEditingLocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D407555F1CD2381100811CDF /* XCFEditingLocationCell.m */; };
+		D40755811CD2381100811CDF /* XCFEditingLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40755601CD2381100811CDF /* XCFEditingLocationCell.xib */; };
+		D40755821CD2381100811CDF /* XCFEditingTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D40755621CD2381100811CDF /* XCFEditingTextCell.m */; };
+		D40755831CD2381100811CDF /* XCFEditingTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40755631CD2381100811CDF /* XCFEditingTextCell.xib */; };
+		D40755841CD2381100811CDF /* XCFProfileEditingHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D40755651CD2381100811CDF /* XCFProfileEditingHeader.m */; };
+		D40755851CD2381100811CDF /* XCFProfileEditingHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40755661CD2381100811CDF /* XCFProfileEditingHeader.xib */; };
+		D40755861CD2381100811CDF /* XCFAddAddressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D40755691CD2381100811CDF /* XCFAddAddressView.m */; };
+		D40755871CD2381100811CDF /* XCFAddressEditingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D407556B1CD2381100811CDF /* XCFAddressEditingView.m */; };
+		D40755881CD2381100811CDF /* XCFAddressEditingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D407556C1CD2381100811CDF /* XCFAddressEditingView.xib */; };
+		D40755891CD2381100811CDF /* XCFShippingAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D407556E1CD2381100811CDF /* XCFShippingAddressCell.m */; };
+		D407558A1CD2381100811CDF /* XCFShippingAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D407556F1CD2381100811CDF /* XCFShippingAddressCell.xib */; };
+		D407558B1CD2381100811CDF /* XCFMyInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D40755711CD2381100811CDF /* XCFMyInfoCell.m */; };
+		D407558C1CD2381100811CDF /* XCFMyInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40755721CD2381100811CDF /* XCFMyInfoCell.xib */; };
+		D407558D1CD2381100811CDF /* XCFSettingFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = D40755741CD2381100811CDF /* XCFSettingFooter.m */; };
+		D40755921CD238D000811CDF /* breakfast.json in Resources */ = {isa = PBXBuildFile; fileRef = D407558F1CD238D000811CDF /* breakfast.json */; };
+		D40755931CD238D000811CDF /* location.json in Resources */ = {isa = PBXBuildFile; fileRef = D40755901CD238D000811CDF /* location.json */; };
+		D40755991CD23A3200811CDF /* cart_items.plist in Resources */ = {isa = PBXBuildFile; fileRef = D40755941CD23A3200811CDF /* cart_items.plist */; };
+		D407559A1CD23A3200811CDF /* comment.plist in Resources */ = {isa = PBXBuildFile; fileRef = D40755951CD23A3200811CDF /* comment.plist */; };
+		D407559B1CD23A3200811CDF /* detaillocation.plist in Resources */ = {isa = PBXBuildFile; fileRef = D40755961CD23A3200811CDF /* detaillocation.plist */; };
+		D407559C1CD23A3200811CDF /* Ingredient.plist in Resources */ = {isa = PBXBuildFile; fileRef = D40755971CD23A3200811CDF /* Ingredient.plist */; };
+		D407559D1CD23A3200811CDF /* keywords.plist in Resources */ = {isa = PBXBuildFile; fileRef = D40755981CD23A3200811CDF /* keywords.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D4074F7F1CD207E200811CDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4074F5D1CD207E200811CDF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4074F641CD207E200811CDF;
+			remoteInfo = XCFApp;
+		};
+		D4074F8A1CD207E200811CDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4074F5D1CD207E200811CDF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4074F641CD207E200811CDF;
+			remoteInfo = XCFApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1B943ADB34F2252CAF87BC38 /* libPods-XCFApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XCFApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D1F7A3E8237131B9B03F313 /* Pods-XCFApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCFApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XCFApp/Pods-XCFApp.debug.xcconfig"; sourceTree = "<group>"; };
+		9187FAEE9289B0E81FE92E6E /* Pods-XCFApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCFApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-XCFApp/Pods-XCFApp.release.xcconfig"; sourceTree = "<group>"; };
+		D4074F651CD207E200811CDF /* XCFApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XCFApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4074F7E1CD207E200811CDF /* XCFAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCFAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4074F821CD207E200811CDF /* XCFAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCFAppTests.m; sourceTree = "<group>"; };
+		D4074F841CD207E200811CDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4074F891CD207E200811CDF /* XCFAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCFAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4074F8D1CD207E200811CDF /* XCFAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCFAppUITests.m; sourceTree = "<group>"; };
+		D4074F8F1CD207E200811CDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D407525D1CD20E5600811CDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Supporting Files/Assets.xcassets"; sourceTree = "<group>"; };
+		D407525F1CD20E5E00811CDF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
+		D40752661CD2378000811CDF /* XCFBazaarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFBazaarController.h; sourceTree = "<group>"; };
+		D40752671CD2378000811CDF /* XCFBazaarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFBazaarController.m; sourceTree = "<group>"; };
+		D407526C1CD2378000811CDF /* XCFDetailReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFDetailReviewViewController.h; sourceTree = "<group>"; };
+		D407526D1CD2378000811CDF /* XCFDetailReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFDetailReviewViewController.m; sourceTree = "<group>"; };
+		D407526E1CD2378000811CDF /* XCFGoodsReviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFGoodsReviewController.h; sourceTree = "<group>"; };
+		D407526F1CD2378000811CDF /* XCFGoodsReviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFGoodsReviewController.m; sourceTree = "<group>"; };
+		D40752701CD2378000811CDF /* XCFGoodsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFGoodsViewController.h; sourceTree = "<group>"; };
+		D40752711CD2378000811CDF /* XCFGoodsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFGoodsViewController.m; sourceTree = "<group>"; };
+		D40752731CD2378000811CDF /* XCFGoodsAttrs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFGoodsAttrs.h; sourceTree = "<group>"; };
+		D40752741CD2378000811CDF /* XCFGoodsAttrs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFGoodsAttrs.m; sourceTree = "<group>"; };
+		D40752751CD2378000811CDF /* XCFGoodsKind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFGoodsKind.h; sourceTree = "<group>"; };
+		D40752761CD2378000811CDF /* XCFGoodsKind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFGoodsKind.m; sourceTree = "<group>"; };
+		D40752771CD2378000811CDF /* XCFShop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFShop.h; sourceTree = "<group>"; };
+		D40752781CD2378000811CDF /* XCFShop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFShop.m; sourceTree = "<group>"; };
+		D407527B1CD2378000811CDF /* XCFGoodsDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFGoodsDetailView.h; sourceTree = "<group>"; };
+		D407527C1CD2378000811CDF /* XCFGoodsDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFGoodsDetailView.m; sourceTree = "<group>"; };
+		D407527D1CD2378000811CDF /* XCFGoodsDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFGoodsDetailView.xib; sourceTree = "<group>"; };
+		D407527E1CD2378000811CDF /* XCFGoodsHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFGoodsHeaderView.h; sourceTree = "<group>"; };
+		D407527F1CD2378000811CDF /* XCFGoodsHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFGoodsHeaderView.m; sourceTree = "<group>"; };
+		D40752801CD2378000811CDF /* XCFGoodsShopPromotionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFGoodsShopPromotionView.h; sourceTree = "<group>"; };
+		D40752811CD2378000811CDF /* XCFGoodsShopPromotionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFGoodsShopPromotionView.m; sourceTree = "<group>"; };
+		D40752821CD2378000811CDF /* XCFGoodsShopPromotionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFGoodsShopPromotionView.xib; sourceTree = "<group>"; };
+		D40752841CD2378000811CDF /* XCFAttrsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFAttrsCell.h; sourceTree = "<group>"; };
+		D40752851CD2378000811CDF /* XCFAttrsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFAttrsCell.m; sourceTree = "<group>"; };
+		D40752861CD2378000811CDF /* XCFGoodsAttrsViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFGoodsAttrsViewCell.h; sourceTree = "<group>"; };
+		D40752871CD2378000811CDF /* XCFGoodsAttrsViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFGoodsAttrsViewCell.m; sourceTree = "<group>"; };
+		D40752881CD2378000811CDF /* XCFGoodsImageTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFGoodsImageTextView.h; sourceTree = "<group>"; };
+		D40752891CD2378000811CDF /* XCFGoodsImageTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFGoodsImageTextView.m; sourceTree = "<group>"; };
+		D407528A1CD2378000811CDF /* XCFDetailReviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFDetailReviewCell.h; sourceTree = "<group>"; };
+		D407528B1CD2378000811CDF /* XCFDetailReviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFDetailReviewCell.m; sourceTree = "<group>"; };
+		D407528C1CD2378000811CDF /* XCFDetailReviewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFDetailReviewCell.xib; sourceTree = "<group>"; };
+		D407528D1CD2378000811CDF /* XCFGoodsBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFGoodsBottomView.h; sourceTree = "<group>"; };
+		D407528E1CD2378000811CDF /* XCFGoodsBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFGoodsBottomView.m; sourceTree = "<group>"; };
+		D407528F1CD2378000811CDF /* XCFGoodsFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFGoodsFooterView.h; sourceTree = "<group>"; };
+		D40752901CD2378000811CDF /* XCFGoodsFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFGoodsFooterView.m; sourceTree = "<group>"; };
+		D40752911CD2378000811CDF /* XCFGoodsFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFGoodsFooterView.xib; sourceTree = "<group>"; };
+		D40752921CD2378000811CDF /* XCFGoodsShopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFGoodsShopCell.h; sourceTree = "<group>"; };
+		D40752931CD2378000811CDF /* XCFGoodsShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFGoodsShopCell.m; sourceTree = "<group>"; };
+		D40752941CD2378000811CDF /* XCFGoodsShopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFGoodsShopCell.xib; sourceTree = "<group>"; };
+		D40752971CD2378000811CDF /* XCFCartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFCartViewController.h; sourceTree = "<group>"; };
+		D40752981CD2378000811CDF /* XCFCartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFCartViewController.m; sourceTree = "<group>"; };
+		D40752991CD2378000811CDF /* XCFOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFOrderViewController.h; sourceTree = "<group>"; };
+		D407529A1CD2378000811CDF /* XCFOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFOrderViewController.m; sourceTree = "<group>"; };
+		D407529C1CD2378000811CDF /* XCFCartItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFCartItem.h; sourceTree = "<group>"; };
+		D407529D1CD2378000811CDF /* XCFCartItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFCartItem.m; sourceTree = "<group>"; };
+		D407529E1CD2378000811CDF /* XCFCartItemTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFCartItemTool.h; sourceTree = "<group>"; };
+		D407529F1CD2378000811CDF /* XCFCartItemTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFCartItemTool.m; sourceTree = "<group>"; };
+		D40752A21CD2378000811CDF /* XCFOrderAddressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFOrderAddressView.h; sourceTree = "<group>"; };
+		D40752A31CD2378000811CDF /* XCFOrderAddressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFOrderAddressView.m; sourceTree = "<group>"; };
+		D40752A41CD2378000811CDF /* XCFOrderAddressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFOrderAddressView.xib; sourceTree = "<group>"; };
+		D40752A51CD2378000811CDF /* XCFOrderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFOrderFooterView.h; sourceTree = "<group>"; };
+		D40752A61CD2378000811CDF /* XCFOrderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFOrderFooterView.m; sourceTree = "<group>"; };
+		D40752A71CD2378000811CDF /* XCFOrderFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFOrderFooterView.xib; sourceTree = "<group>"; };
+		D40752A81CD2378000811CDF /* XCFOrderPayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFOrderPayView.h; sourceTree = "<group>"; };
+		D40752A91CD2378000811CDF /* XCFOrderPayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFOrderPayView.m; sourceTree = "<group>"; };
+		D40752AA1CD2378000811CDF /* XCFOrderPayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFOrderPayView.xib; sourceTree = "<group>"; };
+		D40752AB1CD2378000811CDF /* XCFOrderSectionFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFOrderSectionFooter.h; sourceTree = "<group>"; };
+		D40752AC1CD2378000811CDF /* XCFOrderSectionFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFOrderSectionFooter.m; sourceTree = "<group>"; };
+		D40752AD1CD2378000811CDF /* XCFOrderSectionFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFOrderSectionFooter.xib; sourceTree = "<group>"; };
+		D40752AF1CD2378000811CDF /* XCFCartItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFCartItemCell.h; sourceTree = "<group>"; };
+		D40752B01CD2378000811CDF /* XCFCartItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFCartItemCell.m; sourceTree = "<group>"; };
+		D40752B11CD2378000811CDF /* XCFCartItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFCartItemCell.xib; sourceTree = "<group>"; };
+		D40752B21CD2378000811CDF /* XCFCartItemShopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFCartItemShopView.h; sourceTree = "<group>"; };
+		D40752B31CD2378000811CDF /* XCFCartItemShopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFCartItemShopView.m; sourceTree = "<group>"; };
+		D40752B41CD2378000811CDF /* XCFCartItemShopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFCartItemShopView.xib; sourceTree = "<group>"; };
+		D40752B51CD2378000811CDF /* XCFCartSettlementView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFCartSettlementView.h; sourceTree = "<group>"; };
+		D40752B61CD2378000811CDF /* XCFCartSettlementView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFCartSettlementView.m; sourceTree = "<group>"; };
+		D40752B71CD2378000811CDF /* XCFCartSettlementView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFCartSettlementView.xib; sourceTree = "<group>"; };
+		D40752BA1CD2378000811CDF /* XCFCommunityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFCommunityViewController.h; sourceTree = "<group>"; };
+		D40752BB1CD2378000811CDF /* XCFCommunityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFCommunityViewController.m; sourceTree = "<group>"; };
+		D40752BC1CD2378000811CDF /* XCFTopicDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFTopicDetailController.h; sourceTree = "<group>"; };
+		D40752BD1CD2378000811CDF /* XCFTopicDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFTopicDetailController.m; sourceTree = "<group>"; };
+		D40752BE1CD2378000811CDF /* XCFTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFTopicViewController.h; sourceTree = "<group>"; };
+		D40752BF1CD2378000811CDF /* XCFTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFTopicViewController.m; sourceTree = "<group>"; };
+		D40752C11CD2378000811CDF /* XCFCommentTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFCommentTool.h; sourceTree = "<group>"; };
+		D40752C21CD2378000811CDF /* XCFCommentTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFCommentTool.m; sourceTree = "<group>"; };
+		D40752C31CD2378000811CDF /* XCFForum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFForum.h; sourceTree = "<group>"; };
+		D40752C41CD2378000811CDF /* XCFForum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFForum.m; sourceTree = "<group>"; };
+		D40752C51CD2378000811CDF /* XCFTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFTopic.h; sourceTree = "<group>"; };
+		D40752C61CD2378000811CDF /* XCFTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFTopic.m; sourceTree = "<group>"; };
+		D40752C71CD2378000811CDF /* XCFTopicComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFTopicComment.h; sourceTree = "<group>"; };
+		D40752C81CD2378000811CDF /* XCFTopicComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFTopicComment.m; sourceTree = "<group>"; };
+		D40752CA1CD2378000811CDF /* XCFAddCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFAddCommentView.h; sourceTree = "<group>"; };
+		D40752CB1CD2378000811CDF /* XCFAddCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFAddCommentView.m; sourceTree = "<group>"; };
+		D40752CC1CD2378000811CDF /* XCFAddCommentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFAddCommentView.xib; sourceTree = "<group>"; };
+		D40752CD1CD2378000811CDF /* XCFCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFCommentCell.h; sourceTree = "<group>"; };
+		D40752CE1CD2378000811CDF /* XCFCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFCommentCell.m; sourceTree = "<group>"; };
+		D40752CF1CD2378000811CDF /* XCFCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFCommentCell.xib; sourceTree = "<group>"; };
+		D40752D01CD2378000811CDF /* XCFForumViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFForumViewCell.h; sourceTree = "<group>"; };
+		D40752D11CD2378000811CDF /* XCFForumViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFForumViewCell.m; sourceTree = "<group>"; };
+		D40752D21CD2378000811CDF /* XCFForumViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFForumViewCell.xib; sourceTree = "<group>"; };
+		D40752D31CD2378000811CDF /* XCFTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFTopicCell.h; sourceTree = "<group>"; };
+		D40752D41CD2378000811CDF /* XCFTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFTopicCell.m; sourceTree = "<group>"; };
+		D40752D51CD2378000811CDF /* XCFTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFTopicCell.xib; sourceTree = "<group>"; };
+		D40752D91CD2378000811CDF /* XCFIngredientListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFIngredientListViewController.h; sourceTree = "<group>"; };
+		D40752DA1CD2378000811CDF /* XCFIngredientListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFIngredientListViewController.m; sourceTree = "<group>"; };
+		D40752DC1CD2378000811CDF /* XCFIngredientTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFIngredientTool.h; sourceTree = "<group>"; };
+		D40752DD1CD2378000811CDF /* XCFIngredientTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFIngredientTool.m; sourceTree = "<group>"; };
+		D40752DF1CD2378000811CDF /* XCFBuyListSectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFBuyListSectionHeader.h; sourceTree = "<group>"; };
+		D40752E01CD2378000811CDF /* XCFBuyListSectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFBuyListSectionHeader.m; sourceTree = "<group>"; };
+		D40752E11CD2378000811CDF /* XCFBuyListSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFBuyListSectionHeader.xib; sourceTree = "<group>"; };
+		D40752E21CD2378000811CDF /* XCFIngredientListTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFIngredientListTopView.h; sourceTree = "<group>"; };
+		D40752E31CD2378000811CDF /* XCFIngredientListTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFIngredientListTopView.m; sourceTree = "<group>"; };
+		D40752E41CD2378000811CDF /* XCFIngredientListTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFIngredientListTopView.xib; sourceTree = "<group>"; };
+		D40752E51CD2378000811CDF /* XCFIngredientListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFIngredientListViewCell.h; sourceTree = "<group>"; };
+		D40752E61CD2378000811CDF /* XCFIngredientListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFIngredientListViewCell.m; sourceTree = "<group>"; };
+		D40752E71CD2378000811CDF /* XCFIngredientListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFIngredientListViewCell.xib; sourceTree = "<group>"; };
+		D40752E81CD2378000811CDF /* XCFIngredientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFIngredientView.h; sourceTree = "<group>"; };
+		D40752E91CD2378000811CDF /* XCFIngredientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFIngredientView.m; sourceTree = "<group>"; };
+		D40752ED1CD2378000811CDF /* XCFCreateRecipeInstructionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFCreateRecipeInstructionCell.h; sourceTree = "<group>"; };
+		D40752EE1CD2378000811CDF /* XCFCreateRecipeInstructionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFCreateRecipeInstructionCell.m; sourceTree = "<group>"; };
+		D40752EF1CD2378000811CDF /* XCFCreateTipsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFCreateTipsCell.h; sourceTree = "<group>"; };
+		D40752F01CD2378000811CDF /* XCFCreateTipsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFCreateTipsCell.m; sourceTree = "<group>"; };
+		D40752F11CD2378000811CDF /* XCFDraftRecipeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFDraftRecipeCell.h; sourceTree = "<group>"; };
+		D40752F21CD2378000811CDF /* XCFDraftRecipeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFDraftRecipeCell.m; sourceTree = "<group>"; };
+		D40752F31CD2378000811CDF /* XCFDraftRecipeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFDraftRecipeCell.xib; sourceTree = "<group>"; };
+		D40752F41CD2378000811CDF /* XCFIngredientEditCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFIngredientEditCell.h; sourceTree = "<group>"; };
+		D40752F51CD2378000811CDF /* XCFIngredientEditCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFIngredientEditCell.m; sourceTree = "<group>"; };
+		D40752F61CD2378000811CDF /* XCFIngredientEditCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFIngredientEditCell.xib; sourceTree = "<group>"; };
+		D40752F81CD2378000811CDF /* XCFCreateIngredientFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFCreateIngredientFooter.h; sourceTree = "<group>"; };
+		D40752F91CD2378000811CDF /* XCFCreateIngredientFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFCreateIngredientFooter.m; sourceTree = "<group>"; };
+		D40752FA1CD2378000811CDF /* XCFCreateInstructionFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFCreateInstructionFooter.h; sourceTree = "<group>"; };
+		D40752FB1CD2378000811CDF /* XCFCreateInstructionFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFCreateInstructionFooter.m; sourceTree = "<group>"; };
+		D40752FC1CD2378000811CDF /* XCFIngredientEditFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFIngredientEditFooter.h; sourceTree = "<group>"; };
+		D40752FD1CD2378000811CDF /* XCFIngredientEditFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFIngredientEditFooter.m; sourceTree = "<group>"; };
+		D40752FE1CD2378000811CDF /* XCFRecipeEditViewFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFRecipeEditViewFooter.h; sourceTree = "<group>"; };
+		D40752FF1CD2378000811CDF /* XCFRecipeEditViewFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFRecipeEditViewFooter.m; sourceTree = "<group>"; };
+		D40753001CD2378000811CDF /* XCFRecipeEditViewFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFRecipeEditViewFooter.xib; sourceTree = "<group>"; };
+		D40753021CD2378000811CDF /* XCFRecipeEditViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFRecipeEditViewHeader.h; sourceTree = "<group>"; };
+		D40753031CD2378000811CDF /* XCFRecipeEditViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFRecipeEditViewHeader.m; sourceTree = "<group>"; };
+		D40753041CD2378000811CDF /* XCFRecipeEditViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFRecipeEditViewHeader.xib; sourceTree = "<group>"; };
+		D40753071CD2378000811CDF /* XCFDraftBoxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFDraftBoxViewController.h; sourceTree = "<group>"; };
+		D40753081CD2378000811CDF /* XCFDraftBoxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFDraftBoxViewController.m; sourceTree = "<group>"; };
+		D40753091CD2378000811CDF /* XCFEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFEditController.h; sourceTree = "<group>"; };
+		D407530A1CD2378000811CDF /* XCFEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFEditController.m; sourceTree = "<group>"; };
+		D407530B1CD2378000811CDF /* XCFIngredientEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFIngredientEditController.h; sourceTree = "<group>"; };
+		D407530C1CD2378000811CDF /* XCFIngredientEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFIngredientEditController.m; sourceTree = "<group>"; };
+		D407530F1CD2378000811CDF /* XCFCreateRecipe+Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCFCreateRecipe+Tool.h"; sourceTree = "<group>"; };
+		D40753101CD2378000811CDF /* XCFCreateRecipe+Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCFCreateRecipe+Tool.m"; sourceTree = "<group>"; };
+		D40753111CD2378000811CDF /* XCFRecipeDraftTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFRecipeDraftTool.h; sourceTree = "<group>"; };
+		D40753121CD2378000811CDF /* XCFRecipeDraftTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFRecipeDraftTool.m; sourceTree = "<group>"; };
+		D40753131CD2378000811CDF /* XCFCreateIngredient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFCreateIngredient.h; sourceTree = "<group>"; };
+		D40753141CD2378000811CDF /* XCFCreateIngredient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFCreateIngredient.m; sourceTree = "<group>"; };
+		D40753151CD2378000811CDF /* XCFCreateInstruction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFCreateInstruction.h; sourceTree = "<group>"; };
+		D40753161CD2378000811CDF /* XCFCreateInstruction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFCreateInstruction.m; sourceTree = "<group>"; };
+		D40753171CD2378000811CDF /* XCFCreateRecipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFCreateRecipe.h; sourceTree = "<group>"; };
+		D40753181CD2378000811CDF /* XCFCreateRecipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFCreateRecipe.m; sourceTree = "<group>"; };
+		D407531B1CD2378000811CDF /* XCFCreateRecipeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFCreateRecipeController.h; sourceTree = "<group>"; };
+		D407531C1CD2378000811CDF /* XCFCreateRecipeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFCreateRecipeController.m; sourceTree = "<group>"; };
+		D407531D1CD2378000811CDF /* XCFRecipeCreateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFRecipeCreateController.h; sourceTree = "<group>"; };
+		D407531E1CD2378000811CDF /* XCFRecipeCreateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFRecipeCreateController.m; sourceTree = "<group>"; };
+		D40753211CD2378000811CDF /* XCFDishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFDishViewController.h; sourceTree = "<group>"; };
+		D40753221CD2378000811CDF /* XCFDishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFDishViewController.m; sourceTree = "<group>"; };
+		D40753231CD2378000811CDF /* XCFKitchenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFKitchenViewController.h; sourceTree = "<group>"; };
+		D40753241CD2378000811CDF /* XCFKitchenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFKitchenViewController.m; sourceTree = "<group>"; };
+		D40753251CD2378000811CDF /* XCFRecipeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFRecipeListViewController.h; sourceTree = "<group>"; };
+		D40753261CD2378000811CDF /* XCFRecipeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFRecipeListViewController.m; sourceTree = "<group>"; };
+		D40753271CD2378000811CDF /* XCFRecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFRecipeViewController.h; sourceTree = "<group>"; };
+		D40753281CD2378000811CDF /* XCFRecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFRecipeViewController.m; sourceTree = "<group>"; };
+		D407532B1CD2378000811CDF /* XCFContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFContent.h; sourceTree = "<group>"; };
+		D407532C1CD2378000811CDF /* XCFContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFContent.m; sourceTree = "<group>"; };
+		D407532D1CD2378000811CDF /* XCFContents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFContents.h; sourceTree = "<group>"; };
+		D407532E1CD2378000811CDF /* XCFContents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFContents.m; sourceTree = "<group>"; };
+		D407532F1CD2378000811CDF /* XCFImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFImage.h; sourceTree = "<group>"; };
+		D40753301CD2378000811CDF /* XCFImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFImage.m; sourceTree = "<group>"; };
+		D40753311CD2378000811CDF /* XCFIssues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFIssues.h; sourceTree = "<group>"; };
+		D40753321CD2378000811CDF /* XCFIssues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFIssues.m; sourceTree = "<group>"; };
+		D40753331CD2378000811CDF /* XCFItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFItems.h; sourceTree = "<group>"; };
+		D40753341CD2378000811CDF /* XCFItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFItems.m; sourceTree = "<group>"; };
+		D40753361CD2378000811CDF /* XCFNav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFNav.h; sourceTree = "<group>"; };
+		D40753371CD2378000811CDF /* XCFNav.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFNav.m; sourceTree = "<group>"; };
+		D40753381CD2378000811CDF /* XCFNavContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFNavContent.h; sourceTree = "<group>"; };
+		D40753391CD2378000811CDF /* XCFNavContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFNavContent.m; sourceTree = "<group>"; };
+		D407533A1CD2378000811CDF /* XCFPopEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFPopEvent.h; sourceTree = "<group>"; };
+		D407533B1CD2378000811CDF /* XCFPopEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFPopEvent.m; sourceTree = "<group>"; };
+		D407533C1CD2378000811CDF /* XCFPopEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFPopEvents.h; sourceTree = "<group>"; };
+		D407533D1CD2378000811CDF /* XCFPopEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFPopEvents.m; sourceTree = "<group>"; };
+		D40753401CD2378000811CDF /* XCFAddedRecipeList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFAddedRecipeList.h; sourceTree = "<group>"; };
+		D40753411CD2378000811CDF /* XCFAddedRecipeList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFAddedRecipeList.m; sourceTree = "<group>"; };
+		D40753421CD2378000811CDF /* XCFRecipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFRecipe.h; sourceTree = "<group>"; };
+		D40753431CD2378000811CDF /* XCFRecipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFRecipe.m; sourceTree = "<group>"; };
+		D40753441CD2378000811CDF /* XCFRecipeContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFRecipeContent.h; sourceTree = "<group>"; };
+		D40753451CD2378000811CDF /* XCFRecipeContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFRecipeContent.m; sourceTree = "<group>"; };
+		D40753461CD2378000811CDF /* XCFRecipeDish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFRecipeDish.h; sourceTree = "<group>"; };
+		D40753471CD2378000811CDF /* XCFRecipeDish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFRecipeDish.m; sourceTree = "<group>"; };
+		D40753481CD2378000811CDF /* XCFRecipeIngredient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFRecipeIngredient.h; sourceTree = "<group>"; };
+		D40753491CD2378000811CDF /* XCFRecipeIngredient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFRecipeIngredient.m; sourceTree = "<group>"; };
+		D407534A1CD2378000811CDF /* XCFRecipeInstruction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFRecipeInstruction.h; sourceTree = "<group>"; };
+		D407534B1CD2378000811CDF /* XCFRecipeInstruction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFRecipeInstruction.m; sourceTree = "<group>"; };
+		D407534C1CD2378000811CDF /* XCFRecipeStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFRecipeStats.h; sourceTree = "<group>"; };
+		D407534D1CD2378000811CDF /* XCFRecipeStats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFRecipeStats.m; sourceTree = "<group>"; };
+		D407534F1CD2378000811CDF /* XCFRecipeList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFRecipeList.h; sourceTree = "<group>"; };
+		D40753501CD2378000811CDF /* XCFRecipeList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFRecipeList.m; sourceTree = "<group>"; };
+		D40753511CD2378000811CDF /* XCFRecipeListReason.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFRecipeListReason.h; sourceTree = "<group>"; };
+		D40753521CD2378000811CDF /* XCFRecipeListReason.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFRecipeListReason.m; sourceTree = "<group>"; };
+		D40753561CD2378000811CDF /* XCFDishCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFDishCell.h; sourceTree = "<group>"; };
+		D40753571CD2378000811CDF /* XCFDishCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFDishCell.m; sourceTree = "<group>"; };
+		D40753581CD2378000811CDF /* XCFDishCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFDishCell.xib; sourceTree = "<group>"; };
+		D40753591CD2378000811CDF /* XCFDishShowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFDishShowCell.h; sourceTree = "<group>"; };
+		D407535A1CD2378000811CDF /* XCFDishShowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFDishShowCell.m; sourceTree = "<group>"; };
+		D407535B1CD2378000811CDF /* XCFDishViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFDishViewCell.h; sourceTree = "<group>"; };
+		D407535C1CD2378000811CDF /* XCFDishViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFDishViewCell.m; sourceTree = "<group>"; };
+		D407535D1CD2378000811CDF /* XCFDishViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFDishViewCell.xib; sourceTree = "<group>"; };
+		D407535F1CD2378000811CDF /* XCFDishNavDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFDishNavDetailView.h; sourceTree = "<group>"; };
+		D40753601CD2378000811CDF /* XCFDishNavDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFDishNavDetailView.m; sourceTree = "<group>"; };
+		D40753611CD2378000811CDF /* XCFKitchenHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFKitchenHeader.h; sourceTree = "<group>"; };
+		D40753621CD2378000811CDF /* XCFKitchenHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFKitchenHeader.m; sourceTree = "<group>"; };
+		D40753631CD2378000811CDF /* XCFNavButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFNavButton.h; sourceTree = "<group>"; };
+		D40753641CD2378000811CDF /* XCFNavButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFNavButton.m; sourceTree = "<group>"; };
+		D40753651CD2378000811CDF /* XCFTopNavImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFTopNavImageView.h; sourceTree = "<group>"; };
+		D40753661CD2378000811CDF /* XCFTopNavImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFTopNavImageView.m; sourceTree = "<group>"; };
+		D40753681CD2378000811CDF /* XCFAddedRecipeListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFAddedRecipeListViewCell.h; sourceTree = "<group>"; };
+		D40753691CD2378000811CDF /* XCFAddedRecipeListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFAddedRecipeListViewCell.m; sourceTree = "<group>"; };
+		D407536A1CD2378000811CDF /* XCFAddedRecipeListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFAddedRecipeListViewCell.xib; sourceTree = "<group>"; };
+		D407536B1CD2378000811CDF /* XCFRecipeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFRecipeHeader.h; sourceTree = "<group>"; };
+		D407536C1CD2378000811CDF /* XCFRecipeHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFRecipeHeader.m; sourceTree = "<group>"; };
+		D407536D1CD2378000811CDF /* XCFRecipeIngredientCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFRecipeIngredientCell.h; sourceTree = "<group>"; };
+		D407536E1CD2378000811CDF /* XCFRecipeIngredientCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFRecipeIngredientCell.m; sourceTree = "<group>"; };
+		D407536F1CD2378000811CDF /* XCFRecipeInstructionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFRecipeInstructionCell.h; sourceTree = "<group>"; };
+		D40753701CD2378000811CDF /* XCFRecipeInstructionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFRecipeInstructionCell.m; sourceTree = "<group>"; };
+		D40753711CD2378000811CDF /* XCFRecipeSupplementaryFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFRecipeSupplementaryFooter.h; sourceTree = "<group>"; };
+		D40753721CD2378000811CDF /* XCFRecipeSupplementaryFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFRecipeSupplementaryFooter.m; sourceTree = "<group>"; };
+		D40753741CD2378000811CDF /* XCFRecipeListHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFRecipeListHeader.h; sourceTree = "<group>"; };
+		D40753751CD2378000811CDF /* XCFRecipeListHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFRecipeListHeader.m; sourceTree = "<group>"; };
+		D40753761CD2378000811CDF /* XCFRecipeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFRecipeCell.h; sourceTree = "<group>"; };
+		D40753771CD2378000811CDF /* XCFRecipeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFRecipeCell.m; sourceTree = "<group>"; };
+		D407537A1CD2378000811CDF /* XCFFeedsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFFeedsViewController.h; sourceTree = "<group>"; };
+		D407537B1CD2378000811CDF /* XCFFeedsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFFeedsViewController.m; sourceTree = "<group>"; };
+		D407537C1CD2378000811CDF /* XCFKitchenBuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFKitchenBuyViewController.h; sourceTree = "<group>"; };
+		D407537D1CD2378000811CDF /* XCFKitchenBuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFKitchenBuyViewController.m; sourceTree = "<group>"; };
+		D407537E1CD2378000811CDF /* XCFMealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFMealViewController.h; sourceTree = "<group>"; };
+		D407537F1CD2378000811CDF /* XCFMealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFMealViewController.m; sourceTree = "<group>"; };
+		D40753821CD2378000811CDF /* XCFGoods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFGoods.h; sourceTree = "<group>"; };
+		D40753831CD2378000811CDF /* XCFGoods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFGoods.m; sourceTree = "<group>"; };
+		D40753841CD2378000811CDF /* XCFReview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFReview.h; sourceTree = "<group>"; };
+		D40753851CD2378000811CDF /* XCFReview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFReview.m; sourceTree = "<group>"; };
+		D40753861CD2378000811CDF /* XCFReviewCommodity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFReviewCommodity.h; sourceTree = "<group>"; };
+		D40753871CD2378000811CDF /* XCFReviewCommodity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFReviewCommodity.m; sourceTree = "<group>"; };
+		D40753881CD2378000811CDF /* XCFReviewPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFReviewPhoto.h; sourceTree = "<group>"; };
+		D40753891CD2378000811CDF /* XCFReviewPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFReviewPhoto.m; sourceTree = "<group>"; };
+		D407538B1CD2378000811CDF /* XCFComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFComment.h; sourceTree = "<group>"; };
+		D407538C1CD2378000811CDF /* XCFComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFComment.m; sourceTree = "<group>"; };
+		D407538D1CD2378000811CDF /* XCFDiggUsers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFDiggUsers.h; sourceTree = "<group>"; };
+		D407538E1CD2378000811CDF /* XCFDiggUsers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFDiggUsers.m; sourceTree = "<group>"; };
+		D407538F1CD2378000811CDF /* XCFDish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFDish.h; sourceTree = "<group>"; };
+		D40753901CD2378000811CDF /* XCFDish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFDish.m; sourceTree = "<group>"; };
+		D40753911CD2378000811CDF /* XCFEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFEvents.h; sourceTree = "<group>"; };
+		D40753921CD2378000811CDF /* XCFEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFEvents.m; sourceTree = "<group>"; };
+		D40753931CD2378000811CDF /* XCFFeeds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFFeeds.h; sourceTree = "<group>"; };
+		D40753941CD2378000811CDF /* XCFFeeds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFFeeds.m; sourceTree = "<group>"; };
+		D40753951CD2378000811CDF /* XCFFeedsContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFFeedsContent.h; sourceTree = "<group>"; };
+		D40753961CD2378000811CDF /* XCFFeedsContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFFeedsContent.m; sourceTree = "<group>"; };
+		D40753971CD2378000811CDF /* XCFPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFPicture.h; sourceTree = "<group>"; };
+		D40753981CD2378000811CDF /* XCFPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFPicture.m; sourceTree = "<group>"; };
+		D407539A1CD2378000811CDF /* XCFMealInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFMealInfo.h; sourceTree = "<group>"; };
+		D407539B1CD2378000811CDF /* XCFMealInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFMealInfo.m; sourceTree = "<group>"; };
+		D407539E1CD2378000811CDF /* XCFMealDishCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFMealDishCell.h; sourceTree = "<group>"; };
+		D407539F1CD2378000811CDF /* XCFMealDishCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFMealDishCell.m; sourceTree = "<group>"; };
+		D40753A01CD2378000811CDF /* XCFMealDishCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFMealDishCell.xib; sourceTree = "<group>"; };
+		D40753A11CD2378000811CDF /* XCFMealHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFMealHeader.h; sourceTree = "<group>"; };
+		D40753A21CD2378000811CDF /* XCFMealHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFMealHeader.m; sourceTree = "<group>"; };
+		D40753A31CD2378000811CDF /* XCFMealHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFMealHeader.xib; sourceTree = "<group>"; };
+		D40753A61CD2378000811CDF /* XCFSearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFSearchResultViewController.h; sourceTree = "<group>"; };
+		D40753A71CD2378000811CDF /* XCFSearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFSearchResultViewController.m; sourceTree = "<group>"; };
+		D40753A81CD2378000811CDF /* XCFSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFSearchViewController.h; sourceTree = "<group>"; };
+		D40753A91CD2378000811CDF /* XCFSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFSearchViewController.m; sourceTree = "<group>"; };
+		D40753AB1CD2378000811CDF /* XCFSearchKeywordsTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFSearchKeywordsTool.h; sourceTree = "<group>"; };
+		D40753AC1CD2378000811CDF /* XCFSearchKeywordsTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFSearchKeywordsTool.m; sourceTree = "<group>"; };
+		D40753AE1CD2378000811CDF /* XCFSearchViewFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFSearchViewFooter.h; sourceTree = "<group>"; };
+		D40753AF1CD2378000811CDF /* XCFSearchViewFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFSearchViewFooter.m; sourceTree = "<group>"; };
+		D40753B01CD2378000811CDF /* XCFSearchViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFSearchViewHeader.h; sourceTree = "<group>"; };
+		D40753B11CD2378000811CDF /* XCFSearchViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFSearchViewHeader.m; sourceTree = "<group>"; };
+		D40753B41CD2378000811CDF /* XCFAddTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFAddTagViewController.h; sourceTree = "<group>"; };
+		D40753B51CD2378000811CDF /* XCFAddTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFAddTagViewController.m; sourceTree = "<group>"; };
+		D40753B61CD2378000811CDF /* XCFUploadDishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFUploadDishViewController.h; sourceTree = "<group>"; };
+		D40753B71CD2378000811CDF /* XCFUploadDishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFUploadDishViewController.m; sourceTree = "<group>"; };
+		D40753B91CD2378000811CDF /* XCFUploadDataTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFUploadDataTool.h; sourceTree = "<group>"; };
+		D40753BA1CD2378000811CDF /* XCFUploadDataTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFUploadDataTool.m; sourceTree = "<group>"; };
+		D40753BC1CD2378000811CDF /* XCFMealsAndTagsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFMealsAndTagsView.h; sourceTree = "<group>"; };
+		D40753BD1CD2378000811CDF /* XCFMealsAndTagsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFMealsAndTagsView.m; sourceTree = "<group>"; };
+		D40753BE1CD2378000811CDF /* XCFMealsAndTagsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFMealsAndTagsView.xib; sourceTree = "<group>"; };
+		D40753BF1CD2378000811CDF /* XCFPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFPhotoView.h; sourceTree = "<group>"; };
+		D40753C01CD2378000811CDF /* XCFPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFPhotoView.m; sourceTree = "<group>"; };
+		D40753C11CD2378000811CDF /* XCFPhotoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFPhotoView.xib; sourceTree = "<group>"; };
+		D40753C21CD2378000811CDF /* XCFTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFTagView.h; sourceTree = "<group>"; };
+		D40753C31CD2378000811CDF /* XCFTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFTagView.m; sourceTree = "<group>"; };
+		D40753C41CD2378000811CDF /* XCFTagView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFTagView.xib; sourceTree = "<group>"; };
+		D40753C51CD2378000811CDF /* XCFTextAndPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFTextAndPhotoView.h; sourceTree = "<group>"; };
+		D40753C61CD2378000811CDF /* XCFTextAndPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFTextAndPhotoView.m; sourceTree = "<group>"; };
+		D40753C71CD2378000811CDF /* XCFTextAndPhotoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFTextAndPhotoView.xib; sourceTree = "<group>"; };
+		D40753DD1CD2378000811CDF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D40753DE1CD2378000811CDF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D40753E01CD2378000811CDF /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		D40753E11CD2378000811CDF /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		D40753E21CD2378000811CDF /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		D40753E31CD2378000811CDF /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		D40753E41CD2378000811CDF /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		D40753E51CD2378000811CDF /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		D40753E61CD2378000811CDF /* UIButton+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Extension.h"; sourceTree = "<group>"; };
+		D40753E71CD2378000811CDF /* UIButton+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extension.m"; sourceTree = "<group>"; };
+		D40753E81CD2378000811CDF /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		D40753E91CD2378000811CDF /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		D40753EA1CD2378000811CDF /* UIImageView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Extension.h"; sourceTree = "<group>"; };
+		D40753EB1CD2378000811CDF /* UIImageView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Extension.m"; sourceTree = "<group>"; };
+		D40753EC1CD2378000811CDF /* UILabel+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Extension.h"; sourceTree = "<group>"; };
+		D40753ED1CD2378000811CDF /* UILabel+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Extension.m"; sourceTree = "<group>"; };
+		D40753EE1CD2378000811CDF /* UIViewController+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extension.h"; sourceTree = "<group>"; };
+		D40753EF1CD2378000811CDF /* UIViewController+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extension.m"; sourceTree = "<group>"; };
+		D40753F11CD2378000811CDF /* XCFConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFConst.h; sourceTree = "<group>"; };
+		D40753F21CD2378000811CDF /* XCFConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFConst.m; sourceTree = "<group>"; };
+		D40753F31CD2378000811CDF /* XCFConstRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFConstRequest.h; sourceTree = "<group>"; };
+		D40753F41CD2378000811CDF /* XCFConstRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFConstRequest.m; sourceTree = "<group>"; };
+		D40753F51CD2378000811CDF /* XCFConstString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFConstString.h; sourceTree = "<group>"; };
+		D40753F61CD2378000811CDF /* XCFConstString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFConstString.m; sourceTree = "<group>"; };
+		D40753F81CD2378000811CDF /* XCFImageShowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFImageShowController.h; sourceTree = "<group>"; };
+		D40753F91CD2378000811CDF /* XCFImageShowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFImageShowController.m; sourceTree = "<group>"; };
+		D40753FA1CD2378000811CDF /* XCFNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFNavigationController.h; sourceTree = "<group>"; };
+		D40753FB1CD2378000811CDF /* XCFNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFNavigationController.m; sourceTree = "<group>"; };
+		D40753FC1CD2378000811CDF /* XCFTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFTabBarController.h; sourceTree = "<group>"; };
+		D40753FD1CD2378000811CDF /* XCFTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFTabBarController.m; sourceTree = "<group>"; };
+		D40753FE1CD2378000811CDF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D40753FF1CD2378000811CDF /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		D40754011CD2378000811CDF /* XCFCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFCity.h; sourceTree = "<group>"; };
+		D40754021CD2378000811CDF /* XCFCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFCity.m; sourceTree = "<group>"; };
+		D40754031CD2378000811CDF /* XCFDetailArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFDetailArea.h; sourceTree = "<group>"; };
+		D40754041CD2378000811CDF /* XCFDetailArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFDetailArea.m; sourceTree = "<group>"; };
+		D40754051CD2378000811CDF /* XCFDetailCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFDetailCity.h; sourceTree = "<group>"; };
+		D40754061CD2378000811CDF /* XCFDetailCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFDetailCity.m; sourceTree = "<group>"; };
+		D40754071CD2378000811CDF /* XCFDetailLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFDetailLocation.h; sourceTree = "<group>"; };
+		D40754081CD2378000811CDF /* XCFDetailLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFDetailLocation.m; sourceTree = "<group>"; };
+		D40754091CD2378000811CDF /* XCFLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFLocation.h; sourceTree = "<group>"; };
+		D407540A1CD2378000811CDF /* XCFLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFLocation.m; sourceTree = "<group>"; };
+		D407540C1CD2378000811CDF /* XCFAddMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFAddMark.h; sourceTree = "<group>"; };
+		D407540D1CD2378000811CDF /* XCFAddMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFAddMark.m; sourceTree = "<group>"; };
+		D407540E1CD2378000811CDF /* XCFBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFBottomView.h; sourceTree = "<group>"; };
+		D407540F1CD2378000811CDF /* XCFBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFBottomView.m; sourceTree = "<group>"; };
+		D40754101CD2378000811CDF /* XCFCartIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFCartIcon.h; sourceTree = "<group>"; };
+		D40754111CD2378000811CDF /* XCFCartIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFCartIcon.m; sourceTree = "<group>"; };
+		D40754121CD2378000811CDF /* XCFCartIcon.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFCartIcon.xib; sourceTree = "<group>"; };
+		D40754131CD2378000811CDF /* XCFImageShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFImageShowView.h; sourceTree = "<group>"; };
+		D40754141CD2378000811CDF /* XCFImageShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFImageShowView.m; sourceTree = "<group>"; };
+		D40754151CD2378000811CDF /* XCFSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFSearchBar.h; sourceTree = "<group>"; };
+		D40754161CD2378000811CDF /* XCFSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFSearchBar.m; sourceTree = "<group>"; };
+		D40754171CD2378000811CDF /* XCFStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFStarView.h; sourceTree = "<group>"; };
+		D40754181CD2378000811CDF /* XCFStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFStarView.m; sourceTree = "<group>"; };
+		D407552A1CD2380900811CDF /* XCFMeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFMeController.h; sourceTree = "<group>"; };
+		D407552B1CD2380900811CDF /* XCFMeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFMeController.m; sourceTree = "<group>"; };
+		D407552D1CD2380900811CDF /* XCFAuthor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFAuthor.h; sourceTree = "<group>"; };
+		D407552E1CD2380900811CDF /* XCFAuthor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFAuthor.m; sourceTree = "<group>"; };
+		D407552F1CD2380900811CDF /* XCFAuthorDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFAuthorDetail.h; sourceTree = "<group>"; };
+		D40755301CD2380900811CDF /* XCFAuthorDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFAuthorDetail.m; sourceTree = "<group>"; };
+		D40755321CD2380900811CDF /* XCFMeInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFMeInfoView.h; sourceTree = "<group>"; };
+		D40755331CD2380900811CDF /* XCFMeInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFMeInfoView.m; sourceTree = "<group>"; };
+		D40755341CD2380900811CDF /* XCFMeInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFMeInfoView.xib; sourceTree = "<group>"; };
+		D40755351CD2380900811CDF /* XCFMeSwitchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFMeSwitchView.h; sourceTree = "<group>"; };
+		D40755361CD2380900811CDF /* XCFMeSwitchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFMeSwitchView.m; sourceTree = "<group>"; };
+		D40755371CD2380900811CDF /* XCFMyLocateNDescView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFMyLocateNDescView.h; sourceTree = "<group>"; };
+		D40755381CD2380900811CDF /* XCFMyLocateNDescView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFMyLocateNDescView.m; sourceTree = "<group>"; };
+		D40755391CD2380900811CDF /* XCFMyLocateNDescView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFMyLocateNDescView.xib; sourceTree = "<group>"; };
+		D407553A1CD2380900811CDF /* XCFMyViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFMyViewHeader.h; sourceTree = "<group>"; };
+		D407553B1CD2380900811CDF /* XCFMyViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFMyViewHeader.m; sourceTree = "<group>"; };
+		D40755471CD2381100811CDF /* XCFAddressEditingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFAddressEditingController.h; sourceTree = "<group>"; };
+		D40755481CD2381100811CDF /* XCFAddressEditingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFAddressEditingController.m; sourceTree = "<group>"; };
+		D40755491CD2381100811CDF /* XCFProfileEditingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFProfileEditingController.h; sourceTree = "<group>"; };
+		D407554A1CD2381100811CDF /* XCFProfileEditingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFProfileEditingController.m; sourceTree = "<group>"; };
+		D407554B1CD2381100811CDF /* XCFSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFSettingViewController.h; sourceTree = "<group>"; };
+		D407554C1CD2381100811CDF /* XCFSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFSettingViewController.m; sourceTree = "<group>"; };
+		D407554D1CD2381100811CDF /* XCFShippingAddressController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFShippingAddressController.h; sourceTree = "<group>"; };
+		D407554E1CD2381100811CDF /* XCFShippingAddressController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFShippingAddressController.m; sourceTree = "<group>"; };
+		D40755501CD2381100811CDF /* XCFAddressInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFAddressInfo.h; sourceTree = "<group>"; };
+		D40755511CD2381100811CDF /* XCFAddressInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFAddressInfo.m; sourceTree = "<group>"; };
+		D40755521CD2381100811CDF /* XCFAddressInfoTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFAddressInfoTool.h; sourceTree = "<group>"; };
+		D40755531CD2381100811CDF /* XCFAddressInfoTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFAddressInfoTool.m; sourceTree = "<group>"; };
+		D40755541CD2381100811CDF /* XCFMyInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFMyInfo.h; sourceTree = "<group>"; };
+		D40755551CD2381100811CDF /* XCFMyInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFMyInfo.m; sourceTree = "<group>"; };
+		D40755581CD2381100811CDF /* XCFEditingBirthAndGenderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFEditingBirthAndGenderCell.h; sourceTree = "<group>"; };
+		D40755591CD2381100811CDF /* XCFEditingBirthAndGenderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFEditingBirthAndGenderCell.m; sourceTree = "<group>"; };
+		D407555A1CD2381100811CDF /* XCFEditingBirthAndGenderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFEditingBirthAndGenderCell.xib; sourceTree = "<group>"; };
+		D407555B1CD2381100811CDF /* XCFEditingDescCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFEditingDescCell.h; sourceTree = "<group>"; };
+		D407555C1CD2381100811CDF /* XCFEditingDescCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFEditingDescCell.m; sourceTree = "<group>"; };
+		D407555D1CD2381100811CDF /* XCFEditingDescCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFEditingDescCell.xib; sourceTree = "<group>"; };
+		D407555E1CD2381100811CDF /* XCFEditingLocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFEditingLocationCell.h; sourceTree = "<group>"; };
+		D407555F1CD2381100811CDF /* XCFEditingLocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFEditingLocationCell.m; sourceTree = "<group>"; };
+		D40755601CD2381100811CDF /* XCFEditingLocationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFEditingLocationCell.xib; sourceTree = "<group>"; };
+		D40755611CD2381100811CDF /* XCFEditingTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFEditingTextCell.h; sourceTree = "<group>"; };
+		D40755621CD2381100811CDF /* XCFEditingTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFEditingTextCell.m; sourceTree = "<group>"; };
+		D40755631CD2381100811CDF /* XCFEditingTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFEditingTextCell.xib; sourceTree = "<group>"; };
+		D40755641CD2381100811CDF /* XCFProfileEditingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFProfileEditingHeader.h; sourceTree = "<group>"; };
+		D40755651CD2381100811CDF /* XCFProfileEditingHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFProfileEditingHeader.m; sourceTree = "<group>"; };
+		D40755661CD2381100811CDF /* XCFProfileEditingHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFProfileEditingHeader.xib; sourceTree = "<group>"; };
+		D40755681CD2381100811CDF /* XCFAddAddressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFAddAddressView.h; sourceTree = "<group>"; };
+		D40755691CD2381100811CDF /* XCFAddAddressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFAddAddressView.m; sourceTree = "<group>"; };
+		D407556A1CD2381100811CDF /* XCFAddressEditingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFAddressEditingView.h; sourceTree = "<group>"; };
+		D407556B1CD2381100811CDF /* XCFAddressEditingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFAddressEditingView.m; sourceTree = "<group>"; };
+		D407556C1CD2381100811CDF /* XCFAddressEditingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFAddressEditingView.xib; sourceTree = "<group>"; };
+		D407556D1CD2381100811CDF /* XCFShippingAddressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFShippingAddressCell.h; sourceTree = "<group>"; };
+		D407556E1CD2381100811CDF /* XCFShippingAddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFShippingAddressCell.m; sourceTree = "<group>"; };
+		D407556F1CD2381100811CDF /* XCFShippingAddressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFShippingAddressCell.xib; sourceTree = "<group>"; };
+		D40755701CD2381100811CDF /* XCFMyInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFMyInfoCell.h; sourceTree = "<group>"; };
+		D40755711CD2381100811CDF /* XCFMyInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFMyInfoCell.m; sourceTree = "<group>"; };
+		D40755721CD2381100811CDF /* XCFMyInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFMyInfoCell.xib; sourceTree = "<group>"; };
+		D40755731CD2381100811CDF /* XCFSettingFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFSettingFooter.h; sourceTree = "<group>"; };
+		D40755741CD2381100811CDF /* XCFSettingFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFSettingFooter.m; sourceTree = "<group>"; };
+		D407558F1CD238D000811CDF /* breakfast.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = breakfast.json; sourceTree = "<group>"; };
+		D40755901CD238D000811CDF /* location.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = location.json; sourceTree = "<group>"; };
+		D40755941CD23A3200811CDF /* cart_items.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cart_items.plist; sourceTree = "<group>"; };
+		D40755951CD23A3200811CDF /* comment.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = comment.plist; sourceTree = "<group>"; };
+		D40755961CD23A3200811CDF /* detaillocation.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = detaillocation.plist; sourceTree = "<group>"; };
+		D40755971CD23A3200811CDF /* Ingredient.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Ingredient.plist; sourceTree = "<group>"; };
+		D40755981CD23A3200811CDF /* keywords.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keywords.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4074F621CD207E200811CDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56C7E7771BBB489837FE88FD /* libPods-XCFApp.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4074F7B1CD207E200811CDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4074F861CD207E200811CDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5CD5AAF3F51D4AFB2A6D7754 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1D1F7A3E8237131B9B03F313 /* Pods-XCFApp.debug.xcconfig */,
+				9187FAEE9289B0E81FE92E6E /* Pods-XCFApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		79A040A7865884C20F046957 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B943ADB34F2252CAF87BC38 /* libPods-XCFApp.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4074F5C1CD207E200811CDF = {
+			isa = PBXGroup;
+			children = (
+				D4074F671CD207E200811CDF /* XCFApp */,
+				D4074F811CD207E200811CDF /* XCFAppTests */,
+				D4074F8C1CD207E200811CDF /* XCFAppUITests */,
+				D4074F661CD207E200811CDF /* Products */,
+				5CD5AAF3F51D4AFB2A6D7754 /* Pods */,
+				79A040A7865884C20F046957 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D4074F661CD207E200811CDF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4074F651CD207E200811CDF /* XCFApp.app */,
+				D4074F7E1CD207E200811CDF /* XCFAppTests.xctest */,
+				D4074F891CD207E200811CDF /* XCFAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4074F671CD207E200811CDF /* XCFApp */ = {
+			isa = PBXGroup;
+			children = (
+				D40752621CD2378000811CDF /* Classes */,
+				D4074F681CD207E200811CDF /* Supporting Files */,
+			);
+			path = XCFApp;
+			sourceTree = "<group>";
+		};
+		D4074F681CD207E200811CDF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D407558E1CD238D000811CDF /* JSON */,
+				D40755911CD238D000811CDF /* Plist */,
+				D407525D1CD20E5600811CDF /* Assets.xcassets */,
+				D407525F1CD20E5E00811CDF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D4074F811CD207E200811CDF /* XCFAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				D4074F821CD207E200811CDF /* XCFAppTests.m */,
+				D4074F841CD207E200811CDF /* Info.plist */,
+			);
+			path = XCFAppTests;
+			sourceTree = "<group>";
+		};
+		D4074F8C1CD207E200811CDF /* XCFAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D4074F8D1CD207E200811CDF /* XCFAppUITests.m */,
+				D4074F8F1CD207E200811CDF /* Info.plist */,
+			);
+			path = XCFAppUITests;
+			sourceTree = "<group>";
+		};
+		D40752621CD2378000811CDF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D40752D61CD2378000811CDF /* Kitchen - 下厨房 */,
+				D40752631CD2378000811CDF /* Bazaar - 市集 */,
+				D40752B81CD2378000811CDF /* Community - 社区 */,
+				D40755281CD2380900811CDF /* Me - 我 */,
+				D40755451CD2381100811CDF /* Setting - 设置 */,
+				D40753DC1CD2378000811CDF /* Other */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D40752631CD2378000811CDF /* Bazaar - 市集 */ = {
+			isa = PBXGroup;
+			children = (
+				D40752641CD2378000811CDF /* Bazaar - 市集 */,
+				D407526A1CD2378000811CDF /* Goods - 商品界面 */,
+				D40752951CD2378000811CDF /* ShoppingCart - 购物车 */,
+			);
+			path = "Bazaar - 市集";
+			sourceTree = "<group>";
+		};
+		D40752641CD2378000811CDF /* Bazaar - 市集 */ = {
+			isa = PBXGroup;
+			children = (
+				D40752651CD2378000811CDF /* Controller */,
+				D40752681CD2378000811CDF /* Model */,
+				D40752691CD2378000811CDF /* View */,
+			);
+			path = "Bazaar - 市集";
+			sourceTree = "<group>";
+		};
+		D40752651CD2378000811CDF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D40752661CD2378000811CDF /* XCFBazaarController.h */,
+				D40752671CD2378000811CDF /* XCFBazaarController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D40752681CD2378000811CDF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D40752691CD2378000811CDF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D407526A1CD2378000811CDF /* Goods - 商品界面 */ = {
+			isa = PBXGroup;
+			children = (
+				D407526B1CD2378000811CDF /* Controller */,
+				D40752721CD2378000811CDF /* Model */,
+				D40752791CD2378000811CDF /* View */,
+			);
+			path = "Goods - 商品界面";
+			sourceTree = "<group>";
+		};
+		D407526B1CD2378000811CDF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D40752701CD2378000811CDF /* XCFGoodsViewController.h */,
+				D40752711CD2378000811CDF /* XCFGoodsViewController.m */,
+				D407526E1CD2378000811CDF /* XCFGoodsReviewController.h */,
+				D407526F1CD2378000811CDF /* XCFGoodsReviewController.m */,
+				D407526C1CD2378000811CDF /* XCFDetailReviewViewController.h */,
+				D407526D1CD2378000811CDF /* XCFDetailReviewViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D40752721CD2378000811CDF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D40752731CD2378000811CDF /* XCFGoodsAttrs.h */,
+				D40752741CD2378000811CDF /* XCFGoodsAttrs.m */,
+				D40752751CD2378000811CDF /* XCFGoodsKind.h */,
+				D40752761CD2378000811CDF /* XCFGoodsKind.m */,
+				D40752771CD2378000811CDF /* XCFShop.h */,
+				D40752781CD2378000811CDF /* XCFShop.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D40752791CD2378000811CDF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D407527A1CD2378000811CDF /* header */,
+				D40752831CD2378000811CDF /* ImageTextDetail */,
+				D407528A1CD2378000811CDF /* XCFDetailReviewCell.h */,
+				D407528B1CD2378000811CDF /* XCFDetailReviewCell.m */,
+				D407528C1CD2378000811CDF /* XCFDetailReviewCell.xib */,
+				D407528D1CD2378000811CDF /* XCFGoodsBottomView.h */,
+				D407528E1CD2378000811CDF /* XCFGoodsBottomView.m */,
+				D407528F1CD2378000811CDF /* XCFGoodsFooterView.h */,
+				D40752901CD2378000811CDF /* XCFGoodsFooterView.m */,
+				D40752911CD2378000811CDF /* XCFGoodsFooterView.xib */,
+				D40752921CD2378000811CDF /* XCFGoodsShopCell.h */,
+				D40752931CD2378000811CDF /* XCFGoodsShopCell.m */,
+				D40752941CD2378000811CDF /* XCFGoodsShopCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D407527A1CD2378000811CDF /* header */ = {
+			isa = PBXGroup;
+			children = (
+				D407527B1CD2378000811CDF /* XCFGoodsDetailView.h */,
+				D407527C1CD2378000811CDF /* XCFGoodsDetailView.m */,
+				D407527D1CD2378000811CDF /* XCFGoodsDetailView.xib */,
+				D407527E1CD2378000811CDF /* XCFGoodsHeaderView.h */,
+				D407527F1CD2378000811CDF /* XCFGoodsHeaderView.m */,
+				D40752801CD2378000811CDF /* XCFGoodsShopPromotionView.h */,
+				D40752811CD2378000811CDF /* XCFGoodsShopPromotionView.m */,
+				D40752821CD2378000811CDF /* XCFGoodsShopPromotionView.xib */,
+			);
+			path = header;
+			sourceTree = "<group>";
+		};
+		D40752831CD2378000811CDF /* ImageTextDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D40752841CD2378000811CDF /* XCFAttrsCell.h */,
+				D40752851CD2378000811CDF /* XCFAttrsCell.m */,
+				D40752861CD2378000811CDF /* XCFGoodsAttrsViewCell.h */,
+				D40752871CD2378000811CDF /* XCFGoodsAttrsViewCell.m */,
+				D40752881CD2378000811CDF /* XCFGoodsImageTextView.h */,
+				D40752891CD2378000811CDF /* XCFGoodsImageTextView.m */,
+			);
+			path = ImageTextDetail;
+			sourceTree = "<group>";
+		};
+		D40752951CD2378000811CDF /* ShoppingCart - 购物车 */ = {
+			isa = PBXGroup;
+			children = (
+				D40752961CD2378000811CDF /* Controller */,
+				D407529B1CD2378000811CDF /* Model */,
+				D40752A01CD2378000811CDF /* View */,
+			);
+			path = "ShoppingCart - 购物车";
+			sourceTree = "<group>";
+		};
+		D40752961CD2378000811CDF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D40752971CD2378000811CDF /* XCFCartViewController.h */,
+				D40752981CD2378000811CDF /* XCFCartViewController.m */,
+				D40752991CD2378000811CDF /* XCFOrderViewController.h */,
+				D407529A1CD2378000811CDF /* XCFOrderViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D407529B1CD2378000811CDF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D407529C1CD2378000811CDF /* XCFCartItem.h */,
+				D407529D1CD2378000811CDF /* XCFCartItem.m */,
+				D407529E1CD2378000811CDF /* XCFCartItemTool.h */,
+				D407529F1CD2378000811CDF /* XCFCartItemTool.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D40752A01CD2378000811CDF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D40752A11CD2378000811CDF /* 订单 */,
+				D40752AE1CD2378000811CDF /* 购物车 */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D40752A11CD2378000811CDF /* 订单 */ = {
+			isa = PBXGroup;
+			children = (
+				D40752A21CD2378000811CDF /* XCFOrderAddressView.h */,
+				D40752A31CD2378000811CDF /* XCFOrderAddressView.m */,
+				D40752A41CD2378000811CDF /* XCFOrderAddressView.xib */,
+				D40752A51CD2378000811CDF /* XCFOrderFooterView.h */,
+				D40752A61CD2378000811CDF /* XCFOrderFooterView.m */,
+				D40752A71CD2378000811CDF /* XCFOrderFooterView.xib */,
+				D40752A81CD2378000811CDF /* XCFOrderPayView.h */,
+				D40752A91CD2378000811CDF /* XCFOrderPayView.m */,
+				D40752AA1CD2378000811CDF /* XCFOrderPayView.xib */,
+				D40752AB1CD2378000811CDF /* XCFOrderSectionFooter.h */,
+				D40752AC1CD2378000811CDF /* XCFOrderSectionFooter.m */,
+				D40752AD1CD2378000811CDF /* XCFOrderSectionFooter.xib */,
+			);
+			path = "订单";
+			sourceTree = "<group>";
+		};
+		D40752AE1CD2378000811CDF /* 购物车 */ = {
+			isa = PBXGroup;
+			children = (
+				D40752AF1CD2378000811CDF /* XCFCartItemCell.h */,
+				D40752B01CD2378000811CDF /* XCFCartItemCell.m */,
+				D40752B11CD2378000811CDF /* XCFCartItemCell.xib */,
+				D40752B21CD2378000811CDF /* XCFCartItemShopView.h */,
+				D40752B31CD2378000811CDF /* XCFCartItemShopView.m */,
+				D40752B41CD2378000811CDF /* XCFCartItemShopView.xib */,
+				D40752B51CD2378000811CDF /* XCFCartSettlementView.h */,
+				D40752B61CD2378000811CDF /* XCFCartSettlementView.m */,
+				D40752B71CD2378000811CDF /* XCFCartSettlementView.xib */,
+			);
+			path = "购物车";
+			sourceTree = "<group>";
+		};
+		D40752B81CD2378000811CDF /* Community - 社区 */ = {
+			isa = PBXGroup;
+			children = (
+				D40752B91CD2378000811CDF /* Controller */,
+				D40752C01CD2378000811CDF /* Model */,
+				D40752C91CD2378000811CDF /* View */,
+			);
+			path = "Community - 社区";
+			sourceTree = "<group>";
+		};
+		D40752B91CD2378000811CDF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D40752BA1CD2378000811CDF /* XCFCommunityViewController.h */,
+				D40752BB1CD2378000811CDF /* XCFCommunityViewController.m */,
+				D40752BE1CD2378000811CDF /* XCFTopicViewController.h */,
+				D40752BF1CD2378000811CDF /* XCFTopicViewController.m */,
+				D40752BC1CD2378000811CDF /* XCFTopicDetailController.h */,
+				D40752BD1CD2378000811CDF /* XCFTopicDetailController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D40752C01CD2378000811CDF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D40752C11CD2378000811CDF /* XCFCommentTool.h */,
+				D40752C21CD2378000811CDF /* XCFCommentTool.m */,
+				D40752C31CD2378000811CDF /* XCFForum.h */,
+				D40752C41CD2378000811CDF /* XCFForum.m */,
+				D40752C51CD2378000811CDF /* XCFTopic.h */,
+				D40752C61CD2378000811CDF /* XCFTopic.m */,
+				D40752C71CD2378000811CDF /* XCFTopicComment.h */,
+				D40752C81CD2378000811CDF /* XCFTopicComment.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D40752C91CD2378000811CDF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D40752CA1CD2378000811CDF /* XCFAddCommentView.h */,
+				D40752CB1CD2378000811CDF /* XCFAddCommentView.m */,
+				D40752CC1CD2378000811CDF /* XCFAddCommentView.xib */,
+				D40752CD1CD2378000811CDF /* XCFCommentCell.h */,
+				D40752CE1CD2378000811CDF /* XCFCommentCell.m */,
+				D40752CF1CD2378000811CDF /* XCFCommentCell.xib */,
+				D40752D01CD2378000811CDF /* XCFForumViewCell.h */,
+				D40752D11CD2378000811CDF /* XCFForumViewCell.m */,
+				D40752D21CD2378000811CDF /* XCFForumViewCell.xib */,
+				D40752D31CD2378000811CDF /* XCFTopicCell.h */,
+				D40752D41CD2378000811CDF /* XCFTopicCell.m */,
+				D40752D51CD2378000811CDF /* XCFTopicCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D40752D61CD2378000811CDF /* Kitchen - 下厨房 */ = {
+			isa = PBXGroup;
+			children = (
+				D407531F1CD2378000811CDF /* Main - 下厨房 */,
+				D40753781CD2378000811CDF /* Nav - 导航 */,
+				D40752D71CD2378000811CDF /* BuyList - 菜篮子 */,
+				D40752EA1CD2378000811CDF /* CreateRecipe - 创建菜谱 */,
+				D40753A41CD2378000811CDF /* Search - 搜索 */,
+				D40753B21CD2378000811CDF /* UploadDish - 上传作品 */,
+			);
+			path = "Kitchen - 下厨房";
+			sourceTree = "<group>";
+		};
+		D40752D71CD2378000811CDF /* BuyList - 菜篮子 */ = {
+			isa = PBXGroup;
+			children = (
+				D40752D81CD2378000811CDF /* Controller */,
+				D40752DB1CD2378000811CDF /* Model */,
+				D40752DE1CD2378000811CDF /* View */,
+			);
+			path = "BuyList - 菜篮子";
+			sourceTree = "<group>";
+		};
+		D40752D81CD2378000811CDF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D40752D91CD2378000811CDF /* XCFIngredientListViewController.h */,
+				D40752DA1CD2378000811CDF /* XCFIngredientListViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D40752DB1CD2378000811CDF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D40752DC1CD2378000811CDF /* XCFIngredientTool.h */,
+				D40752DD1CD2378000811CDF /* XCFIngredientTool.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D40752DE1CD2378000811CDF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D40752DF1CD2378000811CDF /* XCFBuyListSectionHeader.h */,
+				D40752E01CD2378000811CDF /* XCFBuyListSectionHeader.m */,
+				D40752E11CD2378000811CDF /* XCFBuyListSectionHeader.xib */,
+				D40752E21CD2378000811CDF /* XCFIngredientListTopView.h */,
+				D40752E31CD2378000811CDF /* XCFIngredientListTopView.m */,
+				D40752E41CD2378000811CDF /* XCFIngredientListTopView.xib */,
+				D40752E51CD2378000811CDF /* XCFIngredientListViewCell.h */,
+				D40752E61CD2378000811CDF /* XCFIngredientListViewCell.m */,
+				D40752E71CD2378000811CDF /* XCFIngredientListViewCell.xib */,
+				D40752E81CD2378000811CDF /* XCFIngredientView.h */,
+				D40752E91CD2378000811CDF /* XCFIngredientView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D40752EA1CD2378000811CDF /* CreateRecipe - 创建菜谱 */ = {
+			isa = PBXGroup;
+			children = (
+				D40752EB1CD2378000811CDF /* View */,
+				D40753051CD2378000811CDF /* 编辑界面 */,
+				D40753191CD2378000811CDF /* 草稿界面 */,
+			);
+			path = "CreateRecipe - 创建菜谱";
+			sourceTree = "<group>";
+		};
+		D40752EB1CD2378000811CDF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D40752EC1CD2378000811CDF /* cell */,
+				D40752F71CD2378000811CDF /* Footer */,
+				D40753011CD2378000811CDF /* header */,
+			);
+			name = View;
+			path = CreateRecipe;
+			sourceTree = "<group>";
+		};
+		D40752EC1CD2378000811CDF /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				D40752ED1CD2378000811CDF /* XCFCreateRecipeInstructionCell.h */,
+				D40752EE1CD2378000811CDF /* XCFCreateRecipeInstructionCell.m */,
+				D40752EF1CD2378000811CDF /* XCFCreateTipsCell.h */,
+				D40752F01CD2378000811CDF /* XCFCreateTipsCell.m */,
+				D40752F11CD2378000811CDF /* XCFDraftRecipeCell.h */,
+				D40752F21CD2378000811CDF /* XCFDraftRecipeCell.m */,
+				D40752F31CD2378000811CDF /* XCFDraftRecipeCell.xib */,
+				D40752F41CD2378000811CDF /* XCFIngredientEditCell.h */,
+				D40752F51CD2378000811CDF /* XCFIngredientEditCell.m */,
+				D40752F61CD2378000811CDF /* XCFIngredientEditCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		D40752F71CD2378000811CDF /* Footer */ = {
+			isa = PBXGroup;
+			children = (
+				D40752F81CD2378000811CDF /* XCFCreateIngredientFooter.h */,
+				D40752F91CD2378000811CDF /* XCFCreateIngredientFooter.m */,
+				D40752FA1CD2378000811CDF /* XCFCreateInstructionFooter.h */,
+				D40752FB1CD2378000811CDF /* XCFCreateInstructionFooter.m */,
+				D40752FC1CD2378000811CDF /* XCFIngredientEditFooter.h */,
+				D40752FD1CD2378000811CDF /* XCFIngredientEditFooter.m */,
+				D40752FE1CD2378000811CDF /* XCFRecipeEditViewFooter.h */,
+				D40752FF1CD2378000811CDF /* XCFRecipeEditViewFooter.m */,
+				D40753001CD2378000811CDF /* XCFRecipeEditViewFooter.xib */,
+			);
+			path = Footer;
+			sourceTree = "<group>";
+		};
+		D40753011CD2378000811CDF /* header */ = {
+			isa = PBXGroup;
+			children = (
+				D40753021CD2378000811CDF /* XCFRecipeEditViewHeader.h */,
+				D40753031CD2378000811CDF /* XCFRecipeEditViewHeader.m */,
+				D40753041CD2378000811CDF /* XCFRecipeEditViewHeader.xib */,
+			);
+			path = header;
+			sourceTree = "<group>";
+		};
+		D40753051CD2378000811CDF /* 编辑界面 */ = {
+			isa = PBXGroup;
+			children = (
+				D40753061CD2378000811CDF /* Controller */,
+				D407530D1CD2378000811CDF /* Model */,
+			);
+			path = "编辑界面";
+			sourceTree = "<group>";
+		};
+		D40753061CD2378000811CDF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D40753071CD2378000811CDF /* XCFDraftBoxViewController.h */,
+				D40753081CD2378000811CDF /* XCFDraftBoxViewController.m */,
+				D40753091CD2378000811CDF /* XCFEditController.h */,
+				D407530A1CD2378000811CDF /* XCFEditController.m */,
+				D407530B1CD2378000811CDF /* XCFIngredientEditController.h */,
+				D407530C1CD2378000811CDF /* XCFIngredientEditController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D407530D1CD2378000811CDF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D407530E1CD2378000811CDF /* Tool */,
+				D40753131CD2378000811CDF /* XCFCreateIngredient.h */,
+				D40753141CD2378000811CDF /* XCFCreateIngredient.m */,
+				D40753151CD2378000811CDF /* XCFCreateInstruction.h */,
+				D40753161CD2378000811CDF /* XCFCreateInstruction.m */,
+				D40753171CD2378000811CDF /* XCFCreateRecipe.h */,
+				D40753181CD2378000811CDF /* XCFCreateRecipe.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D407530E1CD2378000811CDF /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				D407530F1CD2378000811CDF /* XCFCreateRecipe+Tool.h */,
+				D40753101CD2378000811CDF /* XCFCreateRecipe+Tool.m */,
+				D40753111CD2378000811CDF /* XCFRecipeDraftTool.h */,
+				D40753121CD2378000811CDF /* XCFRecipeDraftTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		D40753191CD2378000811CDF /* 草稿界面 */ = {
+			isa = PBXGroup;
+			children = (
+				D407531A1CD2378000811CDF /* Controller */,
+			);
+			path = "草稿界面";
+			sourceTree = "<group>";
+		};
+		D407531A1CD2378000811CDF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D407531D1CD2378000811CDF /* XCFRecipeCreateController.h */,
+				D407531E1CD2378000811CDF /* XCFRecipeCreateController.m */,
+				D407531B1CD2378000811CDF /* XCFCreateRecipeController.h */,
+				D407531C1CD2378000811CDF /* XCFCreateRecipeController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D407531F1CD2378000811CDF /* Main - 下厨房 */ = {
+			isa = PBXGroup;
+			children = (
+				D40753201CD2378000811CDF /* Controller */,
+				D40753291CD2378000811CDF /* Model */,
+				D40753531CD2378000811CDF /* View */,
+			);
+			path = "Main - 下厨房";
+			sourceTree = "<group>";
+		};
+		D40753201CD2378000811CDF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D40753231CD2378000811CDF /* XCFKitchenViewController.h */,
+				D40753241CD2378000811CDF /* XCFKitchenViewController.m */,
+				D40753211CD2378000811CDF /* XCFDishViewController.h */,
+				D40753221CD2378000811CDF /* XCFDishViewController.m */,
+				D40753251CD2378000811CDF /* XCFRecipeListViewController.h */,
+				D40753261CD2378000811CDF /* XCFRecipeListViewController.m */,
+				D40753271CD2378000811CDF /* XCFRecipeViewController.h */,
+				D40753281CD2378000811CDF /* XCFRecipeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D40753291CD2378000811CDF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D407532A1CD2378000811CDF /* cellModel - 首页 */,
+				D40753351CD2378000811CDF /* NavModel - 顶部导航数据 */,
+				D407533E1CD2378000811CDF /* PushModel - 跳转页面数据 */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D407532A1CD2378000811CDF /* cellModel - 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				D407532B1CD2378000811CDF /* XCFContent.h */,
+				D407532C1CD2378000811CDF /* XCFContent.m */,
+				D407532D1CD2378000811CDF /* XCFContents.h */,
+				D407532E1CD2378000811CDF /* XCFContents.m */,
+				D407532F1CD2378000811CDF /* XCFImage.h */,
+				D40753301CD2378000811CDF /* XCFImage.m */,
+				D40753311CD2378000811CDF /* XCFIssues.h */,
+				D40753321CD2378000811CDF /* XCFIssues.m */,
+				D40753331CD2378000811CDF /* XCFItems.h */,
+				D40753341CD2378000811CDF /* XCFItems.m */,
+			);
+			path = "cellModel - 首页";
+			sourceTree = "<group>";
+		};
+		D40753351CD2378000811CDF /* NavModel - 顶部导航数据 */ = {
+			isa = PBXGroup;
+			children = (
+				D40753361CD2378000811CDF /* XCFNav.h */,
+				D40753371CD2378000811CDF /* XCFNav.m */,
+				D40753381CD2378000811CDF /* XCFNavContent.h */,
+				D40753391CD2378000811CDF /* XCFNavContent.m */,
+				D407533A1CD2378000811CDF /* XCFPopEvent.h */,
+				D407533B1CD2378000811CDF /* XCFPopEvent.m */,
+				D407533C1CD2378000811CDF /* XCFPopEvents.h */,
+				D407533D1CD2378000811CDF /* XCFPopEvents.m */,
+			);
+			path = "NavModel - 顶部导航数据";
+			sourceTree = "<group>";
+		};
+		D407533E1CD2378000811CDF /* PushModel - 跳转页面数据 */ = {
+			isa = PBXGroup;
+			children = (
+				D407533F1CD2378000811CDF /* Recipe */,
+				D407534E1CD2378000811CDF /* RecipeList */,
+			);
+			path = "PushModel - 跳转页面数据";
+			sourceTree = "<group>";
+		};
+		D407533F1CD2378000811CDF /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				D40753401CD2378000811CDF /* XCFAddedRecipeList.h */,
+				D40753411CD2378000811CDF /* XCFAddedRecipeList.m */,
+				D40753421CD2378000811CDF /* XCFRecipe.h */,
+				D40753431CD2378000811CDF /* XCFRecipe.m */,
+				D40753441CD2378000811CDF /* XCFRecipeContent.h */,
+				D40753451CD2378000811CDF /* XCFRecipeContent.m */,
+				D40753461CD2378000811CDF /* XCFRecipeDish.h */,
+				D40753471CD2378000811CDF /* XCFRecipeDish.m */,
+				D40753481CD2378000811CDF /* XCFRecipeIngredient.h */,
+				D40753491CD2378000811CDF /* XCFRecipeIngredient.m */,
+				D407534A1CD2378000811CDF /* XCFRecipeInstruction.h */,
+				D407534B1CD2378000811CDF /* XCFRecipeInstruction.m */,
+				D407534C1CD2378000811CDF /* XCFRecipeStats.h */,
+				D407534D1CD2378000811CDF /* XCFRecipeStats.m */,
+			);
+			path = Recipe;
+			sourceTree = "<group>";
+		};
+		D407534E1CD2378000811CDF /* RecipeList */ = {
+			isa = PBXGroup;
+			children = (
+				D407534F1CD2378000811CDF /* XCFRecipeList.h */,
+				D40753501CD2378000811CDF /* XCFRecipeList.m */,
+				D40753511CD2378000811CDF /* XCFRecipeListReason.h */,
+				D40753521CD2378000811CDF /* XCFRecipeListReason.m */,
+			);
+			path = RecipeList;
+			sourceTree = "<group>";
+		};
+		D40753531CD2378000811CDF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D40753541CD2378000811CDF /* Dish - 作品 */,
+				D407535E1CD2378000811CDF /* Nav - 导航 */,
+				D40753671CD2378000811CDF /* Recipe - 菜谱 */,
+				D40753731CD2378000811CDF /* RecipeList - 菜单 */,
+				D40753761CD2378000811CDF /* XCFRecipeCell.h */,
+				D40753771CD2378000811CDF /* XCFRecipeCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D40753541CD2378000811CDF /* Dish - 作品 */ = {
+			isa = PBXGroup;
+			children = (
+				D40753551CD2378000811CDF /* DishShow - 作品展示 */,
+				D407535B1CD2378000811CDF /* XCFDishViewCell.h */,
+				D407535C1CD2378000811CDF /* XCFDishViewCell.m */,
+				D407535D1CD2378000811CDF /* XCFDishViewCell.xib */,
+			);
+			path = "Dish - 作品";
+			sourceTree = "<group>";
+		};
+		D40753551CD2378000811CDF /* DishShow - 作品展示 */ = {
+			isa = PBXGroup;
+			children = (
+				D40753561CD2378000811CDF /* XCFDishCell.h */,
+				D40753571CD2378000811CDF /* XCFDishCell.m */,
+				D40753581CD2378000811CDF /* XCFDishCell.xib */,
+				D40753591CD2378000811CDF /* XCFDishShowCell.h */,
+				D407535A1CD2378000811CDF /* XCFDishShowCell.m */,
+			);
+			path = "DishShow - 作品展示";
+			sourceTree = "<group>";
+		};
+		D407535E1CD2378000811CDF /* Nav - 导航 */ = {
+			isa = PBXGroup;
+			children = (
+				D407535F1CD2378000811CDF /* XCFDishNavDetailView.h */,
+				D40753601CD2378000811CDF /* XCFDishNavDetailView.m */,
+				D40753611CD2378000811CDF /* XCFKitchenHeader.h */,
+				D40753621CD2378000811CDF /* XCFKitchenHeader.m */,
+				D40753631CD2378000811CDF /* XCFNavButton.h */,
+				D40753641CD2378000811CDF /* XCFNavButton.m */,
+				D40753651CD2378000811CDF /* XCFTopNavImageView.h */,
+				D40753661CD2378000811CDF /* XCFTopNavImageView.m */,
+			);
+			path = "Nav - 导航";
+			sourceTree = "<group>";
+		};
+		D40753671CD2378000811CDF /* Recipe - 菜谱 */ = {
+			isa = PBXGroup;
+			children = (
+				D40753681CD2378000811CDF /* XCFAddedRecipeListViewCell.h */,
+				D40753691CD2378000811CDF /* XCFAddedRecipeListViewCell.m */,
+				D407536A1CD2378000811CDF /* XCFAddedRecipeListViewCell.xib */,
+				D407536B1CD2378000811CDF /* XCFRecipeHeader.h */,
+				D407536C1CD2378000811CDF /* XCFRecipeHeader.m */,
+				D407536D1CD2378000811CDF /* XCFRecipeIngredientCell.h */,
+				D407536E1CD2378000811CDF /* XCFRecipeIngredientCell.m */,
+				D407536F1CD2378000811CDF /* XCFRecipeInstructionCell.h */,
+				D40753701CD2378000811CDF /* XCFRecipeInstructionCell.m */,
+				D40753711CD2378000811CDF /* XCFRecipeSupplementaryFooter.h */,
+				D40753721CD2378000811CDF /* XCFRecipeSupplementaryFooter.m */,
+			);
+			path = "Recipe - 菜谱";
+			sourceTree = "<group>";
+		};
+		D40753731CD2378000811CDF /* RecipeList - 菜单 */ = {
+			isa = PBXGroup;
+			children = (
+				D40753741CD2378000811CDF /* XCFRecipeListHeader.h */,
+				D40753751CD2378000811CDF /* XCFRecipeListHeader.m */,
+			);
+			path = "RecipeList - 菜单";
+			sourceTree = "<group>";
+		};
+		D40753781CD2378000811CDF /* Nav - 导航 */ = {
+			isa = PBXGroup;
+			children = (
+				D40753791CD2378000811CDF /* Controller */,
+				D407539C1CD2378000811CDF /* View */,
+				D40753801CD2378000811CDF /* Model */,
+			);
+			path = "Nav - 导航";
+			sourceTree = "<group>";
+		};
+		D40753791CD2378000811CDF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D407537A1CD2378000811CDF /* XCFFeedsViewController.h */,
+				D407537B1CD2378000811CDF /* XCFFeedsViewController.m */,
+				D407537C1CD2378000811CDF /* XCFKitchenBuyViewController.h */,
+				D407537D1CD2378000811CDF /* XCFKitchenBuyViewController.m */,
+				D407537E1CD2378000811CDF /* XCFMealViewController.h */,
+				D407537F1CD2378000811CDF /* XCFMealViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D40753801CD2378000811CDF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D40753811CD2378000811CDF /* BuyBuyBuy - 买买买 */,
+				D407538A1CD2378000811CDF /* FeedsModel - 关注动态 */,
+				D40753991CD2378000811CDF /* MealsModel - 三餐 */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D40753811CD2378000811CDF /* BuyBuyBuy - 买买买 */ = {
+			isa = PBXGroup;
+			children = (
+				D40753821CD2378000811CDF /* XCFGoods.h */,
+				D40753831CD2378000811CDF /* XCFGoods.m */,
+				D40753841CD2378000811CDF /* XCFReview.h */,
+				D40753851CD2378000811CDF /* XCFReview.m */,
+				D40753861CD2378000811CDF /* XCFReviewCommodity.h */,
+				D40753871CD2378000811CDF /* XCFReviewCommodity.m */,
+				D40753881CD2378000811CDF /* XCFReviewPhoto.h */,
+				D40753891CD2378000811CDF /* XCFReviewPhoto.m */,
+			);
+			path = "BuyBuyBuy - 买买买";
+			sourceTree = "<group>";
+		};
+		D407538A1CD2378000811CDF /* FeedsModel - 关注动态 */ = {
+			isa = PBXGroup;
+			children = (
+				D407538B1CD2378000811CDF /* XCFComment.h */,
+				D407538C1CD2378000811CDF /* XCFComment.m */,
+				D407538D1CD2378000811CDF /* XCFDiggUsers.h */,
+				D407538E1CD2378000811CDF /* XCFDiggUsers.m */,
+				D407538F1CD2378000811CDF /* XCFDish.h */,
+				D40753901CD2378000811CDF /* XCFDish.m */,
+				D40753911CD2378000811CDF /* XCFEvents.h */,
+				D40753921CD2378000811CDF /* XCFEvents.m */,
+				D40753931CD2378000811CDF /* XCFFeeds.h */,
+				D40753941CD2378000811CDF /* XCFFeeds.m */,
+				D40753951CD2378000811CDF /* XCFFeedsContent.h */,
+				D40753961CD2378000811CDF /* XCFFeedsContent.m */,
+				D40753971CD2378000811CDF /* XCFPicture.h */,
+				D40753981CD2378000811CDF /* XCFPicture.m */,
+			);
+			path = "FeedsModel - 关注动态";
+			sourceTree = "<group>";
+		};
+		D40753991CD2378000811CDF /* MealsModel - 三餐 */ = {
+			isa = PBXGroup;
+			children = (
+				D407539A1CD2378000811CDF /* XCFMealInfo.h */,
+				D407539B1CD2378000811CDF /* XCFMealInfo.m */,
+			);
+			path = "MealsModel - 三餐";
+			sourceTree = "<group>";
+		};
+		D407539C1CD2378000811CDF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D407539D1CD2378000811CDF /* Meals - 三餐 */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D407539D1CD2378000811CDF /* Meals - 三餐 */ = {
+			isa = PBXGroup;
+			children = (
+				D407539E1CD2378000811CDF /* XCFMealDishCell.h */,
+				D407539F1CD2378000811CDF /* XCFMealDishCell.m */,
+				D40753A01CD2378000811CDF /* XCFMealDishCell.xib */,
+				D40753A11CD2378000811CDF /* XCFMealHeader.h */,
+				D40753A21CD2378000811CDF /* XCFMealHeader.m */,
+				D40753A31CD2378000811CDF /* XCFMealHeader.xib */,
+			);
+			path = "Meals - 三餐";
+			sourceTree = "<group>";
+		};
+		D40753A41CD2378000811CDF /* Search - 搜索 */ = {
+			isa = PBXGroup;
+			children = (
+				D40753A51CD2378000811CDF /* Controller */,
+				D40753AA1CD2378000811CDF /* Model */,
+				D40753AD1CD2378000811CDF /* View */,
+			);
+			path = "Search - 搜索";
+			sourceTree = "<group>";
+		};
+		D40753A51CD2378000811CDF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D40753A81CD2378000811CDF /* XCFSearchViewController.h */,
+				D40753A91CD2378000811CDF /* XCFSearchViewController.m */,
+				D40753A61CD2378000811CDF /* XCFSearchResultViewController.h */,
+				D40753A71CD2378000811CDF /* XCFSearchResultViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D40753AA1CD2378000811CDF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D40753AB1CD2378000811CDF /* XCFSearchKeywordsTool.h */,
+				D40753AC1CD2378000811CDF /* XCFSearchKeywordsTool.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D40753AD1CD2378000811CDF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D40753AE1CD2378000811CDF /* XCFSearchViewFooter.h */,
+				D40753AF1CD2378000811CDF /* XCFSearchViewFooter.m */,
+				D40753B01CD2378000811CDF /* XCFSearchViewHeader.h */,
+				D40753B11CD2378000811CDF /* XCFSearchViewHeader.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D40753B21CD2378000811CDF /* UploadDish - 上传作品 */ = {
+			isa = PBXGroup;
+			children = (
+				D40753B31CD2378000811CDF /* Controller */,
+				D40753B81CD2378000811CDF /* Model */,
+				D40753BB1CD2378000811CDF /* View */,
+			);
+			path = "UploadDish - 上传作品";
+			sourceTree = "<group>";
+		};
+		D40753B31CD2378000811CDF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D40753B61CD2378000811CDF /* XCFUploadDishViewController.h */,
+				D40753B71CD2378000811CDF /* XCFUploadDishViewController.m */,
+				D40753B41CD2378000811CDF /* XCFAddTagViewController.h */,
+				D40753B51CD2378000811CDF /* XCFAddTagViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D40753B81CD2378000811CDF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D40753B91CD2378000811CDF /* XCFUploadDataTool.h */,
+				D40753BA1CD2378000811CDF /* XCFUploadDataTool.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D40753BB1CD2378000811CDF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D40753BC1CD2378000811CDF /* XCFMealsAndTagsView.h */,
+				D40753BD1CD2378000811CDF /* XCFMealsAndTagsView.m */,
+				D40753BE1CD2378000811CDF /* XCFMealsAndTagsView.xib */,
+				D40753BF1CD2378000811CDF /* XCFPhotoView.h */,
+				D40753C01CD2378000811CDF /* XCFPhotoView.m */,
+				D40753C11CD2378000811CDF /* XCFPhotoView.xib */,
+				D40753C21CD2378000811CDF /* XCFTagView.h */,
+				D40753C31CD2378000811CDF /* XCFTagView.m */,
+				D40753C41CD2378000811CDF /* XCFTagView.xib */,
+				D40753C51CD2378000811CDF /* XCFTextAndPhotoView.h */,
+				D40753C61CD2378000811CDF /* XCFTextAndPhotoView.m */,
+				D40753C71CD2378000811CDF /* XCFTextAndPhotoView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D40753DC1CD2378000811CDF /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				D40753DF1CD2378000811CDF /* Category */,
+				D40753F01CD2378000811CDF /* Const */,
+				D40753F71CD2378000811CDF /* Controller */,
+				D40754001CD2378000811CDF /* Tools */,
+				D407540B1CD2378000811CDF /* View */,
+				D40753DD1CD2378000811CDF /* AppDelegate.h */,
+				D40753DE1CD2378000811CDF /* AppDelegate.m */,
+				D40753FE1CD2378000811CDF /* main.m */,
+				D40753FF1CD2378000811CDF /* PrefixHeader.pch */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		D40753DF1CD2378000811CDF /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D40753E01CD2378000811CDF /* NSDate+Extension.h */,
+				D40753E11CD2378000811CDF /* NSDate+Extension.m */,
+				D40753E21CD2378000811CDF /* NSString+Extension.h */,
+				D40753E31CD2378000811CDF /* NSString+Extension.m */,
+				D40753E41CD2378000811CDF /* UIBarButtonItem+Extension.h */,
+				D40753E51CD2378000811CDF /* UIBarButtonItem+Extension.m */,
+				D40753E61CD2378000811CDF /* UIButton+Extension.h */,
+				D40753E71CD2378000811CDF /* UIButton+Extension.m */,
+				D40753E81CD2378000811CDF /* UIImage+Extension.h */,
+				D40753E91CD2378000811CDF /* UIImage+Extension.m */,
+				D40753EA1CD2378000811CDF /* UIImageView+Extension.h */,
+				D40753EB1CD2378000811CDF /* UIImageView+Extension.m */,
+				D40753EC1CD2378000811CDF /* UILabel+Extension.h */,
+				D40753ED1CD2378000811CDF /* UILabel+Extension.m */,
+				D40753EE1CD2378000811CDF /* UIViewController+Extension.h */,
+				D40753EF1CD2378000811CDF /* UIViewController+Extension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		D40753F01CD2378000811CDF /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				D40753F11CD2378000811CDF /* XCFConst.h */,
+				D40753F21CD2378000811CDF /* XCFConst.m */,
+				D40753F31CD2378000811CDF /* XCFConstRequest.h */,
+				D40753F41CD2378000811CDF /* XCFConstRequest.m */,
+				D40753F51CD2378000811CDF /* XCFConstString.h */,
+				D40753F61CD2378000811CDF /* XCFConstString.m */,
+			);
+			path = Const;
+			sourceTree = "<group>";
+		};
+		D40753F71CD2378000811CDF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D40753F81CD2378000811CDF /* XCFImageShowController.h */,
+				D40753F91CD2378000811CDF /* XCFImageShowController.m */,
+				D40753FA1CD2378000811CDF /* XCFNavigationController.h */,
+				D40753FB1CD2378000811CDF /* XCFNavigationController.m */,
+				D40753FC1CD2378000811CDF /* XCFTabBarController.h */,
+				D40753FD1CD2378000811CDF /* XCFTabBarController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D40754001CD2378000811CDF /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				D407559F1CD2730900811CDF /* DetailLocation */,
+				D407559E1CD272FB00811CDF /* Location */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		D407540B1CD2378000811CDF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D407540C1CD2378000811CDF /* XCFAddMark.h */,
+				D407540D1CD2378000811CDF /* XCFAddMark.m */,
+				D407540E1CD2378000811CDF /* XCFBottomView.h */,
+				D407540F1CD2378000811CDF /* XCFBottomView.m */,
+				D40754101CD2378000811CDF /* XCFCartIcon.h */,
+				D40754111CD2378000811CDF /* XCFCartIcon.m */,
+				D40754121CD2378000811CDF /* XCFCartIcon.xib */,
+				D40754131CD2378000811CDF /* XCFImageShowView.h */,
+				D40754141CD2378000811CDF /* XCFImageShowView.m */,
+				D40754151CD2378000811CDF /* XCFSearchBar.h */,
+				D40754161CD2378000811CDF /* XCFSearchBar.m */,
+				D40754171CD2378000811CDF /* XCFStarView.h */,
+				D40754181CD2378000811CDF /* XCFStarView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D40755281CD2380900811CDF /* Me - 我 */ = {
+			isa = PBXGroup;
+			children = (
+				D40755291CD2380900811CDF /* Controller */,
+				D407552C1CD2380900811CDF /* Model */,
+				D40755311CD2380900811CDF /* View */,
+			);
+			path = "Me - 我";
+			sourceTree = "<group>";
+		};
+		D40755291CD2380900811CDF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D407552A1CD2380900811CDF /* XCFMeController.h */,
+				D407552B1CD2380900811CDF /* XCFMeController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D407552C1CD2380900811CDF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D407552D1CD2380900811CDF /* XCFAuthor.h */,
+				D407552E1CD2380900811CDF /* XCFAuthor.m */,
+				D407552F1CD2380900811CDF /* XCFAuthorDetail.h */,
+				D40755301CD2380900811CDF /* XCFAuthorDetail.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D40755311CD2380900811CDF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D407553A1CD2380900811CDF /* XCFMyViewHeader.h */,
+				D407553B1CD2380900811CDF /* XCFMyViewHeader.m */,
+				D40755331CD2380900811CDF /* XCFMeInfoView.m */,
+				D40755391CD2380900811CDF /* XCFMyLocateNDescView.xib */,
+				D40755321CD2380900811CDF /* XCFMeInfoView.h */,
+				D40755341CD2380900811CDF /* XCFMeInfoView.xib */,
+				D40755351CD2380900811CDF /* XCFMeSwitchView.h */,
+				D40755361CD2380900811CDF /* XCFMeSwitchView.m */,
+				D40755371CD2380900811CDF /* XCFMyLocateNDescView.h */,
+				D40755381CD2380900811CDF /* XCFMyLocateNDescView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D40755451CD2381100811CDF /* Setting - 设置 */ = {
+			isa = PBXGroup;
+			children = (
+				D40755461CD2381100811CDF /* Controller */,
+				D407554F1CD2381100811CDF /* Model */,
+				D40755561CD2381100811CDF /* View */,
+			);
+			path = "Setting - 设置";
+			sourceTree = "<group>";
+		};
+		D40755461CD2381100811CDF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D40755471CD2381100811CDF /* XCFAddressEditingController.h */,
+				D40755481CD2381100811CDF /* XCFAddressEditingController.m */,
+				D40755491CD2381100811CDF /* XCFProfileEditingController.h */,
+				D407554A1CD2381100811CDF /* XCFProfileEditingController.m */,
+				D407554B1CD2381100811CDF /* XCFSettingViewController.h */,
+				D407554C1CD2381100811CDF /* XCFSettingViewController.m */,
+				D407554D1CD2381100811CDF /* XCFShippingAddressController.h */,
+				D407554E1CD2381100811CDF /* XCFShippingAddressController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D407554F1CD2381100811CDF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D40755501CD2381100811CDF /* XCFAddressInfo.h */,
+				D40755511CD2381100811CDF /* XCFAddressInfo.m */,
+				D40755521CD2381100811CDF /* XCFAddressInfoTool.h */,
+				D40755531CD2381100811CDF /* XCFAddressInfoTool.m */,
+				D40755541CD2381100811CDF /* XCFMyInfo.h */,
+				D40755551CD2381100811CDF /* XCFMyInfo.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D40755561CD2381100811CDF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D40755571CD2381100811CDF /* ProfileEditing */,
+				D40755671CD2381100811CDF /* ShippingAddress */,
+				D40755701CD2381100811CDF /* XCFMyInfoCell.h */,
+				D40755711CD2381100811CDF /* XCFMyInfoCell.m */,
+				D40755721CD2381100811CDF /* XCFMyInfoCell.xib */,
+				D40755731CD2381100811CDF /* XCFSettingFooter.h */,
+				D40755741CD2381100811CDF /* XCFSettingFooter.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D40755571CD2381100811CDF /* ProfileEditing */ = {
+			isa = PBXGroup;
+			children = (
+				D40755581CD2381100811CDF /* XCFEditingBirthAndGenderCell.h */,
+				D40755591CD2381100811CDF /* XCFEditingBirthAndGenderCell.m */,
+				D407555A1CD2381100811CDF /* XCFEditingBirthAndGenderCell.xib */,
+				D407555B1CD2381100811CDF /* XCFEditingDescCell.h */,
+				D407555C1CD2381100811CDF /* XCFEditingDescCell.m */,
+				D407555D1CD2381100811CDF /* XCFEditingDescCell.xib */,
+				D407555E1CD2381100811CDF /* XCFEditingLocationCell.h */,
+				D407555F1CD2381100811CDF /* XCFEditingLocationCell.m */,
+				D40755601CD2381100811CDF /* XCFEditingLocationCell.xib */,
+				D40755611CD2381100811CDF /* XCFEditingTextCell.h */,
+				D40755621CD2381100811CDF /* XCFEditingTextCell.m */,
+				D40755631CD2381100811CDF /* XCFEditingTextCell.xib */,
+				D40755641CD2381100811CDF /* XCFProfileEditingHeader.h */,
+				D40755651CD2381100811CDF /* XCFProfileEditingHeader.m */,
+				D40755661CD2381100811CDF /* XCFProfileEditingHeader.xib */,
+			);
+			path = ProfileEditing;
+			sourceTree = "<group>";
+		};
+		D40755671CD2381100811CDF /* ShippingAddress */ = {
+			isa = PBXGroup;
+			children = (
+				D40755681CD2381100811CDF /* XCFAddAddressView.h */,
+				D40755691CD2381100811CDF /* XCFAddAddressView.m */,
+				D407556A1CD2381100811CDF /* XCFAddressEditingView.h */,
+				D407556B1CD2381100811CDF /* XCFAddressEditingView.m */,
+				D407556C1CD2381100811CDF /* XCFAddressEditingView.xib */,
+				D407556D1CD2381100811CDF /* XCFShippingAddressCell.h */,
+				D407556E1CD2381100811CDF /* XCFShippingAddressCell.m */,
+				D407556F1CD2381100811CDF /* XCFShippingAddressCell.xib */,
+			);
+			path = ShippingAddress;
+			sourceTree = "<group>";
+		};
+		D407558E1CD238D000811CDF /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				D407558F1CD238D000811CDF /* breakfast.json */,
+				D40755901CD238D000811CDF /* location.json */,
+			);
+			name = JSON;
+			path = "Supporting Files/JSON";
+			sourceTree = "<group>";
+		};
+		D40755911CD238D000811CDF /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				D40755941CD23A3200811CDF /* cart_items.plist */,
+				D40755951CD23A3200811CDF /* comment.plist */,
+				D40755961CD23A3200811CDF /* detaillocation.plist */,
+				D40755971CD23A3200811CDF /* Ingredient.plist */,
+				D40755981CD23A3200811CDF /* keywords.plist */,
+			);
+			name = Plist;
+			path = "Supporting Files/Plist";
+			sourceTree = "<group>";
+		};
+		D407559E1CD272FB00811CDF /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				D40754011CD2378000811CDF /* XCFCity.h */,
+				D40754021CD2378000811CDF /* XCFCity.m */,
+				D40754091CD2378000811CDF /* XCFLocation.h */,
+				D407540A1CD2378000811CDF /* XCFLocation.m */,
+			);
+			name = Location;
+			sourceTree = "<group>";
+		};
+		D407559F1CD2730900811CDF /* DetailLocation */ = {
+			isa = PBXGroup;
+			children = (
+				D40754031CD2378000811CDF /* XCFDetailArea.h */,
+				D40754041CD2378000811CDF /* XCFDetailArea.m */,
+				D40754051CD2378000811CDF /* XCFDetailCity.h */,
+				D40754061CD2378000811CDF /* XCFDetailCity.m */,
+				D40754071CD2378000811CDF /* XCFDetailLocation.h */,
+				D40754081CD2378000811CDF /* XCFDetailLocation.m */,
+			);
+			name = DetailLocation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4074F641CD207E200811CDF /* XCFApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4074F921CD207E200811CDF /* Build configuration list for PBXNativeTarget "XCFApp" */;
+			buildPhases = (
+				37F68642747766448C9A9176 /* 📦 Check Pods Manifest.lock */,
+				D4074F611CD207E200811CDF /* Sources */,
+				D4074F621CD207E200811CDF /* Frameworks */,
+				D4074F631CD207E200811CDF /* Resources */,
+				2CB60F7420698BD63ED9D8FF /* 📦 Embed Pods Frameworks */,
+				4F77FFC1EC88112446EC14BC /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XCFApp;
+			productName = XCFApp;
+			productReference = D4074F651CD207E200811CDF /* XCFApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D4074F7D1CD207E200811CDF /* XCFAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4074F951CD207E200811CDF /* Build configuration list for PBXNativeTarget "XCFAppTests" */;
+			buildPhases = (
+				D4074F7A1CD207E200811CDF /* Sources */,
+				D4074F7B1CD207E200811CDF /* Frameworks */,
+				D4074F7C1CD207E200811CDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4074F801CD207E200811CDF /* PBXTargetDependency */,
+			);
+			name = XCFAppTests;
+			productName = XCFAppTests;
+			productReference = D4074F7E1CD207E200811CDF /* XCFAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D4074F881CD207E200811CDF /* XCFAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4074F981CD207E200811CDF /* Build configuration list for PBXNativeTarget "XCFAppUITests" */;
+			buildPhases = (
+				D4074F851CD207E200811CDF /* Sources */,
+				D4074F861CD207E200811CDF /* Frameworks */,
+				D4074F871CD207E200811CDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4074F8B1CD207E200811CDF /* PBXTargetDependency */,
+			);
+			name = XCFAppUITests;
+			productName = XCFAppUITests;
+			productReference = D4074F891CD207E200811CDF /* XCFAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4074F5D1CD207E200811CDF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Joey;
+				TargetAttributes = {
+					D4074F641CD207E200811CDF = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					D4074F7D1CD207E200811CDF = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = D4074F641CD207E200811CDF;
+					};
+					D4074F881CD207E200811CDF = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = D4074F641CD207E200811CDF;
+					};
+				};
+			};
+			buildConfigurationList = D4074F601CD207E200811CDF /* Build configuration list for PBXProject "XCFApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D4074F5C1CD207E200811CDF;
+			productRefGroup = D4074F661CD207E200811CDF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4074F641CD207E200811CDF /* XCFApp */,
+				D4074F7D1CD207E200811CDF /* XCFAppTests */,
+				D4074F881CD207E200811CDF /* XCFAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4074F631CD207E200811CDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D407559D1CD23A3200811CDF /* keywords.plist in Resources */,
+				D407558A1CD2381100811CDF /* XCFShippingAddressCell.xib in Resources */,
+				D40754D71CD2378000811CDF /* XCFMealDishCell.xib in Resources */,
+				D40754681CD2378000811CDF /* XCFOrderPayView.xib in Resources */,
+				D40754E31CD2378000811CDF /* XCFMealsAndTagsView.xib in Resources */,
+				D40754791CD2378000811CDF /* XCFAddCommentView.xib in Resources */,
+				D407557F1CD2381100811CDF /* XCFEditingDescCell.xib in Resources */,
+				D40754851CD2378000811CDF /* XCFIngredientListTopView.xib in Resources */,
+				D407558C1CD2381100811CDF /* XCFMyInfoCell.xib in Resources */,
+				D40754E71CD2378000811CDF /* XCFTagView.xib in Resources */,
+				D407546C1CD2378000811CDF /* XCFCartItemCell.xib in Resources */,
+				D40755851CD2381100811CDF /* XCFProfileEditingHeader.xib in Resources */,
+				D40754541CD2378000811CDF /* XCFGoodsShopPromotionView.xib in Resources */,
+				D407557D1CD2381100811CDF /* XCFEditingBirthAndGenderCell.xib in Resources */,
+				D407559C1CD23A3200811CDF /* Ingredient.plist in Resources */,
+				D40754931CD2378000811CDF /* XCFRecipeEditViewFooter.xib in Resources */,
+				D407550B1CD2378000811CDF /* XCFCartIcon.xib in Resources */,
+				D407545C1CD2378000811CDF /* XCFGoodsFooterView.xib in Resources */,
+				D40754641CD2378000811CDF /* XCFOrderAddressView.xib in Resources */,
+				D40755921CD238D000811CDF /* breakfast.json in Resources */,
+				D40752601CD20E5E00811CDF /* Info.plist in Resources */,
+				D407547D1CD2378000811CDF /* XCFForumViewCell.xib in Resources */,
+				D407545E1CD2378000811CDF /* XCFGoodsShopCell.xib in Resources */,
+				D40755991CD23A3200811CDF /* cart_items.plist in Resources */,
+				D40754E91CD2378000811CDF /* XCFTextAndPhotoView.xib in Resources */,
+				D40754C01CD2378000811CDF /* XCFAddedRecipeListViewCell.xib in Resources */,
+				D407559B1CD23A3200811CDF /* detaillocation.plist in Resources */,
+				D40754951CD2378000811CDF /* XCFRecipeEditViewHeader.xib in Resources */,
+				D407548C1CD2378000811CDF /* XCFDraftRecipeCell.xib in Resources */,
+				D40754701CD2378000811CDF /* XCFCartSettlementView.xib in Resources */,
+				D40755931CD238D000811CDF /* location.json in Resources */,
+				D40754BA1CD2378000811CDF /* XCFDishViewCell.xib in Resources */,
+				D40754871CD2378000811CDF /* XCFIngredientListViewCell.xib in Resources */,
+				D40755401CD2380900811CDF /* XCFMeInfoView.xib in Resources */,
+				D40754D91CD2378000811CDF /* XCFMealHeader.xib in Resources */,
+				D40754591CD2378000811CDF /* XCFDetailReviewCell.xib in Resources */,
+				D40754831CD2378000811CDF /* XCFBuyListSectionHeader.xib in Resources */,
+				D40754B71CD2378000811CDF /* XCFDishCell.xib in Resources */,
+				D40755831CD2381100811CDF /* XCFEditingTextCell.xib in Resources */,
+				D407547B1CD2378000811CDF /* XCFCommentCell.xib in Resources */,
+				D407547F1CD2378000811CDF /* XCFTopicCell.xib in Resources */,
+				D40755881CD2381100811CDF /* XCFAddressEditingView.xib in Resources */,
+				D407525E1CD20E5600811CDF /* Assets.xcassets in Resources */,
+				D40755811CD2381100811CDF /* XCFEditingLocationCell.xib in Resources */,
+				D40755431CD2380900811CDF /* XCFMyLocateNDescView.xib in Resources */,
+				D40754511CD2378000811CDF /* XCFGoodsDetailView.xib in Resources */,
+				D407546A1CD2378000811CDF /* XCFOrderSectionFooter.xib in Resources */,
+				D407559A1CD23A3200811CDF /* comment.plist in Resources */,
+				D40754661CD2378000811CDF /* XCFOrderFooterView.xib in Resources */,
+				D40754E51CD2378000811CDF /* XCFPhotoView.xib in Resources */,
+				D407548E1CD2378000811CDF /* XCFIngredientEditCell.xib in Resources */,
+				D407546E1CD2378000811CDF /* XCFCartItemShopView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4074F7C1CD207E200811CDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4074F871CD207E200811CDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2CB60F7420698BD63ED9D8FF /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XCFApp/Pods-XCFApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		37F68642747766448C9A9176 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4F77FFC1EC88112446EC14BC /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XCFApp/Pods-XCFApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4074F611CD207E200811CDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D40754CD1CD2378000811CDF /* XCFReviewPhoto.m in Sources */,
+				D40755041CD2378000811CDF /* XCFDetailArea.m in Sources */,
+				D407550D1CD2378000811CDF /* XCFSearchBar.m in Sources */,
+				D40754DA1CD2378000811CDF /* XCFSearchResultViewController.m in Sources */,
+				D407553F1CD2380900811CDF /* XCFMeInfoView.m in Sources */,
+				D40754E21CD2378000811CDF /* XCFMealsAndTagsView.m in Sources */,
+				D40754C31CD2378000811CDF /* XCFRecipeInstructionCell.m in Sources */,
+				D40754761CD2378000811CDF /* XCFTopic.m in Sources */,
+				D40754F71CD2378000811CDF /* UIButton+Extension.m in Sources */,
+				D40754B31CD2378000811CDF /* XCFRecipeStats.m in Sources */,
+				D40754571CD2378000811CDF /* XCFGoodsImageTextView.m in Sources */,
+				D40755801CD2381100811CDF /* XCFEditingLocationCell.m in Sources */,
+				D407546F1CD2378000811CDF /* XCFCartSettlementView.m in Sources */,
+				D40754B91CD2378000811CDF /* XCFDishViewCell.m in Sources */,
+				D40754C71CD2378000811CDF /* XCFFeedsViewController.m in Sources */,
+				D407548A1CD2378000811CDF /* XCFCreateTipsCell.m in Sources */,
+				D40754781CD2378000811CDF /* XCFAddCommentView.m in Sources */,
+				D40754941CD2378000811CDF /* XCFRecipeEditViewHeader.m in Sources */,
+				D40754821CD2378000811CDF /* XCFBuyListSectionHeader.m in Sources */,
+				D407546B1CD2378000811CDF /* XCFCartItemCell.m in Sources */,
+				D40754921CD2378000811CDF /* XCFRecipeEditViewFooter.m in Sources */,
+				D40754AB1CD2378000811CDF /* XCFPopEvent.m in Sources */,
+				D40754531CD2378000811CDF /* XCFGoodsShopPromotionView.m in Sources */,
+				D407548D1CD2378000811CDF /* XCFIngredientEditCell.m in Sources */,
+				D40754621CD2378000811CDF /* XCFCartItemTool.m in Sources */,
+				D407550A1CD2378000811CDF /* XCFCartIcon.m in Sources */,
+				D407557E1CD2381100811CDF /* XCFEditingDescCell.m in Sources */,
+				D40754B51CD2378000811CDF /* XCFRecipeListReason.m in Sources */,
+				D40754DC1CD2378000811CDF /* XCFSearchKeywordsTool.m in Sources */,
+				D40755011CD2378000811CDF /* XCFTabBarController.m in Sources */,
+				D40754691CD2378000811CDF /* XCFOrderSectionFooter.m in Sources */,
+				D40754841CD2378000811CDF /* XCFIngredientListTopView.m in Sources */,
+				D40754D81CD2378000811CDF /* XCFMealHeader.m in Sources */,
+				D40754991CD2378000811CDF /* XCFCreateRecipe+Tool.m in Sources */,
+				D407545D1CD2378000811CDF /* XCFGoodsShopCell.m in Sources */,
+				D40754751CD2378000811CDF /* XCFForum.m in Sources */,
+				D40754801CD2378000811CDF /* XCFIngredientListViewController.m in Sources */,
+				D40754BF1CD2378000811CDF /* XCFAddedRecipeListViewCell.m in Sources */,
+				D40755411CD2380900811CDF /* XCFMeSwitchView.m in Sources */,
+				D40754671CD2378000811CDF /* XCFOrderPayView.m in Sources */,
+				D40754B41CD2378000811CDF /* XCFRecipeList.m in Sources */,
+				D40754E61CD2378000811CDF /* XCFTagView.m in Sources */,
+				D407557B1CD2381100811CDF /* XCFMyInfo.m in Sources */,
+				D40755001CD2378000811CDF /* XCFNavigationController.m in Sources */,
+				D40754AF1CD2378000811CDF /* XCFRecipeContent.m in Sources */,
+				D40754E11CD2378000811CDF /* XCFUploadDataTool.m in Sources */,
+				D407549A1CD2378000811CDF /* XCFRecipeDraftTool.m in Sources */,
+				D40754DF1CD2378000811CDF /* XCFAddTagViewController.m in Sources */,
+				D407558D1CD2381100811CDF /* XCFSettingFooter.m in Sources */,
+				D40754BB1CD2378000811CDF /* XCFDishNavDetailView.m in Sources */,
+				D40754CA1CD2378000811CDF /* XCFGoods.m in Sources */,
+				D407548B1CD2378000811CDF /* XCFDraftRecipeCell.m in Sources */,
+				D40754A41CD2378000811CDF /* XCFContent.m in Sources */,
+				D40754901CD2378000811CDF /* XCFCreateInstructionFooter.m in Sources */,
+				D40754FC1CD2378000811CDF /* XCFConst.m in Sources */,
+				D40754D01CD2378000811CDF /* XCFDish.m in Sources */,
+				D40754C91CD2378000811CDF /* XCFMealViewController.m in Sources */,
+				D407549C1CD2378000811CDF /* XCFCreateInstruction.m in Sources */,
+				D407546D1CD2378000811CDF /* XCFCartItemShopView.m in Sources */,
+				D40754B01CD2378000811CDF /* XCFRecipeDish.m in Sources */,
+				D40754A01CD2378000811CDF /* XCFDishViewController.m in Sources */,
+				D40754E41CD2378000811CDF /* XCFPhotoView.m in Sources */,
+				D40754BE1CD2378000811CDF /* XCFTopNavImageView.m in Sources */,
+				D40754A11CD2378000811CDF /* XCFKitchenViewController.m in Sources */,
+				D40754C41CD2378000811CDF /* XCFRecipeSupplementaryFooter.m in Sources */,
+				D407550E1CD2378000811CDF /* XCFStarView.m in Sources */,
+				D40754F51CD2378000811CDF /* NSString+Extension.m in Sources */,
+				D40754D11CD2378000811CDF /* XCFEvents.m in Sources */,
+				D40754561CD2378000811CDF /* XCFGoodsAttrsViewCell.m in Sources */,
+				D407544C1CD2378000811CDF /* XCFGoodsViewController.m in Sources */,
+				D40754D31CD2378000811CDF /* XCFFeedsContent.m in Sources */,
+				D40754971CD2378000811CDF /* XCFEditController.m in Sources */,
+				D40755861CD2381100811CDF /* XCFAddAddressView.m in Sources */,
+				D40754B81CD2378000811CDF /* XCFDishShowCell.m in Sources */,
+				D407544B1CD2378000811CDF /* XCFGoodsReviewController.m in Sources */,
+				D40755071CD2378000811CDF /* XCFLocation.m in Sources */,
+				D407549D1CD2378000811CDF /* XCFCreateRecipe.m in Sources */,
+				D40754811CD2378000811CDF /* XCFIngredientTool.m in Sources */,
+				D40754631CD2378000811CDF /* XCFOrderAddressView.m in Sources */,
+				D407550C1CD2378000811CDF /* XCFImageShowView.m in Sources */,
+				D40754A31CD2378000811CDF /* XCFRecipeViewController.m in Sources */,
+				D40754C11CD2378000811CDF /* XCFRecipeHeader.m in Sources */,
+				D40754491CD2378000811CDF /* XCFBazaarController.m in Sources */,
+				D40754F91CD2378000811CDF /* UIImageView+Extension.m in Sources */,
+				D40754C51CD2378000811CDF /* XCFRecipeListHeader.m in Sources */,
+				D407545F1CD2378000811CDF /* XCFCartViewController.m in Sources */,
+				D40754551CD2378000811CDF /* XCFAttrsCell.m in Sources */,
+				D40754DD1CD2378000811CDF /* XCFSearchViewFooter.m in Sources */,
+				D407547A1CD2378000811CDF /* XCFCommentCell.m in Sources */,
+				D40754CB1CD2378000811CDF /* XCFReview.m in Sources */,
+				D407544E1CD2378000811CDF /* XCFGoodsKind.m in Sources */,
+				D407557C1CD2381100811CDF /* XCFEditingBirthAndGenderCell.m in Sources */,
+				D40755771CD2381100811CDF /* XCFSettingViewController.m in Sources */,
+				D40754BC1CD2378000811CDF /* XCFKitchenHeader.m in Sources */,
+				D407558B1CD2381100811CDF /* XCFMyInfoCell.m in Sources */,
+				D40754E01CD2378000811CDF /* XCFUploadDishViewController.m in Sources */,
+				D40754981CD2378000811CDF /* XCFIngredientEditController.m in Sources */,
+				D407547C1CD2378000811CDF /* XCFForumViewCell.m in Sources */,
+				D40754FF1CD2378000811CDF /* XCFImageShowController.m in Sources */,
+				D40754A21CD2378000811CDF /* XCFRecipeListViewController.m in Sources */,
+				D40754FD1CD2378000811CDF /* XCFConstRequest.m in Sources */,
+				D407557A1CD2381100811CDF /* XCFAddressInfoTool.m in Sources */,
+				D40754AA1CD2378000811CDF /* XCFNavContent.m in Sources */,
+				D40754AD1CD2378000811CDF /* XCFAddedRecipeList.m in Sources */,
+				D40754861CD2378000811CDF /* XCFIngredientListViewCell.m in Sources */,
+				D40754F81CD2378000811CDF /* UIImage+Extension.m in Sources */,
+				D40754AC1CD2378000811CDF /* XCFPopEvents.m in Sources */,
+				D40754A81CD2378000811CDF /* XCFItems.m in Sources */,
+				D40755441CD2380900811CDF /* XCFMyViewHeader.m in Sources */,
+				D407549E1CD2378000811CDF /* XCFCreateRecipeController.m in Sources */,
+				D40754771CD2378000811CDF /* XCFTopicComment.m in Sources */,
+				D40755021CD2378000811CDF /* main.m in Sources */,
+				D40754CF1CD2378000811CDF /* XCFDiggUsers.m in Sources */,
+				D40754A91CD2378000811CDF /* XCFNav.m in Sources */,
+				D40754F31CD2378000811CDF /* AppDelegate.m in Sources */,
+				D40754B61CD2378000811CDF /* XCFDishCell.m in Sources */,
+				D40755891CD2381100811CDF /* XCFShippingAddressCell.m in Sources */,
+				D40754581CD2378000811CDF /* XCFDetailReviewCell.m in Sources */,
+				D40755051CD2378000811CDF /* XCFDetailCity.m in Sources */,
+				D40755841CD2381100811CDF /* XCFProfileEditingHeader.m in Sources */,
+				D40754CC1CD2378000811CDF /* XCFReviewCommodity.m in Sources */,
+				D40754881CD2378000811CDF /* XCFIngredientView.m in Sources */,
+				D40754DB1CD2378000811CDF /* XCFSearchViewController.m in Sources */,
+				D40754891CD2378000811CDF /* XCFCreateRecipeInstructionCell.m in Sources */,
+				D40754731CD2378000811CDF /* XCFTopicViewController.m in Sources */,
+				D407547E1CD2378000811CDF /* XCFTopicCell.m in Sources */,
+				D40754D41CD2378000811CDF /* XCFPicture.m in Sources */,
+				D40754611CD2378000811CDF /* XCFCartItem.m in Sources */,
+				D40755421CD2380900811CDF /* XCFMyLocateNDescView.m in Sources */,
+				D40754FA1CD2378000811CDF /* UILabel+Extension.m in Sources */,
+				D40754B21CD2378000811CDF /* XCFRecipeInstruction.m in Sources */,
+				D40754F41CD2378000811CDF /* NSDate+Extension.m in Sources */,
+				D407549B1CD2378000811CDF /* XCFCreateIngredient.m in Sources */,
+				D407545B1CD2378000811CDF /* XCFGoodsFooterView.m in Sources */,
+				D40754D51CD2378000811CDF /* XCFMealInfo.m in Sources */,
+				D40754FB1CD2378000811CDF /* UIViewController+Extension.m in Sources */,
+				D40755751CD2381100811CDF /* XCFAddressEditingController.m in Sources */,
+				D407544A1CD2378000811CDF /* XCFDetailReviewViewController.m in Sources */,
+				D40755871CD2381100811CDF /* XCFAddressEditingView.m in Sources */,
+				D40754D21CD2378000811CDF /* XCFFeeds.m in Sources */,
+				D40755081CD2378000811CDF /* XCFAddMark.m in Sources */,
+				D407553C1CD2380900811CDF /* XCFMeController.m in Sources */,
+				D407549F1CD2378000811CDF /* XCFRecipeCreateController.m in Sources */,
+				D40754D61CD2378000811CDF /* XCFMealDishCell.m in Sources */,
+				D40755781CD2381100811CDF /* XCFShippingAddressController.m in Sources */,
+				D40754C21CD2378000811CDF /* XCFRecipeIngredientCell.m in Sources */,
+				D40754AE1CD2378000811CDF /* XCFRecipe.m in Sources */,
+				D40754741CD2378000811CDF /* XCFCommentTool.m in Sources */,
+				D40754A51CD2378000811CDF /* XCFContents.m in Sources */,
+				D40754911CD2378000811CDF /* XCFIngredientEditFooter.m in Sources */,
+				D40754521CD2378000811CDF /* XCFGoodsHeaderView.m in Sources */,
+				D40754C81CD2378000811CDF /* XCFKitchenBuyViewController.m in Sources */,
+				D40754601CD2378000811CDF /* XCFOrderViewController.m in Sources */,
+				D40754FE1CD2378000811CDF /* XCFConstString.m in Sources */,
+				D40755061CD2378000811CDF /* XCFDetailLocation.m in Sources */,
+				D40754CE1CD2378000811CDF /* XCFComment.m in Sources */,
+				D40755791CD2381100811CDF /* XCFAddressInfo.m in Sources */,
+				D40755821CD2381100811CDF /* XCFEditingTextCell.m in Sources */,
+				D40754B11CD2378000811CDF /* XCFRecipeIngredient.m in Sources */,
+				D407545A1CD2378000811CDF /* XCFGoodsBottomView.m in Sources */,
+				D40754961CD2378000811CDF /* XCFDraftBoxViewController.m in Sources */,
+				D407544D1CD2378000811CDF /* XCFGoodsAttrs.m in Sources */,
+				D40754A61CD2378000811CDF /* XCFImage.m in Sources */,
+				D40754DE1CD2378000811CDF /* XCFSearchViewHeader.m in Sources */,
+				D40754BD1CD2378000811CDF /* XCFNavButton.m in Sources */,
+				D40754711CD2378000811CDF /* XCFCommunityViewController.m in Sources */,
+				D407553E1CD2380900811CDF /* XCFAuthorDetail.m in Sources */,
+				D40754E81CD2378000811CDF /* XCFTextAndPhotoView.m in Sources */,
+				D40754721CD2378000811CDF /* XCFTopicDetailController.m in Sources */,
+				D407544F1CD2378000811CDF /* XCFShop.m in Sources */,
+				D40754F61CD2378000811CDF /* UIBarButtonItem+Extension.m in Sources */,
+				D40754A71CD2378000811CDF /* XCFIssues.m in Sources */,
+				D40754651CD2378000811CDF /* XCFOrderFooterView.m in Sources */,
+				D40755091CD2378000811CDF /* XCFBottomView.m in Sources */,
+				D40755761CD2381100811CDF /* XCFProfileEditingController.m in Sources */,
+				D407548F1CD2378000811CDF /* XCFCreateIngredientFooter.m in Sources */,
+				D407553D1CD2380900811CDF /* XCFAuthor.m in Sources */,
+				D40754C61CD2378000811CDF /* XCFRecipeCell.m in Sources */,
+				D40755031CD2378000811CDF /* XCFCity.m in Sources */,
+				D40754501CD2378000811CDF /* XCFGoodsDetailView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4074F7A1CD207E200811CDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4074F831CD207E200811CDF /* XCFAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4074F851CD207E200811CDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4074F8E1CD207E200811CDF /* XCFAppUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D4074F801CD207E200811CDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4074F641CD207E200811CDF /* XCFApp */;
+			targetProxy = D4074F7F1CD207E200811CDF /* PBXContainerItemProxy */;
+		};
+		D4074F8B1CD207E200811CDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4074F641CD207E200811CDF /* XCFApp */;
+			targetProxy = D4074F8A1CD207E200811CDF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D4074F901CD207E200811CDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D4074F911CD207E200811CDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4074F931CD207E200811CDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D1F7A3E8237131B9B03F313 /* Pods-XCFApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = XCFApp/Classes/Other/PrefixHeader.pch;
+				INFOPLIST_FILE = "$(SRCROOT)/XCFApp/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = joey.cn.XCFApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D4074F941CD207E200811CDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9187FAEE9289B0E81FE92E6E /* Pods-XCFApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = XCFApp/Classes/Other/PrefixHeader.pch;
+				INFOPLIST_FILE = "$(SRCROOT)/XCFApp/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = joey.cn.XCFApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D4074F961CD207E200811CDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = XCFAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = joey.cn.XCFAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XCFApp.app/XCFApp";
+			};
+			name = Debug;
+		};
+		D4074F971CD207E200811CDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = XCFAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = joey.cn.XCFAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XCFApp.app/XCFApp";
+			};
+			name = Release;
+		};
+		D4074F991CD207E200811CDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = XCFAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = joey.cn.XCFAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = XCFApp;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		D4074F9A1CD207E200811CDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = XCFAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = joey.cn.XCFAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = XCFApp;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4074F601CD207E200811CDF /* Build configuration list for PBXProject "XCFApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4074F901CD207E200811CDF /* Debug */,
+				D4074F911CD207E200811CDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4074F921CD207E200811CDF /* Build configuration list for PBXNativeTarget "XCFApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4074F931CD207E200811CDF /* Debug */,
+				D4074F941CD207E200811CDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4074F951CD207E200811CDF /* Build configuration list for PBXNativeTarget "XCFAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4074F961CD207E200811CDF /* Debug */,
+				D4074F971CD207E200811CDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4074F981CD207E200811CDF /* Build configuration list for PBXNativeTarget "XCFAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4074F991CD207E200811CDF /* Debug */,
+				D4074F9A1CD207E200811CDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4074F5D1CD207E200811CDF /* Project object */;
+}

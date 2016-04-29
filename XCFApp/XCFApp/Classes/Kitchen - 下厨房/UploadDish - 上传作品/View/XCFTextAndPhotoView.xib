@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="CH2-zG-2Fo" customClass="XCFTextAndPhotoView">
+            <rect key="frame" x="0.0" y="0.0" width="420" height="201"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="j71-qH-fOI">
+                    <rect key="frame" x="0.0" y="0.0" width="420" height="100"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="KLV-zH-jvd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HkB-9b-GHH">
+                    <rect key="frame" x="0.0" y="100" width="420" height="101"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i8e-0z-jv6">
+                            <rect key="frame" x="10" y="0.0" width="88" height="88"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="88" id="Cqv-e4-bQi"/>
+                                <constraint firstAttribute="height" constant="88" id="Dkj-ep-Gsw"/>
+                            </constraints>
+                            <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                            <state key="normal" image="addPhotoStyle2"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="i8e-0z-jv6" firstAttribute="leading" secondItem="HkB-9b-GHH" secondAttribute="leading" constant="10" id="iJl-2Q-t1Z"/>
+                        <constraint firstItem="i8e-0z-jv6" firstAttribute="top" secondItem="HkB-9b-GHH" secondAttribute="top" id="xxT-bm-Nbg"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="HkB-9b-GHH" secondAttribute="bottom" id="3Ve-cT-3BN"/>
+                <constraint firstAttribute="trailing" secondItem="HkB-9b-GHH" secondAttribute="trailing" id="5J1-fa-UjQ"/>
+                <constraint firstItem="j71-qH-fOI" firstAttribute="leading" secondItem="CH2-zG-2Fo" secondAttribute="leading" id="Ey4-KJ-ftj"/>
+                <constraint firstItem="j71-qH-fOI" firstAttribute="top" secondItem="CH2-zG-2Fo" secondAttribute="top" id="HRJ-zm-ajR"/>
+                <constraint firstItem="HkB-9b-GHH" firstAttribute="top" secondItem="j71-qH-fOI" secondAttribute="bottom" id="T5A-5E-fD2"/>
+                <constraint firstAttribute="trailing" secondItem="j71-qH-fOI" secondAttribute="trailing" id="f1x-To-VrD"/>
+                <constraint firstItem="HkB-9b-GHH" firstAttribute="leading" secondItem="CH2-zG-2Fo" secondAttribute="leading" id="fBp-le-c5n"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addPhotoButton" destination="i8e-0z-jv6" id="Ci0-CM-qd6"/>
+                <outlet property="buttonLeftCon" destination="iJl-2Q-t1Z" id="myX-29-7jh"/>
+                <outlet property="buttonTopCon" destination="xxT-bm-Nbg" id="9BM-IU-7U4"/>
+                <outlet property="photosView" destination="HkB-9b-GHH" id="MFQ-s5-54k"/>
+                <outlet property="textView" destination="j71-qH-fOI" id="aSW-EY-78M"/>
+            </connections>
+            <point key="canvasLocation" x="574" y="218.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="addPhotoStyle2" width="120" height="120"/>
+    </resources>
+</document>
