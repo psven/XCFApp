@@ -53,10 +53,12 @@
 
 - (void)send {
     !self.sendCmtBlock ? : self.sendCmtBlock(self.textView.text, self.atUsers);
+    // 重置编辑框frame
+    if (self.textView.text.length) {
+        self.frame = CGRectMake(0, XCFScreenHeight-44, XCFScreenWidth, 44);
+    }
     // 发送完清空输入框的文字
     self.textView.text = @"";
-    // 重置编辑框frame
-    self.frame = CGRectMake(0, XCFScreenHeight-44, XCFScreenWidth, 44);
 }
 
 

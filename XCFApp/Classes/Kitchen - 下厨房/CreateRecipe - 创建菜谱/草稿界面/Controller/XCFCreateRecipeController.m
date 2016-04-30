@@ -376,13 +376,13 @@ didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     // 如果是顶部大图
     if (picker == self.headerPicker) {
         self.createRecipe.image = info[UIImagePickerControllerEditedImage];
-        [self.tableView reloadData];
     }
     // 如果是步骤图
     else if (picker == self.instructPicker) {
         self.instructionArray[self.setImageIndex].image = info[UIImagePickerControllerEditedImage];
-        [self.tableView reloadData];
     }
+    
+    [self.tableView reloadData];
     [picker dismissViewControllerAnimated:YES completion:^{
         // 选取完成后更新本地数据
         [self updateDarft];

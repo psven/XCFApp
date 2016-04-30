@@ -20,6 +20,8 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    // 关闭按钮
     UIButton *dismissButton = [[UIButton alloc] initWithFrame:CGRectMake(15, 15, 30, 30)];
     [dismissButton setImage:[UIImage imageNamed:@"closeLandscape"] forState:UIControlStateNormal];
     [dismissButton addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
@@ -27,12 +29,15 @@
     [self.view addSubview:dismissButton];
     self.closeButton = dismissButton;
     
+    // 图片轮播器
     CGRect displayRect = CGRectMake(0, XCFScreenHeight*0.5-175, XCFScreenWidth, 350);
     XCFImageShowView *showView = [[XCFImageShowView alloc] initWithFrame:displayRect];
+    // 设置属性
     showView.type = XCFShowViewTypeDetail;
     showView.imageArray = self.imageArray;
     showView.currentIndex = self.imageIndex;
     showView.imageViewDidScrolledBlock = self.imageViewDidScrolledBlock;
+    // 默认先隐藏
     showView.hidden = YES;
     [self.view addSubview:showView];
     self.showView = showView;

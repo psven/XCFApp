@@ -24,6 +24,7 @@
 @property (nonatomic, strong) NSMutableArray *cmtArray;      // 评论数组
 @property (nonatomic, strong) NSMutableArray *atUserArray;   // 能@的用户数组
 @property (nonatomic, strong) XCFAddCommentView *addCmtView; // 底部编辑栏
+@property (nonatomic, assign) CGFloat keyboardHeight;        // 记录键盘高度
 @end
 
 @implementation XCFTopicDetailController
@@ -136,7 +137,8 @@ static NSString *const atUserReuseIdentifier = @"atUserCell";
     _atUsersTableView.hidden = YES;
     _atUsersTableView.contentInset = UIEdgeInsetsMake(64, 0, 44, 0);
     [self.view addSubview:_atUsersTableView];
-    [_atUsersTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:atUserReuseIdentifier];
+    [_atUsersTableView registerClass:[UITableViewCell class]
+              forCellReuseIdentifier:atUserReuseIdentifier];
 }
 
 - (void)setupAddCmtView {
@@ -146,7 +148,8 @@ static NSString *const atUserReuseIdentifier = @"atUserCell";
 //        if (comment.length) {
             CGFloat height = [comment getSizeWithTextSize:CGSizeMake(XCFScreenWidth-115, MAXFLOAT) fontSize:14].height;
             CGFloat displayHeight = height + 30;
-            weakSelf.addCmtView.frame = CGRectMake(0, XCFScreenHeight-283.5-displayHeight, XCFScreenWidth, displayHeight);
+        
+            weakSelf.addCmtView.frame = CGRectMake(0, XCFScreenHeight-self.keyboardHeight-displayHeight, XCFScreenWidth, displayHeight);
 //        }
         
     } sendCmtBlock:^(NSString *comment, NSArray *atUsers) { // 发送评论回调
@@ -199,6 +202,7 @@ static NSString *const atUserReuseIdentifier = @"atUserCell";
 - (void)keyboardWillChangeFrame:(NSNotification *)note {
     NSDictionary *userInfo = note.userInfo;
     CGRect rect = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    self.keyboardHeight = rect.size.height;
     CGFloat duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] floatValue];
     CGFloat finalY = rect.origin.y - XCFScreenHeight;
     [UIView animateWithDuration:duration animations:^{
