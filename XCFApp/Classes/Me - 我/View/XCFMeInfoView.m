@@ -26,6 +26,12 @@
 
 @implementation XCFMeInfoView
 
+- (void)awakeFromNib {
+    // 添加蒙版
+    UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:self.backImageView.bounds];
+    [self.backImageView addSubview:toolbar];
+}
+
 - (UIButton *)followButton {
     if (!_followButton) {
         _followButton = [UIButton buttonWithBackgroundColor:XCFThemeColor
@@ -61,10 +67,13 @@
     self.name.text = authorDetail.name;
     if (!authorDetail.nfollow.length) authorDetail.nfollow = @"0";
     if (!authorDetail.nfollowed.length) authorDetail.nfollowed = @"0";
+    
     NSString *followStr = [NSString stringWithFormat:@"%@ 关注", authorDetail.nfollow];
-    [self.follow setAttributeTextWithString:followStr range:NSMakeRange(0, authorDetail.nfollow.length)];
+    [self.follow setAttributeTextWithString:followStr
+                                      range:NSMakeRange(0, authorDetail.nfollow.length)];
     NSString *followerStr = [NSString stringWithFormat:@"%@ 粉丝", authorDetail.nfollowed];
-    [self.follower setAttributeTextWithString:followerStr range:NSMakeRange(0, authorDetail.nfollowed.length)];
+    [self.follower setAttributeTextWithString:followerStr
+                                        range:NSMakeRange(0, authorDetail.nfollowed.length)];
     
     NSMutableString *otherInfo = [NSMutableString string];
     if (authorDetail.gender.length)  [otherInfo appendString:[NSString stringWithFormat:@"%@  ", authorDetail.gender]];

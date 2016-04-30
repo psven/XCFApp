@@ -11,7 +11,7 @@
             <rect key="frame" x="0.0" y="0.0" width="428" height="266"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I03-nF-tAE">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I03-nF-tAE">
                     <rect key="frame" x="0.0" y="0.0" width="428" height="266"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultUserHeader" translatesAutoresizingMaskIntoConstraints="NO" id="5By-kw-9GX">
@@ -73,7 +73,7 @@
                 <outlet property="name" destination="L2w-R3-6MS" id="44x-Yx-KEp"/>
                 <outlet property="otherInfoLabel" destination="W0x-YP-AtA" id="506-7u-ajE"/>
             </connections>
-            <point key="canvasLocation" x="641" y="123"/>
+            <point key="canvasLocation" x="383" y="169"/>
         </view>
     </objects>
     <resources>

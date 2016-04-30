@@ -114,6 +114,7 @@
         vc.draftIndex = [XCFRecipeDraftTool totalRecipeDrafts].count;
         [XCFRecipeDraftTool addRecipeDraft:createRecipe];
         [self.navigationController pushViewController:vc animated:YES];
+        self.textField.text = @"";
     } else {
         [UILabel showStats:@"请输入菜谱名称" atView:self.view];
     }

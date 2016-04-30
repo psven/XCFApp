@@ -110,7 +110,8 @@ static NSString *const createTipsCellIdentifier            = @"createTipsCell"; 
                                                                    doneEditBlock:^(NSString *result) { // 编辑完文字后的回调，返回编辑后的文字
                                                                        XCFCreateInstruction *instruction = weakSelf.instructionArray[indexPath.row];
                                                                        instruction.text = result;
-                                                                       [weakSelf.instructionArray replaceObjectAtIndex:indexPath.row withObject:instruction];
+                                                                       [weakSelf.instructionArray replaceObjectAtIndex:indexPath.row
+                                                                                                            withObject:instruction];
                                                                        [weakSelf.tableView reloadData];
                                                                        [weakSelf updateDarft];
                                                                    }];
@@ -176,7 +177,7 @@ static NSString *const createTipsCellIdentifier            = @"createTipsCell"; 
 targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath
        toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath {
     NSIndexPath *finalIndexPath;
-    
+    // 如果拖动到第0组，那么松手就返回第1组第0个
     if (proposedDestinationIndexPath.section == 0) {
         finalIndexPath = [NSIndexPath indexPathForRow:0 inSection:1];
     }
@@ -210,8 +211,10 @@ commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
 forRowAtIndexPath:(NSIndexPath *)indexPath {
     // 如果步骤数组有数据，就删除对应位置的数据
     if (self.instructionArray.count) [self.instructionArray removeObjectAtIndex:indexPath.row];
-    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationFade];
+    [self.tableView deleteRowsAtIndexPaths:@[indexPath]
+                          withRowAnimation:UITableViewRowAnimationFade];
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:1]
+                  withRowAnimation:UITableViewRowAnimationFade];
     [self updateDarft];
 }
 
@@ -287,7 +290,8 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
             [weakSelf.instructionArray addObject:[[XCFCreateInstruction alloc] init]];
             NSInteger row = weakSelf.instructionArray.count - 1;
             NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:1];
-            [weakSelf.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationBottom];
+            [weakSelf.tableView insertRowsAtIndexPaths:@[indexPath]
+                                      withRowAnimation:UITableViewRowAnimationBottom];
         };
         instructionFooter.adjustBlock = ^(tableViewAdjustStyle style) { // 调整回调
             weakSelf.style = style;
@@ -449,8 +453,23 @@ didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
         }
         
         else if (action == EditFooterActionDelete) {    // 删除草稿
-            [XCFRecipeDraftTool removeRecipeDraftAtIndex:weakSelf.draftIndex];
-            [weakSelf.navigationController popViewControllerAnimated:YES];
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"确定删除本草稿吗"
+                                                                                     message:@"删除之后将不可恢复"
+                                                                              preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消"
+                                                                   style:UIAlertActionStyleCancel
+                                                                 handler:nil];
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"删除"
+                                                               style:UIAlertActionStyleDefault
+                                                             handler:^(UIAlertAction * _Nonnull action) {
+                                                                 [XCFRecipeDraftTool removeRecipeDraftAtIndex:weakSelf.draftIndex];
+                                                                 [weakSelf.navigationController popViewControllerAnimated:YES];
+                                                             }];
+            [alertController addAction:cancelAction];
+            [alertController addAction:okAction];
+            [weakSelf.navigationController presentViewController:alertController
+                                                        animated:YES
+                                                      completion:nil];
         }
         
     };

@@ -1756,7 +1756,6 @@
 			children = (
 				D407553A1CD2380900811CDF /* XCFMyViewHeader.h */,
 				D407553B1CD2380900811CDF /* XCFMyViewHeader.m */,
-				D40755391CD2380900811CDF /* XCFMyLocateNDescView.xib */,
 				D40755321CD2380900811CDF /* XCFMeInfoView.h */,
 				D40755331CD2380900811CDF /* XCFMeInfoView.m */,
 				D40755341CD2380900811CDF /* XCFMeInfoView.xib */,
@@ -1764,6 +1763,7 @@
 				D40755361CD2380900811CDF /* XCFMeSwitchView.m */,
 				D40755371CD2380900811CDF /* XCFMyLocateNDescView.h */,
 				D40755381CD2380900811CDF /* XCFMyLocateNDescView.m */,
+				D40755391CD2380900811CDF /* XCFMyLocateNDescView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
