@@ -165,8 +165,11 @@ static NSString * const headerIdentifier = @"header";
 #pragma mark - UIScrollViewDelegate
 // 向上拖动到一定程度，切换至图文详情界面
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    // 预定值为100
     if (scrollView.contentOffset.y > self.tableView.contentSize.height - self.tableView.frame.size.height + 100) {
+        // 隐藏商品信息
         self.tableView.hidden = YES;
+        // 动画
         [UIView animateWithDuration:0.5 animations:^{
             self.tableView.transform = CGAffineTransformMakeTranslation(0, -(self.view.bounds.size.height-44-64));
             self.imageTextView.transform = CGAffineTransformMakeTranslation(0, -(self.view.bounds.size.height-44));

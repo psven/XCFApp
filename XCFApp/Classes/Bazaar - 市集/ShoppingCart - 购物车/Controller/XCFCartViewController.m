@@ -76,9 +76,11 @@ static NSString *const headerReuseIdentifier = @"cartItemHeader";
         // 如果不拿到最新数据，在编辑商品数量时点击店铺全选 会导致正在编辑的商品无法同步选中状态的bug
         NSArray *newShopArray = [XCFCartItemTool totalItems][indexPath.section];
         XCFCartItem *newItem = newShopArray[indexPath.row];
-        
+        // 修改数据中商品个数的值
         newItem.number = number;
+        // 更新本地数据
         [XCFCartItemTool updateItemAtIndexPath:indexPath withItem:newItem];
+        // 刷新界面
         [weakSelf.tableView reloadData];
     };
     

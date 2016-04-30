@@ -23,7 +23,7 @@
                                                  name:XCFCartDidAddedGoodsNotification
                                                object:nil];
     NSUInteger count = [XCFCartItemTool totalNumber];
-    if (count) { // 有商品数量才显示
+    if (count) { // 有商品才显示数量标签
         self.countButton.hidden = NO;
         [self.countButton setTitle:[NSString stringWithFormat:@"%zd", count]
                           forState:UIControlStateNormal];

@@ -153,6 +153,9 @@ static NSString *const atUserReuseIdentifier = @"atUserCell";
 //        }
         
     } sendCmtBlock:^(NSString *comment, NSArray *atUsers) { // 发送评论回调
+        // 恢复显示评价tableView
+        self.atUsersTableView.hidden = YES;
+        self.cmtTableView.hidden = NO;
         // 新建一个评论数据
         if (comment.length) { // 如果有内容才发表
             [UILabel showStats:@"发表成功！" atView:weakSelf.view];
