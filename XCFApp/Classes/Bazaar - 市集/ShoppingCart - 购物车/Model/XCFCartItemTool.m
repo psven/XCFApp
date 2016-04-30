@@ -90,7 +90,7 @@ static NSMutableArray *_cartItems;
                         break;
                     }
                 }
-                if (hasSameGoods == NO) [shopArray addObject:item]; // 如果不是就加到店铺中
+                if (hasSameGoods == NO) [shopArray addObject:item]; // 如果不是同一类商品就加到店铺中
                 
                 [_cartItems replaceObjectAtIndex:index withObject:shopArray]; // 重新赋值到大数组
                 hasSameShop = YES;

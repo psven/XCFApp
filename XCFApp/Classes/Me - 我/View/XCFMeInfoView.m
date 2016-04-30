@@ -76,8 +76,12 @@
                                         range:NSMakeRange(0, authorDetail.nfollowed.length)];
     
     NSMutableString *otherInfo = [NSMutableString string];
-    if (authorDetail.gender.length)  [otherInfo appendString:[NSString stringWithFormat:@"%@  ", authorDetail.gender]];
-    if (authorDetail.profession.length)  [otherInfo appendString:[NSString stringWithFormat:@"%@  ", authorDetail.profession]];
+    if (authorDetail.gender.length) {
+        [otherInfo appendString:[NSString stringWithFormat:@"%@  ", authorDetail.gender]];
+    }
+    if (authorDetail.profession.length) {
+        [otherInfo appendString:[NSString stringWithFormat:@"%@  ", authorDetail.profession]];
+    }
     
     NSDateFormatter *dmt = [[NSDateFormatter alloc] init];
     dmt.dateFormat = @"yyyy-MM-dd HH:mm:ss";

@@ -107,8 +107,10 @@
         flowLayout.itemSize = CGSizeMake(XCFScreenWidth*0.5+10, XCFScreenHeight*0.5+25);
         flowLayout.sectionInset = UIEdgeInsetsMake(0, 20, 0, 20);
 
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
-        [_collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([XCFDishCell class]) bundle:nil] forCellWithReuseIdentifier:@"RecipeDishCell"];
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero
+                                             collectionViewLayout:flowLayout];
+        [_collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([XCFDishCell class]) bundle:nil]
+          forCellWithReuseIdentifier:@"RecipeDishCell"];
         _collectionView.dataSource = self;
         _collectionView.delegate = self;
         _collectionView.backgroundColor = XCFDishViewBackgroundColor;
@@ -177,17 +179,18 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 
 /**
  *  通过判断滚动的位置，决定是否刷新
- *  40 -> sectionInset.left + sectionInset.right
- *  10 -> flowLayout.minimumLineSpacing
+ *  40 -> collectionView的内间距：sectionInset.left + sectionInset.right
+ *  10 -> 流水布局的行间距：flowLayout.minimumLineSpacing
  */
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat itemWidth = XCFScreenWidth*0.5+10;
-    
-    if (self.type == XCFVerticalCellTypeDish) { // 作品刷新
+    // 作品刷新
+    if (self.type == XCFVerticalCellTypeDish) {
         CGFloat dishContentSizeWidth = (itemWidth + 10) * self.dish.count - 10 + 40;
         self.readyToRefresh = (scrollView.contentOffset.x > dishContentSizeWidth - XCFScreenWidth + 50);
-        
-    } else if (self.type == XCFVerticalCellTypeReview) { // 评价跳转
+    }
+    // 评价跳转
+    else if (self.type == XCFVerticalCellTypeReview) {
         CGFloat reviewContentSizeWidth = itemWidth * 4 + 30 + 40;
         self.readyToPush = (scrollView.contentOffset.x > reviewContentSizeWidth - XCFScreenWidth + 50);
     }

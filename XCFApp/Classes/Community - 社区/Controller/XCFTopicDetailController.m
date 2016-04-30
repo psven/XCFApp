@@ -142,7 +142,7 @@ static NSString *const atUserReuseIdentifier = @"atUserCell";
 - (void)setupAddCmtView {
     WeakSelf;
     XCFAddCommentView *addCmtView = [XCFAddCommentView addCommentViewWithEditingTextBlock:^(NSString *comment) {
-         // 根据textView内容动态改变Y、height
+         // 根据textView内容动态改变Y、height，如果是自动布局的话，直接在控件内修改约束就可以了
 //        if (comment.length) {
             CGFloat height = [comment getSizeWithTextSize:CGSizeMake(XCFScreenWidth-115, MAXFLOAT) fontSize:14].height;
             CGFloat displayHeight = height + 30;
@@ -171,7 +171,8 @@ static NSString *const atUserReuseIdentifier = @"atUserCell";
         }
     }];
     
-    addCmtView.atUserBlock = ^(NSString *lastString) { // 判断是否有字符“@”， 有就显示用户列表
+    // 判断是否有字符“@”， 有就显示用户列表
+    addCmtView.atUserBlock = ^(NSString *lastString) {
         if ([lastString isEqualToString:@"@"]) {
             weakSelf.atUsersTableView.hidden = NO;
         } else {

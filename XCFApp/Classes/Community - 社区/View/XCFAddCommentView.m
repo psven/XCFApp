@@ -25,9 +25,14 @@
                                                  name:UITextViewTextDidChangeNotification
                                                object:self.textView];
     self.textView.delegate = self;
-    [self.sendButton addTarget:self action:@selector(send) forControlEvents:UIControlEventTouchUpInside];
+    [self.sendButton addTarget:self
+                        action:@selector(send)
+              forControlEvents:UIControlEventTouchUpInside];
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 #pragma mark - 事件处理
 
@@ -92,5 +97,7 @@
     cmtView.sendCmtBlock = sendCmtBlock;
     return cmtView;
 }
+
+
 
 @end

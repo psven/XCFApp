@@ -36,7 +36,8 @@ static NSMutableArray *_recipeDrafts;
     [self update];
 }
 
-+ (void)updateRecipeDraftAtIndex:(NSUInteger)index withRecipeDraft:(XCFCreateRecipe *)draft {
++ (void)updateRecipeDraftAtIndex:(NSUInteger)index
+                 withRecipeDraft:(XCFCreateRecipe *)draft {
     [_recipeDrafts replaceObjectAtIndex:index withObject:draft];
     [self update];
 }

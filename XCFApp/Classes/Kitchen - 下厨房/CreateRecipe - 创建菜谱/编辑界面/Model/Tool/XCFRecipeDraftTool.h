@@ -15,6 +15,7 @@
 + (void)update;
 + (void)addRecipeDraft:(XCFCreateRecipe *)recipe;
 + (void)removeRecipeDraftAtIndex:(NSUInteger)index;
-+ (void)updateRecipeDraftAtIndex:(NSUInteger)index withRecipeDraft:(XCFCreateRecipe *)draft;
++ (void)updateRecipeDraftAtIndex:(NSUInteger)index
+                 withRecipeDraft:(XCFCreateRecipe *)draft;
 
 @end

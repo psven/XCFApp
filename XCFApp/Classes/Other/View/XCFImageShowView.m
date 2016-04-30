@@ -28,13 +28,16 @@ static NSString *const imageCellIdentifier = @"imageCell";
 
 #pragma mark - UICollectionViewDataSource
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+- (NSInteger)collectionView:(UICollectionView *)collectionView
+     numberOfItemsInSection:(NSInteger)section {
     if (self.imageArray.count) return self.imageArray.count;
     return 0;
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:imageCellIdentifier forIndexPath:indexPath];
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
+                  cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:imageCellIdentifier
+                                                                           forIndexPath:indexPath];
     
     NSInteger tag = 3;
     UIImageView *imageView = [cell.contentView viewWithTag:tag];
@@ -45,11 +48,14 @@ static NSString *const imageCellIdentifier = @"imageCell";
     }
     
     if (self.imageArray.count) {
+        // 作品界面
         if (self.type == XCFShowViewTypeDish) {
             XCFPicture *imageData = self.imageArray[indexPath.row];
             [imageView sd_setImageWithURL:[NSURL URLWithString:imageData.bigPhoto]];
             
-        } else if (self.type == XCFShowViewTypeReview || self.type == XCFShowViewTypeGoods || self.type == XCFShowViewTypeDetail) {
+        }
+        // 评价晒图、商品、图片展示界面
+        else if (self.type == XCFShowViewTypeReview || self.type == XCFShowViewTypeGoods || self.type == XCFShowViewTypeDetail) {
             XCFReviewPhoto *photo = self.imageArray[indexPath.row];
             [imageView sd_setImageWithURL:[NSURL URLWithString:photo.url]];
         }

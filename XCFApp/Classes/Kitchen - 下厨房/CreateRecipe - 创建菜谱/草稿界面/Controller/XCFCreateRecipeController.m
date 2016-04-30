@@ -31,10 +31,10 @@
 
 @interface XCFCreateRecipeController () <UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (nonatomic, strong) XCFRecipeEditViewHeader *header;
-@property (nonatomic, strong) UIImagePickerController *headerPicker;
-@property (nonatomic, strong) UIImagePickerController *instructPicker;
-@property (nonatomic, strong) UIActionSheet *headerActionSheet;
-@property (nonatomic, strong) UIActionSheet *instructActionSheet;
+@property (nonatomic, strong) UIActionSheet *headerActionSheet;         // 顶部图片ActionSheet
+@property (nonatomic, strong) UIActionSheet *instructActionSheet;       // 做法步骤ActionSheet
+@property (nonatomic, strong) UIImagePickerController *headerPicker;    // 顶部图片选取器
+@property (nonatomic, strong) UIImagePickerController *instructPicker;  // 做法步骤图片选取器
 @property (nonatomic, assign) NSInteger setImageIndex;
 @property (nonatomic, strong) NSMutableArray<XCFCreateIngredient *> *ingredientArray;       // 用料数组
 @property (nonatomic, strong) NSMutableArray<XCFCreateInstruction *> *instructionArray;     // 步骤数组
@@ -210,7 +210,9 @@ canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
 commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
 forRowAtIndexPath:(NSIndexPath *)indexPath {
     // 如果步骤数组有数据，就删除对应位置的数据
-    if (self.instructionArray.count) [self.instructionArray removeObjectAtIndex:indexPath.row];
+    if (self.instructionArray.count) {
+        [self.instructionArray removeObjectAtIndex:indexPath.row];
+    }
     [self.tableView deleteRowsAtIndexPaths:@[indexPath]
                           withRowAnimation:UITableViewRowAnimationFade];
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:1]
@@ -286,14 +288,16 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
         instructionFooter.style = self.style;
         footer = instructionFooter;
         WeakSelf;
-        instructionFooter.addInstructionBlock = ^{ // 增加一行
+        // 增加一行点击回调
+        instructionFooter.addInstructionBlock = ^{
             [weakSelf.instructionArray addObject:[[XCFCreateInstruction alloc] init]];
             NSInteger row = weakSelf.instructionArray.count - 1;
             NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:1];
             [weakSelf.tableView insertRowsAtIndexPaths:@[indexPath]
                                       withRowAnimation:UITableViewRowAnimationBottom];
         };
-        instructionFooter.adjustBlock = ^(tableViewAdjustStyle style) { // 调整回调
+        // 调整回调
+        instructionFooter.adjustBlock = ^(tableViewAdjustStyle style) {
             weakSelf.style = style;
             if (style == tableViewAdjustStyleNone) {
                 [weakSelf.tableView setEditing:NO animated:YES];
@@ -369,15 +373,18 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
 #pragma mark - UIImagePickerControlleryDeledate
 - (void)imagePickerController:(UIImagePickerController *)picker
 didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
-    if (picker == self.headerPicker) { // 如果是顶部大图
+    // 如果是顶部大图
+    if (picker == self.headerPicker) {
         self.createRecipe.image = info[UIImagePickerControllerEditedImage];
         [self.tableView reloadData];
-        
-    } else if (picker == self.instructPicker) { // 如果是步骤图
+    }
+    // 如果是步骤图
+    else if (picker == self.instructPicker) {
         self.instructionArray[self.setImageIndex].image = info[UIImagePickerControllerEditedImage];
         [self.tableView reloadData];
     }
     [picker dismissViewControllerAnimated:YES completion:^{
+        // 选取完成后更新本地数据
         [self updateDarft];
     }];
 }
@@ -483,11 +490,14 @@ didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     for (NSInteger index=0; index<self.instructionArray.count; index++) {
         XCFCreateInstruction *instruction = self.instructionArray[index];
         // 如果有文字或者图片，就添加到准备存储的数组中
-        if (instruction.text.length || instruction.image) [newArray addObject:instruction];
+        if (instruction.text.length || instruction.image) {
+            [newArray addObject:instruction];
+        }
     }
     self.createRecipe.ingredient = self.ingredientArray;
     self.createRecipe.instruction = newArray;
-    [XCFRecipeDraftTool updateRecipeDraftAtIndex:self.draftIndex withRecipeDraft:self.createRecipe];
+    [XCFRecipeDraftTool updateRecipeDraftAtIndex:self.draftIndex
+                                 withRecipeDraft:self.createRecipe];
 }
 
 #pragma mark - 属性

@@ -98,8 +98,7 @@ static NSString *const headerReuseIdentifier = @"cartItemHeader";
             break;
         }
     }
-    if (yesMarkSelected == YES) header.state = XCFCartShopStateSelected;
-    if (yesMarkSelected == NO) header.state = XCFCartShopStateNone;
+    header.state = yesMarkSelected;
     
     WeakSelf;
     header.selectedShopItemsBlock = ^(XCFCartShopState state) { // 店铺全选回调

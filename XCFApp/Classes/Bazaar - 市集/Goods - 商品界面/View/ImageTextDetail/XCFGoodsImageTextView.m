@@ -45,7 +45,9 @@ static NSString * const attrsCellIdentifier = @"attrsCell";
         [_detailButton setTitleColor:XCFThemeColor forState:UIControlStateSelected];
         [self.navView addSubview:_detailButton];
         _detailButton.selected = YES;
-        [_detailButton addTarget:self action:@selector(scrollToDetailView) forControlEvents:UIControlEventTouchUpInside];
+        [_detailButton addTarget:self
+                          action:@selector(scrollToDetailView)
+                forControlEvents:UIControlEventTouchUpInside];
         
         
         // 规格
@@ -56,7 +58,9 @@ static NSString * const attrsCellIdentifier = @"attrsCell";
         [_attrsButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [_attrsButton setTitleColor:XCFThemeColor forState:UIControlStateSelected];
         [self.navView addSubview:_attrsButton];
-        [_attrsButton addTarget:self action:@selector(scrollToAttrsView) forControlEvents:UIControlEventTouchUpInside];
+        [_attrsButton addTarget:self
+                         action:@selector(scrollToAttrsView)
+               forControlEvents:UIControlEventTouchUpInside];
         
         // 下标
         _indexView = [[UIView alloc] initWithFrame:CGRectMake(0, navViewHeight-2, navViewWidth*0.5, 2)];
@@ -72,9 +76,15 @@ static NSString * const attrsCellIdentifier = @"attrsCell";
         flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         flowLayout.itemSize = CGSizeMake(self.bounds.size.width, self.bounds.size.height-44);
         flowLayout.minimumLineSpacing = 0;
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 44, self.bounds.size.width, self.bounds.size.height-44) collectionViewLayout:flowLayout];
-        [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:detailCellIdentifier];
-        [_collectionView registerClass:[XCFGoodsAttrsViewCell class] forCellWithReuseIdentifier:attrsCellIdentifier];
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0,
+                                                                             44,
+                                                                             self.bounds.size.width,
+                                                                             self.bounds.size.height-44)
+                                             collectionViewLayout:flowLayout];
+        [_collectionView registerClass:[UICollectionViewCell class]
+            forCellWithReuseIdentifier:detailCellIdentifier];
+        [_collectionView registerClass:[XCFGoodsAttrsViewCell class]
+            forCellWithReuseIdentifier:attrsCellIdentifier];
         _collectionView.dataSource = self;
         _collectionView.delegate = self;
         _collectionView.pagingEnabled = YES;
@@ -97,7 +107,8 @@ static NSString * const attrsCellIdentifier = @"attrsCell";
     UICollectionViewCell *cell;
     
     if (indexPath.row == 0) { // 详情
-        cell = [collectionView dequeueReusableCellWithReuseIdentifier:detailCellIdentifier forIndexPath:indexPath];
+        cell = [collectionView dequeueReusableCellWithReuseIdentifier:detailCellIdentifier
+                                                         forIndexPath:indexPath];
         NSInteger tag = 111;
         UIWebView *webView = [cell.contentView viewWithTag:tag];
         if (!webView) {
@@ -113,7 +124,8 @@ static NSString * const attrsCellIdentifier = @"attrsCell";
         }
         
     } else if (indexPath.row == 1) { // 属性
-        XCFGoodsAttrsViewCell *attrsCell = [collectionView dequeueReusableCellWithReuseIdentifier:attrsCellIdentifier forIndexPath:indexPath];
+        XCFGoodsAttrsViewCell *attrsCell = [collectionView dequeueReusableCellWithReuseIdentifier:attrsCellIdentifier
+                                                                                     forIndexPath:indexPath];
         attrsCell.attrsArray = self.goods.attrs;
         attrsCell.viewWillDismissBlock = self.viewWillDismissBlock; // 传递block
         cell = attrsCell;
@@ -124,7 +136,9 @@ static NSString * const attrsCellIdentifier = @"attrsCell";
 
 #pragma mark - UIScrollViewDelegate
 
-- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView
+                     withVelocity:(CGPoint)velocity
+              targetContentOffset:(inout CGPoint *)targetContentOffset {
     if ([scrollView.superview isKindOfClass:[UIWebView class]]) {
         if (scrollView.contentOffset.y < -100) !self.viewWillDismissBlock ? : self.viewWillDismissBlock();
     }
