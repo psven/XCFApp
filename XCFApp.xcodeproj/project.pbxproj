@@ -506,14 +506,14 @@
 		D407537D1CD2378000811CDF /* XCFKitchenBuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFKitchenBuyViewController.m; sourceTree = "<group>"; };
 		D407537E1CD2378000811CDF /* XCFMealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFMealViewController.h; sourceTree = "<group>"; };
 		D407537F1CD2378000811CDF /* XCFMealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFMealViewController.m; sourceTree = "<group>"; };
-		D40753821CD2378000811CDF /* XCFGoods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFGoods.h; sourceTree = "<group>"; };
-		D40753831CD2378000811CDF /* XCFGoods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFGoods.m; sourceTree = "<group>"; };
-		D40753841CD2378000811CDF /* XCFReview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFReview.h; sourceTree = "<group>"; };
-		D40753851CD2378000811CDF /* XCFReview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFReview.m; sourceTree = "<group>"; };
-		D40753861CD2378000811CDF /* XCFReviewCommodity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFReviewCommodity.h; sourceTree = "<group>"; };
-		D40753871CD2378000811CDF /* XCFReviewCommodity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFReviewCommodity.m; sourceTree = "<group>"; };
-		D40753881CD2378000811CDF /* XCFReviewPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFReviewPhoto.h; sourceTree = "<group>"; };
-		D40753891CD2378000811CDF /* XCFReviewPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFReviewPhoto.m; sourceTree = "<group>"; };
+		D40753821CD2378000811CDF /* XCFGoods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XCFGoods.h; path = "../../../Kitchen - 下厨房/Nav - 导航/Model/BuyBuyBuy - 买买买/XCFGoods.h"; sourceTree = "<group>"; };
+		D40753831CD2378000811CDF /* XCFGoods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XCFGoods.m; path = "../../../Kitchen - 下厨房/Nav - 导航/Model/BuyBuyBuy - 买买买/XCFGoods.m"; sourceTree = "<group>"; };
+		D40753841CD2378000811CDF /* XCFReview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XCFReview.h; path = "../../../Kitchen - 下厨房/Nav - 导航/Model/BuyBuyBuy - 买买买/XCFReview.h"; sourceTree = "<group>"; };
+		D40753851CD2378000811CDF /* XCFReview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XCFReview.m; path = "../../../Kitchen - 下厨房/Nav - 导航/Model/BuyBuyBuy - 买买买/XCFReview.m"; sourceTree = "<group>"; };
+		D40753861CD2378000811CDF /* XCFReviewCommodity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XCFReviewCommodity.h; path = "../../../Kitchen - 下厨房/Nav - 导航/Model/BuyBuyBuy - 买买买/XCFReviewCommodity.h"; sourceTree = "<group>"; };
+		D40753871CD2378000811CDF /* XCFReviewCommodity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XCFReviewCommodity.m; path = "../../../Kitchen - 下厨房/Nav - 导航/Model/BuyBuyBuy - 买买买/XCFReviewCommodity.m"; sourceTree = "<group>"; };
+		D40753881CD2378000811CDF /* XCFReviewPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XCFReviewPhoto.h; path = "../../../Kitchen - 下厨房/Nav - 导航/Model/BuyBuyBuy - 买买买/XCFReviewPhoto.h"; sourceTree = "<group>"; };
+		D40753891CD2378000811CDF /* XCFReviewPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XCFReviewPhoto.m; path = "../../../Kitchen - 下厨房/Nav - 导航/Model/BuyBuyBuy - 买买买/XCFReviewPhoto.m"; sourceTree = "<group>"; };
 		D407538B1CD2378000811CDF /* XCFComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFComment.h; sourceTree = "<group>"; };
 		D407538C1CD2378000811CDF /* XCFComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFComment.m; sourceTree = "<group>"; };
 		D407538D1CD2378000811CDF /* XCFDiggUsers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFDiggUsers.h; sourceTree = "<group>"; };
@@ -871,6 +871,14 @@
 		D40752721CD2378000811CDF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D40753821CD2378000811CDF /* XCFGoods.h */,
+				D40753831CD2378000811CDF /* XCFGoods.m */,
+				D40753841CD2378000811CDF /* XCFReview.h */,
+				D40753851CD2378000811CDF /* XCFReview.m */,
+				D40753861CD2378000811CDF /* XCFReviewCommodity.h */,
+				D40753871CD2378000811CDF /* XCFReviewCommodity.m */,
+				D40753881CD2378000811CDF /* XCFReviewPhoto.h */,
+				D40753891CD2378000811CDF /* XCFReviewPhoto.m */,
 				D40752731CD2378000811CDF /* XCFGoodsAttrs.h */,
 				D40752741CD2378000811CDF /* XCFGoodsAttrs.m */,
 				D40752751CD2378000811CDF /* XCFGoodsKind.h */,
@@ -904,11 +912,11 @@
 		D407527A1CD2378000811CDF /* header */ = {
 			isa = PBXGroup;
 			children = (
+				D407527E1CD2378000811CDF /* XCFGoodsHeaderView.h */,
+				D407527F1CD2378000811CDF /* XCFGoodsHeaderView.m */,
 				D407527B1CD2378000811CDF /* XCFGoodsDetailView.h */,
 				D407527C1CD2378000811CDF /* XCFGoodsDetailView.m */,
 				D407527D1CD2378000811CDF /* XCFGoodsDetailView.xib */,
-				D407527E1CD2378000811CDF /* XCFGoodsHeaderView.h */,
-				D407527F1CD2378000811CDF /* XCFGoodsHeaderView.m */,
 				D40752801CD2378000811CDF /* XCFGoodsShopPromotionView.h */,
 				D40752811CD2378000811CDF /* XCFGoodsShopPromotionView.m */,
 				D40752821CD2378000811CDF /* XCFGoodsShopPromotionView.xib */,
@@ -1474,14 +1482,6 @@
 		D40753811CD2378000811CDF /* BuyBuyBuy - 买买买 */ = {
 			isa = PBXGroup;
 			children = (
-				D40753821CD2378000811CDF /* XCFGoods.h */,
-				D40753831CD2378000811CDF /* XCFGoods.m */,
-				D40753841CD2378000811CDF /* XCFReview.h */,
-				D40753851CD2378000811CDF /* XCFReview.m */,
-				D40753861CD2378000811CDF /* XCFReviewCommodity.h */,
-				D40753871CD2378000811CDF /* XCFReviewCommodity.m */,
-				D40753881CD2378000811CDF /* XCFReviewPhoto.h */,
-				D40753891CD2378000811CDF /* XCFReviewPhoto.m */,
 			);
 			path = "BuyBuyBuy - 买买买";
 			sourceTree = "<group>";

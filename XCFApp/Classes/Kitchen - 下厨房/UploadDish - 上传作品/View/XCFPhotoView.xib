@@ -11,6 +11,9 @@
             <rect key="frame" x="0.0" y="0.0" width="164" height="149"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DNu-K4-vHW">
+                    <rect key="frame" x="10" y="10" width="144" height="129"/>
+                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3I-HH-pDJ">
                     <rect key="frame" x="144" y="0.0" width="20" height="20"/>
                     <constraints>
@@ -19,9 +22,6 @@
                     </constraints>
                     <state key="normal" image="create_dish_photo_delete"/>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DNu-K4-vHW">
-                    <rect key="frame" x="10" y="10" width="144" height="129"/>
-                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>

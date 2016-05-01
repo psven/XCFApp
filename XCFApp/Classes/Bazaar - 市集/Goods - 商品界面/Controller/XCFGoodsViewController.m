@@ -188,13 +188,14 @@ static NSString * const headerIdentifier = @"header";
 
 // 进入店铺
 - (void)goToShop {
-    UIViewController *shopVC = [[UIViewController alloc] init];
-    UIWebView *webView = [[UIWebView alloc] initWithFrame:shopVC.view.bounds];
-    webView.backgroundColor = XCFGlobalBackgroundColor;
-    [shopVC.view addSubview:webView];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.goods.shop.url]];
-    [webView loadRequest:request];
-    [self.navigationController pushViewController:shopVC animated:YES];
+    [self pushWebViewWithURL:self.goods.shop.url];
+//    UIViewController *shopVC = [[UIViewController alloc] init];
+//    UIWebView *webView = [[UIWebView alloc] initWithFrame:shopVC.view.bounds];
+//    webView.backgroundColor = XCFGlobalBackgroundColor;
+//    [shopVC.view addSubview:webView];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.goods.shop.url]];
+//    [webView loadRequest:request];
+//    [self.navigationController pushViewController:shopVC animated:YES];
 }
 
 // 返回
@@ -281,7 +282,14 @@ static NSString * const headerIdentifier = @"header";
             }];
         }
         else if (type == BottomViewClickedBuyNow) {
-            
+            // 测试
+//            UIViewController *viewCon = [[UIViewController alloc] init];
+//            viewCon.view.alpha = 0.5;
+//            [weakSelf.navigationController presentViewController:viewCon animated:NO completion:^{
+//                [UIView animateWithDuration:1 animations:^{
+//                    weakSelf.view.transform = CGAffineTransformMakeScale(0.9, 0.9);
+//                }];
+//            }];
         }
     };
 }

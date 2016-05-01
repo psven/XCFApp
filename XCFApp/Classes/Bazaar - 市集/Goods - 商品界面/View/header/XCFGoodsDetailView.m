@@ -41,7 +41,8 @@
     
     NSString *originPriceString = [NSString stringWithFormat:@"¥ %@0", goods.display_original_price];
     NSMutableAttributedString *originPriceAttrsStr = [[NSMutableAttributedString alloc] initWithString:originPriceString];
-    [originPriceAttrsStr addAttribute:NSStrikethroughStyleAttributeName value:@(1) range:NSMakeRange(0, originPriceString.length)];
+    [originPriceAttrsStr addAttribute:NSStrikethroughStyleAttributeName value:@(1)
+                                range:NSMakeRange(0, originPriceString.length)];
     self.originPriceLabel.attributedText = originPriceAttrsStr;
     
     

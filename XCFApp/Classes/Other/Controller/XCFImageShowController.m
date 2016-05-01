@@ -12,8 +12,6 @@
 #import <UIImageView+WebCache.h>
 
 @interface XCFImageShowController ()
-@property (nonatomic, strong) UIButton *closeButton;
-@property (nonatomic, strong) XCFImageShowView *showView;
 @end
 
 @implementation XCFImageShowController
@@ -27,7 +25,6 @@
     [dismissButton addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
     dismissButton.alpha = 0;
     [self.view addSubview:dismissButton];
-    self.closeButton = dismissButton;
     
     // 图片轮播器
     CGRect displayRect = CGRectMake(0, XCFScreenHeight*0.5-175, XCFScreenWidth, 350);
@@ -40,7 +37,6 @@
     // 默认先隐藏
     showView.hidden = YES;
     [self.view addSubview:showView];
-    self.showView = showView;
     
     // 临时添加一个imageView 作动画
     CGRect rect = [self.rectValue CGRectValue];
@@ -56,7 +52,7 @@
         [imageView removeFromSuperview];
         showView.hidden = NO;
         [UIView animateWithDuration:0.3 animations:^{
-            self.closeButton.alpha = 1;
+            dismissButton.alpha = 1;
         }];
     }];
 }

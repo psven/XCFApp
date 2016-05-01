@@ -44,10 +44,12 @@ static NSString *const searchCellIdentifier = @"search";
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    // 时刻刷新
     self.header.hidden = ![XCFSearchKeywordsTool totalWords].count || self.searchContent.length;
     self.tableView.tableHeaderView = self.header;
     self.footer.hidden = self.searchContent.length;
     self.tableView.tableFooterView = self.footer;
+    
     return 3;
 }
 
