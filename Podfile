@@ -8,5 +8,6 @@ pod 'AFNetworking'
 pod 'Masonry'
 pod 'SDWebImage'
 pod 'SVProgressHUD'
+pod ‘pop’
 
 end

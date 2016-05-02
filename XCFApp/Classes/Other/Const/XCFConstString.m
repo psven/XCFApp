@@ -21,4 +21,4 @@ NSString *const halfStar = @"yellowStar13Half";
 /** 加入菜篮子通知 */
 NSString *const XCFBasketListDidAddIngredientNotification = @"XCFBasketListDidAddIngredientNotification";
 /** 加入购物车通知 */
-NSString *const XCFCartDidAddedGoodsNotification = @"XCFCartDidAddedGoodsNotification";
+NSString *const XCFCartItemTotalNumberDidChangedNotification = @"XCFCartItemTotalNumberDidChangedNotification";

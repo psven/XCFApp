@@ -10,6 +10,7 @@
 #import "XCFCartItem.h"
 #import "XCFGoods.h"
 #import "XCFShop.h"
+#import "XCFGoodsKind.h"
 #import <MJExtension.h>
 
 #define XCFCartItemsPath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"cartItems.data"]
@@ -21,6 +22,10 @@ static NSMutableArray *_cartItems;
 
 + (void)update {
     [NSKeyedArchiver archiveRootObject:_cartItems toFile:XCFCartItemsPath];
+    // 任何一个操作之后都发送通知，用处：购物车图标动画
+    [[NSNotificationCenter defaultCenter] postNotificationName:XCFCartItemTotalNumberDidChangedNotification
+                                                        object:nil
+                                                      userInfo:@{@"goodsCount" : @([self totalNumber])}];
 }
 
 
@@ -68,26 +73,39 @@ static NSMutableArray *_cartItems;
 
 /**********************添加**********************/
 
+/**
+ *  添加操作需要对进行商品三个层次判断
+ *  1. 判断购物车内是否存在与商品相同的店铺
+ *  2. 判断店铺内是否存在相同名称的商品
+ *  3. 判断商品内是否存在相同的类型
+ */
+
 + (void)addItem:(XCFCartItem *)item {
     if (!_cartItems.count) { // 如果数组为空，重新添加一个店铺数组，店铺数组里添加商品
         _cartItems = [NSMutableArray array];
         NSMutableArray *shopArray = [NSMutableArray array];
         [shopArray addObject:item];
         [_cartItems addObject:shopArray];
-        
     } else {
+        
+        // 1.
         BOOL hasSameShop = NO; // 记录 新添加的商品 是否属于 已存在的店铺
         for (NSInteger index=0; index<_cartItems.count; index++) {
             NSMutableArray *shopArray = _cartItems[index];
             NSString *shopName = [[[shopArray[0] goods] shop] name];
             if ([item.goods.shop.name isEqualToString:shopName]) { // 根据商品店铺名添加到对应店铺数组内
                 
+                // 2.
                 BOOL hasSameGoods = NO; // 记录是否存在相同的商品
                 for (XCFCartItem *existItem in shopArray) {
-                    if ([item.goods.name isEqualToString:existItem.goods.name]) { // 如果是同一类商品，数量加1
-                        existItem.number++;
-                        hasSameGoods = YES;
-                        break;
+                    if ([item.goods.name isEqualToString:existItem.goods.name]) { // 如果是同一类商品
+                        
+                        if ([item.kind_name isEqualToString:existItem.kind_name]) { // 如果是同一分类
+                            existItem.number += item.number;
+                            hasSameGoods = YES;
+                            break;
+                        } 
+                        
                     }
                 }
                 if (hasSameGoods == NO) [shopArray addObject:item]; // 如果不是同一类商品就加到店铺中
@@ -105,19 +123,19 @@ static NSMutableArray *_cartItems;
     }
     [self update];
     
-    // 添加完成后发送通知，用处：购物车图标动画
-    [[NSNotificationCenter defaultCenter] postNotificationName:XCFCartDidAddedGoodsNotification
-                                                        object:nil
-                                                      userInfo:@{@"goodsCount" : @([self totalNumber])}];
 }
 
-+ (void)addItemRandomly:(void (^)(NSString *))itemNameCallback {
++ (XCFCartItem *)randomItem {
     NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle]
                                                                      pathForResource:@"cart_items.plist"
                                                                      ofType:nil]];
     NSArray *dataArray = [XCFCartItem mj_objectArrayWithKeyValuesArray:dict[@"content"][@"cart_items"]];
     NSUInteger random = arc4random_uniform((unsigned int)dataArray.count);
-    XCFCartItem *item = dataArray[random];
+    return dataArray[random];
+}
+
++ (void)addItemRandomly:(void (^)(NSString *))itemNameCallback {
+    XCFCartItem *item = [self randomItem];
     [XCFCartItemTool addItem:item];
     itemNameCallback(item.goods.name);
 }
@@ -203,6 +221,16 @@ static NSMutableArray *_cartItems;
         }
         if (newShopArray.count) [totalBuyItemsArray addObject:newShopArray];
     }
+    return totalBuyItemsArray;
+}
+
++ (NSArray *)buyItem:(XCFCartItem *)item {
+    // 设置状态为选中，即：说明此商品需要购买
+    item.state = XCFCartItemStateSelected;
+    NSMutableArray *totalBuyItemsArray = [NSMutableArray array];
+    NSMutableArray *newShopArray = [NSMutableArray array];
+    [newShopArray addObject:item];
+    [totalBuyItemsArray addObject:newShopArray];
     return totalBuyItemsArray;
 }
 

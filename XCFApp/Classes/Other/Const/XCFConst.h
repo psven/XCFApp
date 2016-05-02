@@ -76,6 +76,16 @@ typedef NS_ENUM(NSUInteger, XCFCartItemState) {
     XCFCartItemStateSelected
 };
 
+/**
+ *  商品分类弹框类型
+ */
+typedef NS_ENUM(NSUInteger, XCFKindsViewType) {
+    XCFKindsViewTypeCart,   // 购物车
+    XCFKindsViewTypeOrder   // 下订单
+};
+
+
+
 /** 下厨房 - 标题距离屏幕左边的间距 */
 UIKIT_EXTERN CGFloat const XCFRecipeCellMarginTitle;
 /** 下厨房 - 大标题距离屏幕左边的间距 */
@@ -101,6 +111,8 @@ UIKIT_EXTERN CGFloat const XCFRecipeListViewHeightCollectButton;
 /** 下厨房 - 菜单 - 专家图标宽高 */
 UIKIT_EXTERN CGFloat const XCFRecipeListViewHeightExpertIcon;
 
+/** 商品界面 - 加入购物车 - 商品分类最小高度 */
+UIKIT_EXTERN CGFloat const XCFGoodsKindsCategoryViewMinusHeight;
 
 
 

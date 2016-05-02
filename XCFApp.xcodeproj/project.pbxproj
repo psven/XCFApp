@@ -242,6 +242,11 @@
 		D407559B1CD23A3200811CDF /* detaillocation.plist in Resources */ = {isa = PBXBuildFile; fileRef = D40755961CD23A3200811CDF /* detaillocation.plist */; };
 		D407559C1CD23A3200811CDF /* Ingredient.plist in Resources */ = {isa = PBXBuildFile; fileRef = D40755971CD23A3200811CDF /* Ingredient.plist */; };
 		D407559D1CD23A3200811CDF /* keywords.plist in Resources */ = {isa = PBXBuildFile; fileRef = D40755981CD23A3200811CDF /* keywords.plist */; };
+		D48FF9CB1CD5FECD00E39F7A /* XCFKindsCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = D48FF9CA1CD5FECD00E39F7A /* XCFKindsCategoryView.m */; };
+		D48FF9CE1CD600AF00E39F7A /* XCFKindsView.m in Sources */ = {isa = PBXBuildFile; fileRef = D48FF9CD1CD600AF00E39F7A /* XCFKindsView.m */; };
+		D48FF9D01CD600BA00E39F7A /* XCFKindsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D48FF9CF1CD600BA00E39F7A /* XCFKindsView.xib */; };
+		D48FF9D31CD662CC00E39F7A /* XCFStepper.m in Sources */ = {isa = PBXBuildFile; fileRef = D48FF9D21CD662CC00E39F7A /* XCFStepper.m */; };
+		D48FF9D51CD6632E00E39F7A /* XCFStepper.xib in Resources */ = {isa = PBXBuildFile; fileRef = D48FF9D41CD6632E00E39F7A /* XCFStepper.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -684,6 +689,14 @@
 		D40755961CD23A3200811CDF /* detaillocation.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = detaillocation.plist; sourceTree = "<group>"; };
 		D40755971CD23A3200811CDF /* Ingredient.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Ingredient.plist; sourceTree = "<group>"; };
 		D40755981CD23A3200811CDF /* keywords.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keywords.plist; sourceTree = "<group>"; };
+		D48FF9C91CD5FECD00E39F7A /* XCFKindsCategoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XCFKindsCategoryView.h; path = KindsCategoryView/XCFKindsCategoryView.h; sourceTree = "<group>"; };
+		D48FF9CA1CD5FECD00E39F7A /* XCFKindsCategoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XCFKindsCategoryView.m; path = KindsCategoryView/XCFKindsCategoryView.m; sourceTree = "<group>"; };
+		D48FF9CC1CD600AF00E39F7A /* XCFKindsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XCFKindsView.h; path = KindsCategoryView/XCFKindsView.h; sourceTree = "<group>"; };
+		D48FF9CD1CD600AF00E39F7A /* XCFKindsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XCFKindsView.m; path = KindsCategoryView/XCFKindsView.m; sourceTree = "<group>"; };
+		D48FF9CF1CD600BA00E39F7A /* XCFKindsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = XCFKindsView.xib; path = KindsCategoryView/XCFKindsView.xib; sourceTree = "<group>"; };
+		D48FF9D11CD662CC00E39F7A /* XCFStepper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XCFStepper.h; path = KindsCategoryView/XCFStepper.h; sourceTree = "<group>"; };
+		D48FF9D21CD662CC00E39F7A /* XCFStepper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XCFStepper.m; path = KindsCategoryView/XCFStepper.m; sourceTree = "<group>"; };
+		D48FF9D41CD6632E00E39F7A /* XCFStepper.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = XCFStepper.xib; path = KindsCategoryView/XCFStepper.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -849,8 +862,8 @@
 			isa = PBXGroup;
 			children = (
 				D407526B1CD2378000811CDF /* Controller */,
-				D40752721CD2378000811CDF /* Model */,
 				D40752791CD2378000811CDF /* View */,
+				D40752721CD2378000811CDF /* Model */,
 			);
 			path = "Goods - 商品界面";
 			sourceTree = "<group>";
@@ -892,6 +905,7 @@
 		D40752791CD2378000811CDF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D48FF9C81CD5FCC000E39F7A /* KindsCategoryView */,
 				D407527A1CD2378000811CDF /* header */,
 				D40752831CD2378000811CDF /* ImageTextDetail */,
 				D407528A1CD2378000811CDF /* XCFDetailReviewCell.h */,
@@ -1611,18 +1625,18 @@
 		D40753BB1CD2378000811CDF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D40753BC1CD2378000811CDF /* XCFMealsAndTagsView.h */,
-				D40753BD1CD2378000811CDF /* XCFMealsAndTagsView.m */,
-				D40753BE1CD2378000811CDF /* XCFMealsAndTagsView.xib */,
 				D40753BF1CD2378000811CDF /* XCFPhotoView.h */,
 				D40753C01CD2378000811CDF /* XCFPhotoView.m */,
 				D40753C11CD2378000811CDF /* XCFPhotoView.xib */,
-				D40753C21CD2378000811CDF /* XCFTagView.h */,
-				D40753C31CD2378000811CDF /* XCFTagView.m */,
-				D40753C41CD2378000811CDF /* XCFTagView.xib */,
 				D40753C51CD2378000811CDF /* XCFTextAndPhotoView.h */,
 				D40753C61CD2378000811CDF /* XCFTextAndPhotoView.m */,
 				D40753C71CD2378000811CDF /* XCFTextAndPhotoView.xib */,
+				D40753C21CD2378000811CDF /* XCFTagView.h */,
+				D40753C31CD2378000811CDF /* XCFTagView.m */,
+				D40753C41CD2378000811CDF /* XCFTagView.xib */,
+				D40753BC1CD2378000811CDF /* XCFMealsAndTagsView.h */,
+				D40753BD1CD2378000811CDF /* XCFMealsAndTagsView.m */,
+				D40753BE1CD2378000811CDF /* XCFMealsAndTagsView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1904,6 +1918,21 @@
 			name = DetailLocation;
 			sourceTree = "<group>";
 		};
+		D48FF9C81CD5FCC000E39F7A /* KindsCategoryView */ = {
+			isa = PBXGroup;
+			children = (
+				D48FF9C91CD5FECD00E39F7A /* XCFKindsCategoryView.h */,
+				D48FF9CA1CD5FECD00E39F7A /* XCFKindsCategoryView.m */,
+				D48FF9CC1CD600AF00E39F7A /* XCFKindsView.h */,
+				D48FF9CD1CD600AF00E39F7A /* XCFKindsView.m */,
+				D48FF9CF1CD600BA00E39F7A /* XCFKindsView.xib */,
+				D48FF9D11CD662CC00E39F7A /* XCFStepper.h */,
+				D48FF9D21CD662CC00E39F7A /* XCFStepper.m */,
+				D48FF9D41CD6632E00E39F7A /* XCFStepper.xib */,
+			);
+			name = KindsCategoryView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2029,6 +2058,7 @@
 				D407550B1CD2378000811CDF /* XCFCartIcon.xib in Resources */,
 				D407545C1CD2378000811CDF /* XCFGoodsFooterView.xib in Resources */,
 				D40754641CD2378000811CDF /* XCFOrderAddressView.xib in Resources */,
+				D48FF9D51CD6632E00E39F7A /* XCFStepper.xib in Resources */,
 				D40755921CD238D000811CDF /* breakfast.json in Resources */,
 				D40752601CD20E5E00811CDF /* Info.plist in Resources */,
 				D407547D1CD2378000811CDF /* XCFForumViewCell.xib in Resources */,
@@ -2059,6 +2089,7 @@
 				D407546A1CD2378000811CDF /* XCFOrderSectionFooter.xib in Resources */,
 				D407559A1CD23A3200811CDF /* comment.plist in Resources */,
 				D40754661CD2378000811CDF /* XCFOrderFooterView.xib in Resources */,
+				D48FF9D01CD600BA00E39F7A /* XCFKindsView.xib in Resources */,
 				D40754E51CD2378000811CDF /* XCFPhotoView.xib in Resources */,
 				D407548E1CD2378000811CDF /* XCFIngredientEditCell.xib in Resources */,
 				D407546E1CD2378000811CDF /* XCFCartItemShopView.xib in Resources */,
@@ -2236,8 +2267,10 @@
 				D40754A21CD2378000811CDF /* XCFRecipeListViewController.m in Sources */,
 				D40754FD1CD2378000811CDF /* XCFConstRequest.m in Sources */,
 				D407557A1CD2381100811CDF /* XCFAddressInfoTool.m in Sources */,
+				D48FF9D31CD662CC00E39F7A /* XCFStepper.m in Sources */,
 				D40754AA1CD2378000811CDF /* XCFNavContent.m in Sources */,
 				D40754AD1CD2378000811CDF /* XCFAddedRecipeList.m in Sources */,
+				D48FF9CE1CD600AF00E39F7A /* XCFKindsView.m in Sources */,
 				D40754861CD2378000811CDF /* XCFIngredientListViewCell.m in Sources */,
 				D40754F81CD2378000811CDF /* UIImage+Extension.m in Sources */,
 				D40754AC1CD2378000811CDF /* XCFPopEvents.m in Sources */,
@@ -2262,6 +2295,7 @@
 				D407547E1CD2378000811CDF /* XCFTopicCell.m in Sources */,
 				D40754D41CD2378000811CDF /* XCFPicture.m in Sources */,
 				D40754611CD2378000811CDF /* XCFCartItem.m in Sources */,
+				D48FF9CB1CD5FECD00E39F7A /* XCFKindsCategoryView.m in Sources */,
 				D40755421CD2380900811CDF /* XCFMyLocateNDescView.m in Sources */,
 				D40754FA1CD2378000811CDF /* UILabel+Extension.m in Sources */,
 				D40754B21CD2378000811CDF /* XCFRecipeInstruction.m in Sources */,

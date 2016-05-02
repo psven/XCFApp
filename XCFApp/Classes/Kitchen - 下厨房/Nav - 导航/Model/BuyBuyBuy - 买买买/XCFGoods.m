@@ -97,10 +97,27 @@
     CGFloat nameLabelHeight = [self.name getSizeWithTextSize:CGSizeMake(labelWidth, MAXFLOAT) fontSize:18].height;         // 标题
     
     _goodsDetailViewHeight = saleViewHeight + totalMargin + displayPriceLabelHeight + forewordLabelHeight + nameLabelHeight;
-    
     if (self.promotion_text_list.count) _goodsDetailViewHeight += 20+20; // 促销信息+间距
-    
     return _goodsDetailViewHeight;
+}
+
+- (CGFloat)goodsCategoryViewHeight {
+    
+    CGFloat currentX = 15;
+    NSUInteger lines = 1;
+    for (NSInteger index=0; index<self.kinds.count; index++) {
+        NSString *kindName = self.kinds[index].name;
+        CGFloat textWidth = [kindName getSizeWithTextSize:CGSizeMake(MAXFLOAT, 20) fontSize:13].width;
+        CGFloat displayWidth = textWidth + 16;
+        
+        if ((currentX+displayWidth+15) > XCFScreenWidth) { // 如果当前x+标签宽度大于屏幕高度，就转行
+            currentX = 15;
+            if (index > 0) lines++;
+            if (displayWidth >= XCFScreenWidth) displayWidth = XCFScreenWidth; // 如果单个标签宽度大于屏幕宽度
+        }
+        currentX += displayWidth+8;
+    }
+    return lines * 33 + XCFGoodsKindsCategoryViewMinusHeight;
 }
 
 - (CGFloat)shopPromotionViewHeight {
@@ -110,7 +127,6 @@
     _shopPromotionViewHeight = goodsDescLabelHeight + margin*2;
     
     if (self.shop.promotion_text_list.count) _shopPromotionViewHeight += 40; // 如果有店铺促销 +店铺促销信息view高度
-    
     if (self.shop.announcement.length) { // 如果有店铺公告 +店铺公告labelHeight +margin
         CGFloat announcementLabelHeight = [self.shop.announcement getSizeWithTextSize:CGSizeMake(labelWidth, MAXFLOAT) fontSize:14].height;
         _shopPromotionViewHeight += announcementLabelHeight + margin;

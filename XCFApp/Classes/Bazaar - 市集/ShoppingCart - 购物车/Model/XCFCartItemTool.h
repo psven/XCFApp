@@ -40,6 +40,11 @@
 + (void)addItem:(XCFCartItem *)item;
 
 /**
+ *  随机获取一个商品
+ */
++ (XCFCartItem *)randomItem;
+
+/**
  *  随机添加一个商品
  *
  *  @param callback 返回添加商品的名称
@@ -103,9 +108,21 @@
 + (void)resetItemState;
 
 
+
+/**********************下订单**********************/
+
 /**
- *  需要购买的商品(订单界面使用)
+ *  由购物车进入
+ *
+ *  @return 需要购买的商品
  */
 + (NSArray *)totalBuyItems;
+
+/**
+ *  立即购买
+ *
+ *  @return 需要购买的商品
+ */
++ (NSArray *)buyItem:(XCFCartItem *)item;
 
 @end

@@ -10,6 +10,6 @@
 
 @interface XCFOrderPayView : UIView
 
-//@property (nonatomic, strong) NSArray *totalArray; 
+@property (nonatomic, strong) NSArray *buyItems; // 购买商品数据
 
 @end

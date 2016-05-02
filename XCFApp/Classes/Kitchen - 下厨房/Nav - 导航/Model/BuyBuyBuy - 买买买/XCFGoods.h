@@ -79,7 +79,10 @@
 
 /** 商品信息viewHeight */
 @property (nonatomic, assign) CGFloat goodsDetailViewHeight;
+/** 商品类别viewHeight */
+@property (nonatomic, assign) CGFloat goodsCategoryViewHeight;
 /** 店铺信息viewHeight */
 @property (nonatomic, assign) CGFloat shopPromotionViewHeight;
+
 
 @end

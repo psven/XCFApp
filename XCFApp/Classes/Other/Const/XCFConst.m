@@ -35,3 +35,5 @@ CGFloat const XCFRecipeListViewHeightCollectButton = 30;
 CGFloat const XCFRecipeListViewHeightExpertIcon = 15;
 
 
+/** 商品界面 - 加入购物车 - 商品分类最小高度 */
+CGFloat const XCFGoodsKindsCategoryViewMinusHeight = 260;

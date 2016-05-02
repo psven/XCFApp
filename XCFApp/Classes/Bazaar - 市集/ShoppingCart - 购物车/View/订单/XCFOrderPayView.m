@@ -19,19 +19,26 @@
 
 @implementation XCFOrderPayView
 
-- (void)awakeFromNib {
-    NSArray *totalItemsArray = [XCFCartItemTool totalItems];
+
+- (void)setBuyItems:(NSArray *)buyItems {
+    _buyItems = buyItems;
+    if (!buyItems.count) {
+        _buyItems = [XCFCartItemTool totalBuyItems];
+    }
+    
     double totalPrice = 0;   // 总价格
     double totalFreight = 0; // 总运费
-    for (NSArray *shopArray in totalItemsArray) {
+    for (NSArray *shopArray in buyItems) {
         totalFreight += [[[shopArray[0] goods] freight] doubleValue];
         for (XCFCartItem *item in shopArray) {
-            if (item.state == XCFCartItemStateSelected) {
-                totalPrice += item.displayPrice * item.number;
-            }
+            totalPrice += item.displayPrice * item.number;
         }
     }
     self.totalPayPrice.text = [NSString stringWithFormat:@"实付款：¥%.1f0", totalPrice+totalFreight];
+    
+}
+
+- (void)awakeFromNib {
     
     [self.payButton addTarget:self action:@selector(pay) forControlEvents:UIControlEventTouchUpInside];
 }

@@ -7,10 +7,12 @@
 //
 
 #import "XCFGoodsViewController.h"
+#import "XCFKindsCategoryView.h"
 #import "XCFImageShowController.h"
 #import "XCFGoodsReviewController.h"
 #import "XCFDetailReviewViewController.h"
 #import "XCFCartViewController.h"
+#import "XCFOrderViewController.h"
 
 #import "XCFGoodsHeaderView.h"
 #import "XCFGoodsFooterView.h"
@@ -19,6 +21,7 @@
 #import "XCFGoodsImageTextView.h"
 #import "XCFGoodsBottomView.h"
 
+#import "XCFCartItem.h"
 #import "XCFCartItemTool.h"
 #import "XCFGoods.h"
 #import "XCFShop.h"
@@ -85,6 +88,7 @@ static NSString * const headerIdentifier = @"header";
         WeakSelf;
         reviewCell.type = XCFVerticalCellTypeReview;
         reviewCell.goods = self.goods;
+        
         // 点击评价cell的回调
         reviewCell.collectionViewCellClickedBlock = ^(NSInteger index) {
             // 评价详情
@@ -189,13 +193,6 @@ static NSString * const headerIdentifier = @"header";
 // 进入店铺
 - (void)goToShop {
     [self pushWebViewWithURL:self.goods.shop.url];
-//    UIViewController *shopVC = [[UIViewController alloc] init];
-//    UIWebView *webView = [[UIWebView alloc] initWithFrame:shopVC.view.bounds];
-//    webView.backgroundColor = XCFGlobalBackgroundColor;
-//    [shopVC.view addSubview:webView];
-//    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.goods.shop.url]];
-//    [webView loadRequest:request];
-//    [self.navigationController pushViewController:shopVC animated:YES];
 }
 
 // 返回
@@ -272,24 +269,89 @@ static NSString * const headerIdentifier = @"header";
     [self.view insertSubview:_bottomView aboveSubview:self.imageTextView];
     WeakSelf;
     _bottomView.actionBlock = ^(BottomViewClicked type) {
+        
+        XCFCartItem *randomItem = [XCFCartItemTool randomItem];
+        XCFGoods *randomGoods = randomItem.goods;
+        // 店铺
         if (type == BottomViewClickedGoToShop) {
             [weakSelf goToShop];
         }
+        
+        
+        // 加入购物车
         else if (type == BottomViewClickedAddToShoppingCart) {
             // 随机添加一样商品
-            [XCFCartItemTool addItemRandomly:^(NSString *goodsName) {
-                [UILabel showStats:[NSString stringWithFormat:@"随机添加:\n%@", goodsName] atView:weakSelf.view];
-            }];
+            
+            // 如果该商品有多种类型，就弹窗让用户选择具体购买哪种类型
+            if (randomGoods.kinds.count > 1) {
+                UIWindow *window = [UIApplication sharedApplication].keyWindow;
+                // 缩小当前界面
+                [UIView animateWithDuration:0.3 animations:^{
+                    window.rootViewController.view.transform = CGAffineTransformMakeScale(0.9, 0.9);
+                }];
+                
+                // 显示商品分类view
+                XCFKindsCategoryView *kindsView = [[XCFKindsCategoryView alloc] initWithFrame:window.bounds];
+                kindsView.type = XCFKindsViewTypeCart;
+                kindsView.item = randomItem;
+                [window addSubview:kindsView];
+                // 确认购买回调
+                kindsView.confirmBlock = ^(XCFCartItem *item) {
+                    [XCFCartItemTool addItem:item];
+                    [UILabel showStats:[NSString stringWithFormat:@"添加:\n%@", item.kind_name] atView:weakSelf.view];
+                };
+                // 取消回调
+                kindsView.cancelBlock = ^{
+                    // 恢复界面大小
+                    [UIView animateWithDuration:0.3 animations:^{
+                        window.rootViewController.view.transform = CGAffineTransformMakeScale(1, 1);
+                    }];
+                };
+                
+            } else { // 如果只有一个商品，直接加入购物车
+                [XCFCartItemTool addItemRandomly:^(NSString *goodsName) {
+                    [UILabel showStats:[NSString stringWithFormat:@"随机添加:\n%@", goodsName] atView:weakSelf.view];
+                }];
+            }
         }
+        
+        
+        
+        // 立即购买
         else if (type == BottomViewClickedBuyNow) {
-            // 测试
-//            UIViewController *viewCon = [[UIViewController alloc] init];
-//            viewCon.view.alpha = 0.5;
-//            [weakSelf.navigationController presentViewController:viewCon animated:NO completion:^{
-//                [UIView animateWithDuration:1 animations:^{
-//                    weakSelf.view.transform = CGAffineTransformMakeScale(0.9, 0.9);
-//                }];
-//            }];
+            // 随机购买一样商品
+            
+            // 如果该商品有多种类型，就弹窗让用户选择具体购买哪种类型
+            if (randomGoods.kinds.count > 1) {
+                UIWindow *window = [UIApplication sharedApplication].keyWindow;
+                // 缩小当前界面
+                [UIView animateWithDuration:0.3 animations:^{
+                    window.rootViewController.view.transform = CGAffineTransformMakeScale(0.9, 0.9);
+                }];
+                // 显示商品分类view
+                XCFKindsCategoryView *kindsView = [[XCFKindsCategoryView alloc] initWithFrame:window.bounds];
+                kindsView.type = XCFKindsViewTypeOrder;
+                kindsView.item = randomItem;
+                [window addSubview:kindsView];
+                kindsView.confirmBlock = ^(XCFCartItem *item) {
+                    // 进入下订单界面
+                    XCFOrderViewController *orderVC = [[XCFOrderViewController alloc] init];
+                    orderVC.buyItems = [XCFCartItemTool buyItem:item];
+                    [weakSelf.navigationController pushViewController:orderVC animated:YES];
+                };
+                // 取消回调
+                kindsView.cancelBlock = ^{
+                    // 恢复界面大小
+                    [UIView animateWithDuration:0.3 animations:^{
+                        window.rootViewController.view.transform = CGAffineTransformMakeScale(1, 1);
+                    }];
+                };
+                
+            } else { // 如果只有一个商品，直接进入下订单界面
+                XCFOrderViewController *orderVC = [[XCFOrderViewController alloc] init];
+                orderVC.buyItems = [XCFCartItemTool buyItem:randomItem];
+                [weakSelf.navigationController pushViewController:orderVC animated:YES];
+            }
         }
     };
 }

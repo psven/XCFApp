@@ -33,6 +33,14 @@ static NSString *const cellReuseIdentifier = @"cartItemCell";
 static NSString *const headerReuseIdentifier = @"cartItemHeader";
 static NSString *const footerReuseIdentifier = @"cartItemfooter";
 
+- (NSArray *)buyItems {
+    // 如果没有数据，说明是从购物车进入
+    if (!_buyItems.count) {
+        _buyItems = [XCFCartItemTool totalBuyItems];
+    }
+    return  _buyItems;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupBasic];
@@ -53,17 +61,17 @@ static NSString *const footerReuseIdentifier = @"cartItemfooter";
 
 #pragma mark - table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [XCFCartItemTool totalBuyItems].count;
+    return self.buyItems.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSArray *shopArray = [XCFCartItemTool totalBuyItems][section];
+    NSArray *shopArray = self.buyItems[section];
     return shopArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     XCFCartItemCell *cell = [tableView dequeueReusableCellWithIdentifier:cellReuseIdentifier];
-    NSArray *shopArray = [XCFCartItemTool totalBuyItems][indexPath.section];
+    NSArray *shopArray = self.buyItems[indexPath.section];
     XCFCartItem *item = shopArray[indexPath.row];
     cell.style = XCFCartViewChildControlStyleOrder; // cell类型为订单类型
     cell.cartItem = item;
@@ -72,7 +80,7 @@ static NSString *const footerReuseIdentifier = @"cartItemfooter";
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     XCFCartItemShopView *header = [tableView dequeueReusableHeaderFooterViewWithIdentifier:headerReuseIdentifier];
-    NSArray *shopArray = [XCFCartItemTool totalBuyItems][section];
+    NSArray *shopArray = self.buyItems[section];
     header.style = XCFCartViewChildControlStyleOrder;
     header.cartItem = shopArray[0];
     return header;
@@ -80,7 +88,7 @@ static NSString *const footerReuseIdentifier = @"cartItemfooter";
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     XCFOrderSectionFooter *footer = [tableView dequeueReusableHeaderFooterViewWithIdentifier:footerReuseIdentifier];
-    footer.shopArray = [XCFCartItemTool totalBuyItems][section];
+    footer.shopArray = self.buyItems[section];
     return footer;
 }
 
@@ -91,7 +99,7 @@ static NSString *const footerReuseIdentifier = @"cartItemfooter";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     CGFloat height;
-    NSArray *shopArray = [XCFCartItemTool totalBuyItems][section];
+    NSArray *shopArray = self.buyItems[section];
     double totalOriginPrice = 0;      // 总原价格
     double totalPayPrice = 0;         // 总支付价格
     for (XCFCartItem *item in shopArray) {
@@ -161,6 +169,8 @@ forHeaderFooterViewReuseIdentifier:footerReuseIdentifier];
     self.payView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([XCFOrderPayView class])
                                                   owner:nil options:nil] lastObject];
     self.payView.frame = CGRectMake(0, XCFScreenHeight-60, XCFScreenWidth, 60);
+    self.payView.buyItems = self.buyItems;
+    
     [self.view addSubview:self.payView];
     
 }

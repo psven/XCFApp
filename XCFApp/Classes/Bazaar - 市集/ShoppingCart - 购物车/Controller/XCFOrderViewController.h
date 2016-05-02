@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface XCFOrderViewController : UIViewController
-
+@property (nonatomic, strong) NSArray *buyItems; // 立即购买才有的数据
 @end

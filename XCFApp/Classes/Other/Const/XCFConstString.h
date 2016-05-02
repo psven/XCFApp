@@ -21,4 +21,4 @@ UIKIT_EXTERN NSString *const halfStar;
 /** 加入菜篮子通知 */
 UIKIT_EXTERN NSString *const XCFBasketListDidAddIngredientNotification;
 /** 加入购物车通知 */
-UIKIT_EXTERN NSString *const XCFCartDidAddedGoodsNotification;
+UIKIT_EXTERN NSString *const XCFCartItemTotalNumberDidChangedNotification;

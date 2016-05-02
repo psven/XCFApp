@@ -20,7 +20,7 @@
     // 监听“添加商品到购物车”的通知
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(cartDidAddedGoods:)
-                                                 name:XCFCartDidAddedGoodsNotification
+                                                 name:XCFCartItemTotalNumberDidChangedNotification
                                                object:nil];
     NSUInteger count = [XCFCartItemTool totalNumber];
     if (count) { // 有商品才显示数量标签
@@ -28,7 +28,11 @@
         [self.countButton setTitle:[NSString stringWithFormat:@"%zd", count]
                           forState:UIControlStateNormal];
     }
+    
+
 }
+
+
 
 - (void)cartDidAddedGoods:(NSNotification *)note {
     self.countButton.hidden = NO;
