@@ -4,12 +4,11 @@
 - 仿写程度：耗时一个月，每天12h+，能实现的基本都实现了
 - 如果我的项目对你有帮助，请大方给我star！开源的世界如此美好！互帮互助，感激不尽！
 
----
+
 #项目讲解地址
 [我的博客地址]()
 
 
----
 #效果预览
 
 ![关注动态.gif](http://upload-images.jianshu.io/upload_images/1099953-9aed49b86f82ff68.gif?imageMogr2/auto-orient/strip)
