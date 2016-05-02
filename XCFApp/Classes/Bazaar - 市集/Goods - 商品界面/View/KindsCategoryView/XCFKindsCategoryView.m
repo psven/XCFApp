@@ -17,9 +17,8 @@
 #import <UIImageView+WebCache.h>
 #import <QuartzCore/QuartzCore.h>
 
-@interface XCFKindsCategoryView () <UITableViewDelegate, UIGestureRecognizerDelegate>
+@interface XCFKindsCategoryView () <UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) XCFKindsView *kindsView;
 @end
 
@@ -36,6 +35,8 @@
         _tableView.showsVerticalScrollIndicator = NO;
         _tableView.backgroundColor = [UIColor clearColor];
         [self addSubview:_tableView];
+        
+        
         
         // 商品分类view
         _kindsView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([XCFKindsView class])

@@ -7,12 +7,12 @@
 //
 
 #import "XCFGoodsViewController.h"
-#import "XCFKindsCategoryView.h"
-#import "XCFImageShowController.h"
-#import "XCFGoodsReviewController.h"
-#import "XCFDetailReviewViewController.h"
-#import "XCFCartViewController.h"
-#import "XCFOrderViewController.h"
+#import "XCFKindsCategoryView.h"            // 商品分类选择view
+#import "XCFImageShowController.h"          // 图片展示
+#import "XCFGoodsReviewController.h"        // 评价
+#import "XCFDetailReviewViewController.h"   // 全部评价
+#import "XCFCartViewController.h"           // 购物车
+#import "XCFOrderViewController.h"          // 订单
 
 #import "XCFGoodsHeaderView.h"
 #import "XCFGoodsFooterView.h"
@@ -292,6 +292,7 @@ static NSString * const headerIdentifier = @"header";
                 
                 // 显示商品分类view
                 XCFKindsCategoryView *kindsView = [[XCFKindsCategoryView alloc] initWithFrame:window.bounds];
+                // 分类view的弹出类型（购物车）
                 kindsView.type = XCFKindsViewTypeCart;
                 kindsView.item = randomItem;
                 [window addSubview:kindsView];
@@ -330,6 +331,7 @@ static NSString * const headerIdentifier = @"header";
                 }];
                 // 显示商品分类view
                 XCFKindsCategoryView *kindsView = [[XCFKindsCategoryView alloc] initWithFrame:window.bounds];
+                // 分类view的弹出类型（立即购买）
                 kindsView.type = XCFKindsViewTypeOrder;
                 kindsView.item = randomItem;
                 [window addSubview:kindsView];
