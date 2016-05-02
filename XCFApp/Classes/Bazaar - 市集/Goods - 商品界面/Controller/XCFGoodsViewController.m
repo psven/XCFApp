@@ -108,7 +108,7 @@ static NSString * const headerIdentifier = @"header";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 0) [self goToShop];
+    if (indexPath.section == 0) [self goToShop];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -229,7 +229,6 @@ static NSString * const headerIdentifier = @"header";
                                progress:nil
                                 success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                                     self.goods = [XCFGoods mj_objectWithKeyValues:responseObject[@"content"][@"goods"]];
-                                    
                                     [self.tableView reloadData];
                                     self.imageTextView.goods = self.goods;
                                     [self setupHeaderView];
