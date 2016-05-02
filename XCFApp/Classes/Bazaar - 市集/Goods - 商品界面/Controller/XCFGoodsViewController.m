@@ -270,6 +270,7 @@ static NSString * const headerIdentifier = @"header";
     WeakSelf;
     _bottomView.actionBlock = ^(BottomViewClicked type) {
         
+        // 随机添加一样商品
         XCFCartItem *randomItem = [XCFCartItemTool randomItem];
         XCFGoods *randomGoods = randomItem.goods;
         // 店铺
@@ -277,10 +278,8 @@ static NSString * const headerIdentifier = @"header";
             [weakSelf goToShop];
         }
         
-        
         // 加入购物车
         else if (type == BottomViewClickedAddToShoppingCart) {
-            // 随机添加一样商品
             
             // 如果该商品有多种类型，就弹窗让用户选择具体购买哪种类型
             if (randomGoods.kinds.count > 1) {
@@ -298,6 +297,7 @@ static NSString * const headerIdentifier = @"header";
                 [window addSubview:kindsView];
                 // 确认购买回调
                 kindsView.confirmBlock = ^(XCFCartItem *item) {
+                    // 本地购物车数据添加商品
                     [XCFCartItemTool addItem:item];
                     [UILabel showStats:[NSString stringWithFormat:@"添加:\n%@", item.kind_name] atView:weakSelf.view];
                 };
@@ -338,6 +338,7 @@ static NSString * const headerIdentifier = @"header";
                 kindsView.confirmBlock = ^(XCFCartItem *item) {
                     // 进入下订单界面
                     XCFOrderViewController *orderVC = [[XCFOrderViewController alloc] init];
+                    // 将要购买的商品数据赋值给“下订单”控制器
                     orderVC.buyItems = [XCFCartItemTool buyItem:item];
                     [weakSelf.navigationController pushViewController:orderVC animated:YES];
                 };
