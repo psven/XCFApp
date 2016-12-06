@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Qrz-xb-gfI" customClass="XCFOrderAddressView">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="86"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sap-tu-93o">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="76"/>
+                    <subviews>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDC-FB-2zP">
+                            <rect key="frame" x="10" y="12" width="36" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pv2-8A-AXb">
+                            <rect key="frame" x="327" y="12" width="36" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="WUn-MJ-MIl">
+                            <rect key="frame" x="363" y="28" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="OJT-tT-wGZ"/>
+                                <constraint firstAttribute="height" constant="20" id="xzS-db-Rac"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击添加地址" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2z-9M-IdQ">
+                            <rect key="frame" x="148" y="28" width="96" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YYK-bG-aJI">
+                            <rect key="frame" x="10" y="40" width="353" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.84313725490196079" green="0.89411764705882346" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="WUn-MJ-MIl" firstAttribute="centerY" secondItem="sap-tu-93o" secondAttribute="centerY" id="23o-4c-ADa"/>
+                        <constraint firstItem="wDC-FB-2zP" firstAttribute="leading" secondItem="sap-tu-93o" secondAttribute="leading" constant="10" id="3LF-bS-HpD"/>
+                        <constraint firstAttribute="trailing" secondItem="WUn-MJ-MIl" secondAttribute="trailing" constant="10" id="4dt-hK-d6A"/>
+                        <constraint firstAttribute="trailing" secondItem="Pv2-8A-AXb" secondAttribute="trailing" constant="30" id="IV8-76-SWe"/>
+                        <constraint firstItem="wDC-FB-2zP" firstAttribute="top" secondItem="sap-tu-93o" secondAttribute="top" constant="12" id="TCy-bS-3cq"/>
+                        <constraint firstItem="Pv2-8A-AXb" firstAttribute="bottom" secondItem="wDC-FB-2zP" secondAttribute="bottom" id="U9h-cc-bLP"/>
+                        <constraint firstItem="Q2z-9M-IdQ" firstAttribute="centerY" secondItem="sap-tu-93o" secondAttribute="centerY" id="Wgu-hS-sL1"/>
+                        <constraint firstItem="Q2z-9M-IdQ" firstAttribute="centerX" secondItem="sap-tu-93o" secondAttribute="centerX" id="eLo-7N-u45"/>
+                        <constraint firstItem="YYK-bG-aJI" firstAttribute="trailing" secondItem="Pv2-8A-AXb" secondAttribute="trailing" id="pan-d0-fmb"/>
+                        <constraint firstItem="YYK-bG-aJI" firstAttribute="centerY" secondItem="sap-tu-93o" secondAttribute="centerY" constant="10" id="qde-jS-CMl"/>
+                        <constraint firstItem="YYK-bG-aJI" firstAttribute="leading" secondItem="wDC-FB-2zP" secondAttribute="leading" id="yXH-Ye-xOZ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="sap-tu-93o" firstAttribute="leading" secondItem="Qrz-xb-gfI" secondAttribute="leading" id="6Za-Zw-fEu"/>
+                <constraint firstAttribute="bottom" secondItem="sap-tu-93o" secondAttribute="bottom" constant="10" id="eN7-c8-MOS"/>
+                <constraint firstItem="sap-tu-93o" firstAttribute="top" secondItem="Qrz-xb-gfI" secondAttribute="top" id="lUi-ye-Mfm"/>
+                <constraint firstAttribute="trailing" secondItem="sap-tu-93o" secondAttribute="trailing" id="zxb-d5-3dr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addAddress" destination="Q2z-9M-IdQ" id="UjA-7u-kVy"/>
+                <outlet property="addressLabel" destination="YYK-bG-aJI" id="9Da-Kd-goy"/>
+                <outlet property="addressView" destination="sap-tu-93o" id="u2h-Jd-95k"/>
+                <outlet property="nameLabel" destination="wDC-FB-2zP" id="lRK-Hm-W3a"/>
+                <outlet property="phoneLabel" destination="Pv2-8A-AXb" id="35N-aj-vYa"/>
+            </connections>
+            <point key="canvasLocation" x="442.5" y="155"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow" width="22" height="22"/>
+    </resources>
+</document>

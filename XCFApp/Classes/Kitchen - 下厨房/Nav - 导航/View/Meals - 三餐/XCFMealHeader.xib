@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="mealHeader" id="U6b-Vx-4bR" customClass="XCFMealHeader">
+            <rect key="frame" x="0.0" y="0.0" width="377" height="163"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmG-Tv-0c0">
+                    <rect key="frame" x="173" y="133" width="31" height="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HCb-WQ-cRl">
+                    <rect key="frame" x="38" y="10" width="300" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="VQf-lh-57r"/>
+                        <constraint firstAttribute="height" constant="80" id="t28-mD-rcs"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.96078431369999995" green="0.94117647059999998" blue="0.84313725490000002" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="HCb-WQ-cRl" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="10" id="86w-tj-CjW"/>
+                <constraint firstAttribute="bottom" secondItem="MmG-Tv-0c0" secondAttribute="bottom" constant="15" id="K7C-gM-XDY"/>
+                <constraint firstItem="MmG-Tv-0c0" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="ML2-aq-3Sm"/>
+                <constraint firstItem="HCb-WQ-cRl" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="c2f-A4-S2C"/>
+            </constraints>
+            <connections>
+                <outlet property="descLabel" destination="MmG-Tv-0c0" id="kag-gu-B3I"/>
+                <outlet property="image" destination="HCb-WQ-cRl" id="UE2-3j-Qy9"/>
+            </connections>
+            <point key="canvasLocation" x="593.5" y="351.5"/>
+        </collectionReusableView>
+    </objects>
+</document>

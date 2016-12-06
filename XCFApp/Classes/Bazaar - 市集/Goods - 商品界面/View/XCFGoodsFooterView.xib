@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="f4b-TE-aiE" customClass="XCFGoodsFooterView">
+            <rect key="frame" x="0.0" y="0.0" width="329" height="79"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="euX-2w-Hro">
+                    <rect key="frame" x="15" y="30" width="63" height="1"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="nr5-ny-dGW"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="继续拖动，查看图文详情" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4Z-ZA-cdv">
+                    <rect key="frame" x="88" y="22" width="154" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BaU-8F-8LT">
+                    <rect key="frame" x="252" y="30" width="62" height="1"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="FUG-Ay-C2c"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="BaU-8F-8LT" firstAttribute="leading" secondItem="m4Z-ZA-cdv" secondAttribute="trailing" constant="10" id="FZT-gN-ETI"/>
+                <constraint firstItem="BaU-8F-8LT" firstAttribute="top" secondItem="euX-2w-Hro" secondAttribute="top" id="LlG-pg-gTL"/>
+                <constraint firstItem="m4Z-ZA-cdv" firstAttribute="leading" secondItem="euX-2w-Hro" secondAttribute="trailing" constant="10" id="PN6-ZE-bsI"/>
+                <constraint firstItem="euX-2w-Hro" firstAttribute="leading" secondItem="f4b-TE-aiE" secondAttribute="leading" constant="15" id="n06-4I-ABf"/>
+                <constraint firstItem="m4Z-ZA-cdv" firstAttribute="centerX" secondItem="f4b-TE-aiE" secondAttribute="centerX" id="na5-fg-bIb"/>
+                <constraint firstAttribute="trailing" secondItem="BaU-8F-8LT" secondAttribute="trailing" constant="15" id="q5w-Yl-hVV"/>
+                <constraint firstItem="m4Z-ZA-cdv" firstAttribute="centerY" secondItem="euX-2w-Hro" secondAttribute="centerY" id="rec-nw-cQo"/>
+                <constraint firstItem="euX-2w-Hro" firstAttribute="top" secondItem="f4b-TE-aiE" secondAttribute="top" constant="30" id="vQ7-uw-UwX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="480.5" y="-30.5"/>
+        </view>
+    </objects>
+</document>
