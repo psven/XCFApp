@@ -1,4 +1,4 @@
-#高仿下厨房App
+# 高仿下厨房App
 *添加了下厨房API文档！只有前面一部分，很多接口返回的数据都差不多相似，请自己再去抓抓看~
 右键选择打开方式为浏览器打开，然后全选复制到支持Markdown的编译器里即可。*
 
@@ -9,12 +9,12 @@
 - 备注：因为当时对block有特殊偏好所以通篇没有一个protocol...代码也是比较新手，嘛主要以实现思路为主！希望能对各位有帮助！
 
 
-#项目讲解地址
+# 项目讲解地址
 [我的博客地址](http://www.jianshu.com/p/a8f619a2c622)
 
 
 
-#效果预览
+# 效果预览
 
 
 ![首页.gif](http://upload-images.jianshu.io/upload_images/1099953-b15962d87f42026b.gif?imageMogr2/auto-orient/strip)
