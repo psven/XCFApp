@@ -2003,7 +2003,7 @@
 				TargetAttributes = {
 					D4074F641CD207E200811CDF = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 86R7VVBXR7;
+						DevelopmentTeam = 9FRZWYKNRJ;
 					};
 					D4074F7D1CD207E200811CDF = {
 						CreatedOnToolsVersion = 7.2;
@@ -2474,11 +2474,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9FRZWYKNRJ;
 				GCC_PREFIX_HEADER = XCFApp/Classes/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/XCFApp/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = joey.com.XCFApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sven.XCFApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -2492,11 +2493,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9FRZWYKNRJ;
 				GCC_PREFIX_HEADER = XCFApp/Classes/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/XCFApp/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = joey.com.XCFApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sven.XCFApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

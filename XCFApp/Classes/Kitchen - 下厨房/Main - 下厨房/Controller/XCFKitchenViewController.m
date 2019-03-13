@@ -303,16 +303,7 @@ forHeaderFooterViewReuseIdentifier:recipeHeaderIdentifier]; // sectionHeader
                    XCFLog(@"loadNavData --- failure");
                }];
     
-    
-    [self.mananger GET:XCFRequestKitchenFeeds
-            parameters:nil
-              progress:nil
-               success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                   self.feedsArray = [XCFFeeds mj_objectArrayWithKeyValuesArray:responseObject[@"content"][@"feeds"]];
-                   self.kitchenHeader.dish = [self.feedsArray[0] dish];
-               } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                   XCFLog(@"loadNavData --- failure");
-               }];
+     
 }
 
 
