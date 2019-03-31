@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,12 +15,18 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="75.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XgV-e8-woh">
-                        <rect key="frame" x="15" y="7" width="61" height="61"/>
+                        <rect key="frame" x="15" y="7.5" width="61" height="61"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notification" translatesAutoresizingMaskIntoConstraints="NO" id="2vf-vU-Zsy">
+                                <rect key="frame" x="0.0" y="0.0" width="61" height="61"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jamFilter2" translatesAutoresizingMaskIntoConstraints="NO" id="C76-JV-YXM">
+                                <rect key="frame" x="0.0" y="0.0" width="61" height="61"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jamFilter2" translatesAutoresizingMaskIntoConstraints="NO" id="t4S-ax-FxQ">
                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                 <constraints>
@@ -46,21 +56,29 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="2vf-vU-Zsy" firstAttribute="top" secondItem="XgV-e8-woh" secondAttribute="top" id="302-88-bch"/>
                             <constraint firstAttribute="bottom" secondItem="9D8-Nb-tC6" secondAttribute="bottom" id="5Gm-PS-h5b"/>
+                            <constraint firstAttribute="trailing" secondItem="C76-JV-YXM" secondAttribute="trailing" id="7d4-rC-DlV"/>
+                            <constraint firstItem="C76-JV-YXM" firstAttribute="top" secondItem="XgV-e8-woh" secondAttribute="top" id="DV8-fJ-tWW"/>
                             <constraint firstAttribute="bottom" secondItem="S67-Oz-cSh" secondAttribute="bottom" id="FjC-q3-7x7"/>
                             <constraint firstItem="t4S-ax-FxQ" firstAttribute="top" secondItem="XgV-e8-woh" secondAttribute="top" id="GWM-bU-L7d"/>
+                            <constraint firstAttribute="bottom" secondItem="2vf-vU-Zsy" secondAttribute="bottom" id="T8m-Le-am9"/>
+                            <constraint firstItem="C76-JV-YXM" firstAttribute="leading" secondItem="XgV-e8-woh" secondAttribute="leading" id="Tsi-UW-qhH"/>
                             <constraint firstItem="t4S-ax-FxQ" firstAttribute="leading" secondItem="XgV-e8-woh" secondAttribute="leading" id="WkJ-kB-Zxr"/>
                             <constraint firstAttribute="trailing" secondItem="9D8-Nb-tC6" secondAttribute="trailing" id="X4J-WK-6qM"/>
+                            <constraint firstAttribute="trailing" secondItem="2vf-vU-Zsy" secondAttribute="trailing" id="ZfH-oO-eLG"/>
                             <constraint firstItem="S67-Oz-cSh" firstAttribute="leading" secondItem="XgV-e8-woh" secondAttribute="leading" id="cPW-dB-WhD"/>
                             <constraint firstAttribute="height" constant="61" id="fmQ-zi-Rin"/>
                             <constraint firstAttribute="width" constant="61" id="ipP-FI-HrD"/>
                             <constraint firstAttribute="trailing" secondItem="M32-S4-6fm" secondAttribute="trailing" id="o4z-rm-dAx"/>
+                            <constraint firstItem="2vf-vU-Zsy" firstAttribute="leading" secondItem="XgV-e8-woh" secondAttribute="leading" id="oBi-1h-8Ae"/>
                             <constraint firstItem="M32-S4-6fm" firstAttribute="top" secondItem="XgV-e8-woh" secondAttribute="top" id="xHW-0Y-Lyg"/>
+                            <constraint firstAttribute="bottom" secondItem="C76-JV-YXM" secondAttribute="bottom" id="xJL-0F-r5f"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="市集讨论区" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bwc-Ox-DqX">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="市集讨论区" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bwc-Ox-DqX">
                         <rect key="frame" x="91" y="15" width="70" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -69,18 +87,18 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2J1-ek-qXM">
                         <rect key="frame" x="91" y="42" width="219" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="textColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9NJ-4a-sm1">
-                        <rect key="frame" x="15" y="74" width="305" height="1"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <rect key="frame" x="15" y="74.5" width="305" height="1"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="wGW-dg-5cd"/>
                         </constraints>
                     </imageView>
                 </subviews>
-                <color key="backgroundColor" red="0.96078431369999995" green="0.94117647059999998" blue="0.84313725490000002" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="backgroundColor" red="0.96078431369999995" green="0.94117647059999998" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="Bwc-Ox-DqX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="2CW-an-ja2"/>
                     <constraint firstItem="XgV-e8-woh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="3CE-6x-wnE"/>
@@ -104,5 +122,6 @@
     </objects>
     <resources>
         <image name="jamFilter2" width="640" height="640"/>
+        <image name="notification" width="44" height="44"/>
     </resources>
 </document>

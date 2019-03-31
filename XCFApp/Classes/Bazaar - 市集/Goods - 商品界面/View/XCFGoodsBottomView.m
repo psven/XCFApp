@@ -57,7 +57,7 @@
         
         
         _leftButton = [UIButton buttonWithBackgroundColor:XCFThemeColor
-                                                    title:@"加入购物车"
+                                                    title:@"加入预购单"
                                            titleLabelFont:[UIFont systemFontOfSize:XCFRecipeCellFontSizeTitle]
                                                titleColor:XCFLabelColorWhite
                                                    target:self
@@ -65,9 +65,9 @@
                                             clipsToBounds:NO];
         [self addSubview:_leftButton];
         [_leftButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self);
+            make.right.bottom.top.equalTo(self);
             make.left.equalTo(self.shopIcon.mas_right);
-            make.size.mas_equalTo(CGSizeMake((XCFScreenWidth-60-1)*0.5, 44));
+//            make.size.mas_equalTo(CGSizeMake((XCFScreenWidth-60-1)*0.5, 44));
         }];
         
         _rightButton = [UIButton buttonWithBackgroundColor:XCFThemeColor
@@ -77,11 +77,11 @@
                                                     target:self
                                                     action:@selector(rightButtonClicked:)
                                              clipsToBounds:NO];
-        [self addSubview:_rightButton];
-        [_rightButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.top.equalTo(self);
-            make.size.equalTo(self.leftButton);
-        }];
+//        [self addSubview:_rightButton];
+//        [_rightButton mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.right.top.equalTo(self);
+//            make.size.equalTo(self.leftButton);
+//        }];
         
     }
     return self;

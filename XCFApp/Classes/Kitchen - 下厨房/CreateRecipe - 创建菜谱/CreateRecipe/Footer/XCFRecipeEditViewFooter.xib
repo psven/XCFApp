@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -19,12 +23,12 @@
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZg-1h-MM8">
                     <rect key="frame" x="15" y="30" width="396" height="40"/>
-                    <color key="backgroundColor" red="0.60000002384185791" green="0.51299122187686153" blue="0.41262442436779212" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.60000002384185791" green="0.51299122187686153" blue="0.41262442436779212" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="uru-LE-lud"/>
                     </constraints>
                     <state key="normal" title="保存草稿">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="saveRecipe:" destination="LkX-ES-HFZ" eventType="touchUpInside" id="p6y-2F-uoL"/>
@@ -32,28 +36,28 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fV-mF-lUV">
                     <rect key="frame" x="15" y="80" width="396" height="40"/>
-                    <color key="backgroundColor" red="0.79207739093959728" green="0.16823091442952998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.79207739093959728" green="0.16823091442952998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="lx6-42-o5x"/>
                     </constraints>
                     <state key="normal" title="发布">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="publish:" destination="LkX-ES-HFZ" eventType="touchUpInside" id="w0y-Pz-SbN"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Foq-js-yAg">
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Foq-js-yAg">
                     <rect key="frame" x="168" y="135" width="90" height="30"/>
                     <state key="normal" title="删除这个草稿">
-                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="delete:" destination="LkX-ES-HFZ" eventType="touchUpInside" id="uhN-Ur-Y6j"/>
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.96078431372549022" green="0.94117647058823528" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.96078431372549022" green="0.94117647058823528" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="tZg-1h-MM8" firstAttribute="top" secondItem="5Up-eW-PlW" secondAttribute="bottom" constant="15" id="QMG-PL-5bs"/>
                 <constraint firstItem="1fV-mF-lUV" firstAttribute="top" secondItem="tZg-1h-MM8" secondAttribute="bottom" constant="10" id="ZiH-Db-Zq7"/>

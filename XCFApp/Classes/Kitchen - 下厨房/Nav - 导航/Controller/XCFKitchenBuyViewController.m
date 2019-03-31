@@ -16,6 +16,9 @@
 #import <AFNetworking.h>
 #import <MJRefresh.h>
 #import <MJExtension.h>
+#import <SVProgressHUD.h>
+
+#import "XCFCartViewController.h"
 
 @interface XCFKitchenBuyViewController ()
 @property (nonatomic, strong) AFHTTPSessionManager *mananger;
@@ -32,8 +35,30 @@ static NSString *const dishViewCellIdentifier = @"dishViewCell";
     [self setupTableView];
     [self setupRefresh];
     [self loadNewData];
+    
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem shoppingCartIconWithTarget:self
+                                                                                  action:@selector(goToShoppingCart)];
+    
 }
 
+- (void)dealloc {
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(goToShoppingCart) name:@"abc" object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+// 购物车
+- (void)goToShoppingCart {
+    [self.navigationController pushViewController:[[XCFCartViewController alloc] init] animated:YES];
+}
 
 #pragma mark - Table view data source
 
@@ -78,6 +103,12 @@ static NSString *const dishViewCellIdentifier = @"dishViewCell";
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [self.navigationController pushViewController:[[XCFGoodsViewController alloc] init]
+                                             animated:YES];
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (self.reviewsArray.count) {
         XCFReview *review = self.reviewsArray[indexPath.row];
@@ -90,6 +121,7 @@ static NSString *const dishViewCellIdentifier = @"dishViewCell";
 #pragma mark - 网络请求
 
 - (void)loadNewData {
+    [SVProgressHUD show];
     [self.mananger GET:XCFRequestKitchenBuy
             parameters:nil
               progress:nil
@@ -110,7 +142,9 @@ static NSString *const dishViewCellIdentifier = @"dishViewCell";
                    }
                    [self.tableView reloadData];
                    
+                   [SVProgressHUD dismiss];
                } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                   [SVProgressHUD dismiss];
                }];
 }
 
@@ -137,7 +171,7 @@ static NSString *const dishViewCellIdentifier = @"dishViewCell";
 #pragma mark - 属性
 
 - (void)setupTableView {
-    self.title = @"买买买";
+    self.title = @"社区";
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor clearColor];
     self.view.backgroundColor = XCFGlobalBackgroundColor;

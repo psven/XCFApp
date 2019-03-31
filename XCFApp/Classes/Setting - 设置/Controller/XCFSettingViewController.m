@@ -12,6 +12,7 @@
 #import "XCFMyInfoCell.h"
 #import "XCFSettingFooter.h"
 #import "XCFAuthorDetail.h"
+#import "FeedbackViewController.h"
 
 @interface XCFSettingViewController ()
 @property (nonatomic, strong) NSMutableArray *titleArray;
@@ -60,19 +61,22 @@ static NSString *const normalCellIdentifier = @"normalCellIdentifier";
 //        self.authorDetail = [[NSUserDefaults standardUserDefaults] objectForKey:@"kMyInfo"];
 //        if (!self.authorDetail) self.authorDetail = [[XCFAuthorDetail alloc] init];
         [self.navigationController pushViewController:[[XCFProfileEditingController alloc] init] animated:YES];
-    } else if (indexPath.section == 1 && indexPath.row == 2) {
+    } else if (indexPath.section == 1 && indexPath.row == 0) {
         [self.navigationController pushViewController:[[XCFShippingAddressController alloc] init] animated:YES];
+    } else if (indexPath.section == 2 && indexPath.row == 0) {
+        [self.navigationController pushViewController:[[FeedbackViewController alloc] init] animated:YES];
+    } else if (indexPath.section == 2 && indexPath.row == 1) {
+        [self.navigationController pushViewController:[[FeedbackViewController alloc] init] animated:YES];
     }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 4;
+    return 3;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) return 1;
-    if (section == 1) return 3;
-    if (section == 2) return 2;
-    if (section == 3) return 2;
+    if (section == 1) return 1;
+    if (section == 2) return 1; // 增加评分功能 这里添加1 
     return 0;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -106,12 +110,15 @@ static NSString *const normalCellIdentifier = @"normalCellIdentifier";
     if (!_titleArray) {
         _titleArray = [NSMutableArray array];
         NSArray *section1 = @[];
-        NSArray *section2 = @[@"账号管理", @"设置密码", @"收货地址"];
+        NSArray *section2 = @[@"收货地址"];
         NSArray *section3 = @[@"发现好友", @"消息推送"];
-        NSArray *section4 = @[@"把下厨房告诉朋友", @"帮助下厨房评分"];
+        NSArray *section4 = @[@"意见反馈", @"帮助美食牌坊评分"];
+//        NSArray *section2 = @[@"账号管理", @"设置密码", @"收货地址"];
+//        NSArray *section3 = @[@"发现好友", @"消息推送"];
+//        NSArray *section4 = @[@"把下厨房告诉朋友", @"帮助下厨房评分"];
         [_titleArray addObject:section1];
         [_titleArray addObject:section2];
-        [_titleArray addObject:section3];
+//        [_titleArray addObject:section3];
         [_titleArray addObject:section4];
     }
     return _titleArray;

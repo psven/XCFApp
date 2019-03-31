@@ -137,7 +137,7 @@ static NSString *const headerReuseIdentifier = @"cartItemHeader";
 #pragma mark - 属性
 
 - (void)setupBasic {
-    self.title = @"购物车";
+    self.title = @"预购单";
     self.view.backgroundColor = XCFGlobalBackgroundColor;
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonItemWithTitle:@"编辑"
                                                                        selectedTitle:@"完成"
@@ -186,9 +186,11 @@ forHeaderFooterViewReuseIdentifier:headerReuseIdentifier];
                 }
             }
             if (totalNumber) { // 有商品就跳转到订单界面
-                [weakSelf.navigationController pushViewController:[[XCFOrderViewController alloc] init] animated:YES];
+//                [weakSelf.navigationController pushViewController:[[XCFOrderViewController alloc] init] animated:YES];
+                [UILabel showStats:[NSString stringWithFormat:@"总共选择了%zd件商品", totalNumber] atView:weakSelf.view];
             } else {
-                [UILabel showStats:@"请选择要支付的商品" atView:weakSelf.view];
+//                [UILabel showStats:@"请选择要支付的商品" atView:weakSelf.view];
+                [UILabel showStats:@"您还没有选择商品" atView:weakSelf.view];
             }
             
         } else if (weakSelf.settlementView.style == XCFCartEditStyleDelete) { // 删除模式

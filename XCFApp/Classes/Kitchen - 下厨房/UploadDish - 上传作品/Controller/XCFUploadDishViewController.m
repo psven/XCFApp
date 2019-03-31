@@ -11,6 +11,7 @@
 #import "XCFTextAndPhotoView.h"
 #import "XCFMealsAndTagsView.h"
 #import <Masonry.h>
+#import <SVProgressHUD.h>
 
 
 @interface XCFUploadDishViewController () <UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
@@ -44,7 +45,7 @@ static CGFloat const mealsAndAddTagBtnViewHeight = 90;
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonItemWithTitle:@"取消"
                                                                              target:self
                                                                              action:@selector(cancel)];
-    self.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonItemWithTitle:@"分享"
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonItemWithTitle:@"上传"
                                                                               target:self
                                                                               action:@selector(share)];
 }
@@ -197,7 +198,30 @@ didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
 }
 
 - (void)share {
+    if (!self.photosArray.count) {
+        [SVProgressHUD showErrorWithStatus:@"请至少上传一张作品图片"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [SVProgressHUD dismiss];
+        });
+        return;
+    }
     
+    [SVProgressHUD showWithStatus:@"正在上传"];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [SVProgressHUD dismiss];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"上传成功"
+                                                                                 message:@"您的作品将在审核通过后展示"
+                                                                          preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定"
+                                                           style:UIAlertActionStyleDefault
+                                                         handler:^(UIAlertAction * _Nonnull action) {        // 保存草稿
+                                                             [self dismissViewControllerAnimated:YES completion:nil];
+                                                         }];
+        [alertController addAction:okAction];
+        [self.navigationController presentViewController:alertController
+                                                    animated:YES
+                                                  completion:nil];
+    });
 }
 
 

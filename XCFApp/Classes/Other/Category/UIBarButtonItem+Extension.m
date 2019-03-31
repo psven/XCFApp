@@ -77,7 +77,7 @@
     XCFCartIcon *icon = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([XCFCartIcon class])
                                                        owner:nil options:nil] lastObject];
     icon.frame = CGRectMake(0, 0, 30, 44);
-    [icon addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:target action:action]];
+//    [icon addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:target action:action]];
     UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:icon];
     return barButtonItem;
 }

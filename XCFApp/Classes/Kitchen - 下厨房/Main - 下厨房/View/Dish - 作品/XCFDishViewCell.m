@@ -169,7 +169,8 @@ static NSString * const imageCellIdentifier = @"imageCell";
     
     [self.iconView setHeaderWithURL:[NSURL URLWithString:review.author.photo60]];
     self.authorNameLabel.text = review.author.name;
-    self.createTimeLabel.text = review.friendly_create_time;
+    NSString *string = [review.friendly_create_time stringByReplacingOccurrencesOfString:@"2016" withString:@"2018"];
+    self.createTimeLabel.text = string;
     self.dishNameLabel.text = review.commodity.goods.name;
     self.descLabel.text = review.review;
     self.actionLabel.text = @"评价";

@@ -20,8 +20,9 @@ typedef NS_ENUM(NSInteger, viewDidClickedAction) {
     
     viewDidClickedActionBreakfast = 6,              // 早餐
     viewDidClickedActionLunch = 7,                  // 午餐
-    viewDidClickedActionSupper = 8                  // 晚餐
+    viewDidClickedActionSupper = 8,                  // 晚餐
     
+    viewDidClickedActionCreate = 9                  // 晚餐
 };
 
 /**

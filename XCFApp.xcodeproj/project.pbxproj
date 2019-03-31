@@ -242,6 +242,8 @@
 		D407559B1CD23A3200811CDF /* detaillocation.plist in Resources */ = {isa = PBXBuildFile; fileRef = D40755961CD23A3200811CDF /* detaillocation.plist */; };
 		D407559C1CD23A3200811CDF /* Ingredient.plist in Resources */ = {isa = PBXBuildFile; fileRef = D40755971CD23A3200811CDF /* Ingredient.plist */; };
 		D407559D1CD23A3200811CDF /* keywords.plist in Resources */ = {isa = PBXBuildFile; fileRef = D40755981CD23A3200811CDF /* keywords.plist */; };
+		D4665E9D2250F39B0025BA86 /* FeedBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4665E9C2250F39B0025BA86 /* FeedBackView.m */; };
+		D4665EA02250F4430025BA86 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4665E9F2250F4430025BA86 /* FeedbackViewController.m */; };
 		D48FF9CB1CD5FECD00E39F7A /* XCFKindsCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = D48FF9CA1CD5FECD00E39F7A /* XCFKindsCategoryView.m */; };
 		D48FF9CE1CD600AF00E39F7A /* XCFKindsView.m in Sources */ = {isa = PBXBuildFile; fileRef = D48FF9CD1CD600AF00E39F7A /* XCFKindsView.m */; };
 		D48FF9D01CD600BA00E39F7A /* XCFKindsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D48FF9CF1CD600BA00E39F7A /* XCFKindsView.xib */; };
@@ -689,6 +691,10 @@
 		D40755961CD23A3200811CDF /* detaillocation.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = detaillocation.plist; sourceTree = "<group>"; };
 		D40755971CD23A3200811CDF /* Ingredient.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Ingredient.plist; sourceTree = "<group>"; };
 		D40755981CD23A3200811CDF /* keywords.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keywords.plist; sourceTree = "<group>"; };
+		D4665E9B2250F39B0025BA86 /* FeedBackView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedBackView.h; sourceTree = "<group>"; };
+		D4665E9C2250F39B0025BA86 /* FeedBackView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedBackView.m; sourceTree = "<group>"; };
+		D4665E9E2250F4430025BA86 /* FeedbackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
+		D4665E9F2250F4430025BA86 /* FeedbackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
 		D48FF9C91CD5FECD00E39F7A /* XCFKindsCategoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XCFKindsCategoryView.h; path = KindsCategoryView/XCFKindsCategoryView.h; sourceTree = "<group>"; };
 		D48FF9CA1CD5FECD00E39F7A /* XCFKindsCategoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XCFKindsCategoryView.m; path = KindsCategoryView/XCFKindsCategoryView.m; sourceTree = "<group>"; };
 		D48FF9CC1CD600AF00E39F7A /* XCFKindsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XCFKindsView.h; path = KindsCategoryView/XCFKindsView.h; sourceTree = "<group>"; };
@@ -1803,6 +1809,8 @@
 				D407554C1CD2381100811CDF /* XCFSettingViewController.m */,
 				D407554D1CD2381100811CDF /* XCFShippingAddressController.h */,
 				D407554E1CD2381100811CDF /* XCFShippingAddressController.m */,
+				D4665E9E2250F4430025BA86 /* FeedbackViewController.h */,
+				D4665E9F2250F4430025BA86 /* FeedbackViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1830,6 +1838,8 @@
 				D40755721CD2381100811CDF /* XCFMyInfoCell.xib */,
 				D40755731CD2381100811CDF /* XCFSettingFooter.h */,
 				D40755741CD2381100811CDF /* XCFSettingFooter.m */,
+				D4665E9B2250F39B0025BA86 /* FeedBackView.h */,
+				D4665E9C2250F39B0025BA86 /* FeedBackView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2199,6 +2209,7 @@
 				D40754691CD2378000811CDF /* XCFOrderSectionFooter.m in Sources */,
 				D40754841CD2378000811CDF /* XCFIngredientListTopView.m in Sources */,
 				D40754D81CD2378000811CDF /* XCFMealHeader.m in Sources */,
+				D4665E9D2250F39B0025BA86 /* FeedBackView.m in Sources */,
 				D40754991CD2378000811CDF /* XCFCreateRecipe+Tool.m in Sources */,
 				D407545D1CD2378000811CDF /* XCFGoodsShopCell.m in Sources */,
 				D40754751CD2378000811CDF /* XCFForum.m in Sources */,
@@ -2277,6 +2288,7 @@
 				D40754AC1CD2378000811CDF /* XCFPopEvents.m in Sources */,
 				D40754A81CD2378000811CDF /* XCFItems.m in Sources */,
 				D40755441CD2380900811CDF /* XCFMyViewHeader.m in Sources */,
+				D4665EA02250F4430025BA86 /* FeedbackViewController.m in Sources */,
 				D407549E1CD2378000811CDF /* XCFCreateRecipeController.m in Sources */,
 				D40754771CD2378000811CDF /* XCFTopicComment.m in Sources */,
 				D40755021CD2378000811CDF /* main.m in Sources */,

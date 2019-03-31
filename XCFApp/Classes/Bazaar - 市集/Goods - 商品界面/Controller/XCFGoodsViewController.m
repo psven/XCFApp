@@ -31,6 +31,9 @@
 #import <MJExtension.h>
 
 @interface XCFGoodsViewController () <UITableViewDataSource, UITableViewDelegate>
+{
+    BOOL finished;
+}
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) XCFGoodsHeaderView *headerView;
 @property (nonatomic, strong) XCFGoodsImageTextView *imageTextView;
@@ -49,6 +52,7 @@ static NSString * const headerIdentifier = @"header";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    finished = NO;
     self.view.backgroundColor = XCFGlobalBackgroundColor;
     [self loadData];
     [self setupNavButton];
@@ -60,8 +64,20 @@ static NSString * const headerIdentifier = @"header";
     [super viewWillAppear:animated];
     self.tableView.tableHeaderView = self.headerView;
     [self.tableView reloadData];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(goToShoppingCart) name:@"abc" object:nil];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    finished = NO;
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    finished = YES;
+}
 
 #pragma mark - UITableViewDataSource
 
@@ -169,6 +185,9 @@ static NSString * const headerIdentifier = @"header";
 #pragma mark - UIScrollViewDelegate
 // 向上拖动到一定程度，切换至图文详情界面
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (!finished) {
+        return;
+    }
     // 预定值为100
     if (scrollView.contentOffset.y > self.tableView.contentSize.height - self.tableView.frame.size.height + 100) {
         // 隐藏商品信息
@@ -178,7 +197,7 @@ static NSString * const headerIdentifier = @"header";
             self.tableView.transform = CGAffineTransformMakeTranslation(0, -(self.view.bounds.size.height-44-64));
             self.imageTextView.transform = CGAffineTransformMakeTranslation(0, -(self.view.bounds.size.height-44));
         } completion:^(BOOL finished) {
-            [UILabel showStats:@"未解决webView导致的内存泄漏问题" atView:self.view];
+//            [UILabel showStats:@"未解决webView导致的内存泄漏问题" atView:self.view];
         }];
     }
 }
@@ -242,20 +261,22 @@ static NSString * const headerIdentifier = @"header";
                                                         imageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 8)
                                                                  target:self
                                                                  action:@selector(back)];
+    
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem shoppingCartIconWithTarget:self
                                                                                   action:@selector(goToShoppingCart)];
+ 
     
-    UIBarButtonItem *pyq = [UIBarButtonItem barButtonRightItemWithImageName:@"convenient_share_pyq"
-                                                                     target:self
-                                                                     action:@selector(sharePYQ)];
-    UIBarButtonItem *wx = [UIBarButtonItem barButtonRightItemWithImageName:@"convenient_share_wx"
-                                                                    target:self
-                                                                    action:@selector(shareWeChat)];
-    UIBarButtonItem *other = [UIBarButtonItem barButtonRightItemWithImageName:@"convenient_share_other"
-                                                                       target:self
-                                                                       action:@selector(shareOther)];
+//    UIBarButtonItem *pyq = [UIBarButtonItem barButtonRightItemWithImageName:@"convenient_share_pyq"
+//                                                                     target:self
+//                                                                     action:@selector(sharePYQ)];
+//    UIBarButtonItem *wx = [UIBarButtonItem barButtonRightItemWithImageName:@"convenient_share_wx"
+//                                                                    target:self
+//                                                                    action:@selector(shareWeChat)];
+//    UIBarButtonItem *other = [UIBarButtonItem barButtonRightItemWithImageName:@"convenient_share_other"
+//                                                                       target:self
+//                                                                       action:@selector(shareOther)];
     
-    [self.navigationItem setLeftBarButtonItems:@[back, pyq, wx, other]];
+    [self.navigationItem setLeftBarButtonItems:@[back]];
     
 }
 

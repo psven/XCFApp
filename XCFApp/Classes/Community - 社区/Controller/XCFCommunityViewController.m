@@ -28,13 +28,24 @@ static NSString *const reuseIdentifier = @"forumCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"社区";
-    self.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonRightItemWithImageName:@"notification"
-                                                                                       target:self
-                                                                                       action:@selector(notification)];
+    self.title = @"消息";
+//    self.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonRightItemWithImageName:@"notification"
+//                                                                                       target:self
+//                                                                                       action:@selector(notification)];
+    
     [self setupTableView];
-    [self addFeedbackButton];
+//    [self addFeedbackButton];
     [self loadNewData];
+    
+    XCFForum *n1 = [XCFForum new];
+    n1.name = @"系统通知";
+    n1.desc = @"嗨！欢迎使用美食牌坊！";
+    self.shouts = n1;
+    
+    XCFForum *n2 = [XCFForum new];
+    n2.name = @"系统通知";
+    n2.desc = @"如果使用上有疑问，请在设置界面进行意见反馈。";
+    self.forums = n2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -50,7 +61,7 @@ static NSString *const reuseIdentifier = @"forumCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
-        [self.navigationController pushViewController:[[XCFTopicViewController alloc] init] animated:YES];
+//        [self.navigationController pushViewController:[[XCFTopicViewController alloc] init] animated:YES];
     }
 }
 
@@ -62,8 +73,8 @@ static NSString *const reuseIdentifier = @"forumCell";
                              parameters:nil
                                progress:nil
                                 success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                                    self.forums = [XCFForum mj_objectWithKeyValues:responseObject[@"content"][@"forums"][0]];
-                                    self.shouts = [XCFForum mj_objectWithKeyValues:responseObject[@"content"][@"shouts"]];
+//                                    self.forums = [XCFForum mj_objectWithKeyValues:responseObject[@"content"][@"forums"][0]];
+//                                    self.shouts = [XCFForum mj_objectWithKeyValues:responseObject[@"content"][@"shouts"]];
                                     [self.tableView reloadData];
                                     [self.tableView.mj_header endRefreshing];
                                 } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

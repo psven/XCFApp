@@ -61,10 +61,10 @@
     if (self.style == XCFCartEditStyleSettlement) { // 结算模式
         if (totalPrice) {
             self.totalLabel.text = [NSString stringWithFormat:@"合计：¥%.1f0", totalPrice];
-            [self.settlementButton setTitle:[NSString stringWithFormat:@"结算(%zd)", totalNumber] forState:UIControlStateNormal];
+            [self.settlementButton setTitle:[NSString stringWithFormat:@"总数(%zd)", totalNumber] forState:UIControlStateNormal];
         } else {
             self.totalLabel.text = [NSString stringWithFormat:@"合计：¥0.00"];
-            [self.settlementButton setTitle:@"结算(0)" forState:UIControlStateNormal];
+            [self.settlementButton setTitle:@"总数(0)" forState:UIControlStateNormal];
         }
         
     } else if (self.style == XCFCartEditStyleDelete) { // 删除模式

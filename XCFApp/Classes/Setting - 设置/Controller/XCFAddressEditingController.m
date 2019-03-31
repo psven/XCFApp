@@ -50,7 +50,7 @@
 
 - (void)setupHeader {
     XCFAddressEditingView *header = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([XCFAddressEditingView class])
-                                                                   owner:nil options:nil] lastObject];
+                                                                   owner:nil options:nil] firstObject];
     header.addressInfo = self.addressInfo;
     header.frame = CGRectMake(0, 0, XCFScreenWidth, 350);
     self.tableView.tableHeaderView = header;

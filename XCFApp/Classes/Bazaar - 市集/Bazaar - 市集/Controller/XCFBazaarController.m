@@ -21,7 +21,7 @@
     [super viewDidLoad];
     [self setupNavigationBar];
     self.view.backgroundColor = XCFGlobalBackgroundColor;
-    [UILabel showStats:@"没有接口。。" atView:self.view];
+//    [UILabel showStats:@"没有接口。。" atView:self.view];
 //    UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
 //    webView.delegate = self;
 //    webView.backgroundColor = XCFGlobalBackgroundColor;
@@ -39,7 +39,7 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
 
 
 - (void)setupNavigationBar {
-    self.navigationItem.titleView = [XCFSearchBar searchBarWithPlaceholder:@"搜索商品"];
+//    self.navigationItem.titleView = [XCFSearchBar searchBarWithPlaceholder:@"搜索商品"];
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonItemWithImageName:@"leftPageButtonBackgroundNormal"
                                                                         imageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 8)
                                                                                  target:self

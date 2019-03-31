@@ -29,6 +29,8 @@
         self.userInteractionEnabled = YES;
         
         [self setBackgroundColor:[UIColor whiteColor]];
+        self.layer.borderColor = XCFGlobalBackgroundColor.CGColor;
+        self.layer.borderWidth = 0.5;
         
         _image = [[UIImageView alloc] init];
         [self addSubview:_image];

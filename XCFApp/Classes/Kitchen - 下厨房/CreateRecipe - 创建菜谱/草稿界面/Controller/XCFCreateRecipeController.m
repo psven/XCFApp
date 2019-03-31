@@ -28,6 +28,7 @@
 #import "XCFCreateInstruction.h"
 
 #import <Masonry.h>
+#import <SVProgressHUD.h>
 
 @interface XCFCreateRecipeController () <UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (nonatomic, strong) XCFRecipeEditViewHeader *header;
@@ -457,6 +458,23 @@ didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
         
         else if (action == EditFooterActionPublish) {   // 发布菜谱
 //            [UILabel showStats:@"这个木有做" atView:weakSelf.view];
+            [SVProgressHUD showWithStatus:@"正在上传"];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [SVProgressHUD dismiss];
+                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"发布成功"
+                                                                                         message:@"您的菜谱将在审核通过后展示"
+                                                                                  preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定"
+                                                                   style:UIAlertActionStyleDefault
+                                                                 handler:^(UIAlertAction * _Nonnull action) {        // 保存草稿
+                                                                     [weakSelf updateDarft];
+                                                                     [weakSelf.navigationController popViewControllerAnimated:YES];
+                                                                 }];
+                [alertController addAction:okAction];
+                [weakSelf.navigationController presentViewController:alertController
+                                                            animated:YES
+                                                          completion:nil];
+            });
         }
         
         else if (action == EditFooterActionDelete) {    // 删除草稿

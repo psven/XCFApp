@@ -35,9 +35,10 @@
 #import <MJRefresh.h>
 #import <MJExtension.h>
 #import <SVProgressHUD.h>
+#import <Masonry.h>
 
 
-@interface XCFKitchenViewController ()
+@interface XCFKitchenViewController () <UISearchBarDelegate>
 @property (nonatomic, strong) AFHTTPSessionManager *mananger;
 @property (nonatomic, strong) XCFKitchenHeader *kitchenHeader;  // 顶部导航View
 @property (nonatomic, strong) XCFNavContent *navContent;        // 导航数据
@@ -58,7 +59,8 @@ static NSString *const recipeHeaderIdentifier = @"RecipeHeader";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupNavigationBar];
+    self.title = @"美食牌坊";
+//    [self setupNavigationBar];
     [self setupTableView];
     [self setupTableViewHeaderView];
     [self setupRefresh];
@@ -79,7 +81,8 @@ static NSString *const recipeHeaderIdentifier = @"RecipeHeader";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // 错误写法啊啊啊啊！
     [self loadNavData]; // 下拉刷新同时刷新顶部导航数据
-    self.tableView.mj_footer.hidden = (self.issuesArray.count == 0);
+    self.tableView.mj_footer.hidden = YES;
+    return 0;
     return [self.issuesArray[section] items_count];
 }
 
@@ -135,7 +138,7 @@ static NSString *const recipeHeaderIdentifier = @"RecipeHeader";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return headerHeight;
+    return 0;
 }
 
 /**
@@ -175,14 +178,37 @@ static NSString *const recipeHeaderIdentifier = @"RecipeHeader";
 
 #pragma mark - 属性
 
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar {
+    XCFSearchViewController *searchCon = [[XCFSearchViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    [self.navigationController pushViewController:searchCon animated:YES];
+    return NO;
+}
+
+
+- (UISearchBar *)searchBarWithPlaceholder:(NSString *)placeholder {
+    UISearchBar *searchBar = [[UISearchBar alloc] init];
+    searchBar.delegate = self;
+    searchBar.placeholder = placeholder;
+    searchBar.tintColor = XCFSearchBarTintColor;
+    [searchBar setImage:[UIImage imageNamed:@"searchIcon"] forSearchBarIcon:UISearchBarIconSearch state:UIControlStateNormal];
+    
+    UIView *searchBarSub = searchBar.subviews[0];
+    for (UIView *subView in searchBarSub.subviews) {
+        
+        if ([subView isKindOfClass:NSClassFromString(@"UISearchBarTextField")]) {
+            [subView setBackgroundColor:RGB(247, 247, 240)];
+        }
+        
+        if ([subView isKindOfClass:NSClassFromString(@"UISearchBarBackground")]) {
+            [subView removeFromSuperview];
+        }
+    }
+    return searchBar;
+}
+
 - (void)setupNavigationBar {
-    XCFSearchBar *searchBar = [XCFSearchBar searchBarWithPlaceholder:@"菜谱、食材"];
+    UISearchBar *searchBar = [self searchBarWithPlaceholder:@"菜谱、食材"];
     self.navigationItem.titleView = searchBar;
-    WeakSelf;
-    searchBar.searchBarShouldBeginEditingBlock = ^{
-        XCFSearchViewController *searchCon = [[XCFSearchViewController alloc] initWithStyle:UITableViewStyleGrouped];
-        [weakSelf.navigationController pushViewController:searchCon animated:YES];
-    };
     
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonItemWithImageName:@"homepageCreateRecipeButton"
                                                                         imageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 8)
@@ -206,7 +232,7 @@ forHeaderFooterViewReuseIdentifier:recipeHeaderIdentifier]; // sectionHeader
 
 - (void)setupTableViewHeaderView {
     // 顶部导航视图（流行菜谱、关注动态）高度 + 导航按钮高度 + 三餐导航按钮高度
-    CGFloat reciperHeaderHeight = XCFKitchenViewHeightTopNav + XCFKitchenViewHeightNavButton * 2 + 20;
+    CGFloat reciperHeaderHeight = XCFKitchenViewHeightTopNav + XCFKitchenViewHeightNavButton + XCFKitchenViewHeightNavButton1 + XCFKitchenViewHeightCreateButton;
     self.kitchenHeader = [[XCFKitchenHeader alloc] initWithFrame:CGRectMake(0, 0, XCFScreenWidth, reciperHeaderHeight)];
     self.kitchenHeader.navContent = self.navContent;
     self.tableView.tableHeaderView = self.kitchenHeader;
@@ -215,7 +241,8 @@ forHeaderFooterViewReuseIdentifier:recipeHeaderIdentifier]; // sectionHeader
     self.kitchenHeader.clickBlock = ^(NSInteger clickedAction) {
         // 本周流行菜谱
         if (clickedAction == viewDidClickedActionPopRecipeView) {
-            [UILabel showStats:@"界面跟主页差不多，就没抓数据了~~" atView:weakSelf.view];
+//            [UILabel showStats:@"界面跟主页差不多，就没抓数据了~~" atView:weakSelf.view];
+            [weakSelf.navigationController pushViewController:[[XCFKitchenBuyViewController alloc] init] animated:YES];
         }
         // 关注动态
         else if (clickedAction == viewDidClickedActionFeedsView) {
@@ -227,7 +254,8 @@ forHeaderFooterViewReuseIdentifier:recipeHeaderIdentifier]; // sectionHeader
         }
         // 看视频
         else if (clickedAction == viewDidClickedActionVideoButton) {
-            [UILabel showStats:@"该界面数据未抓取" atView:weakSelf.view];
+//            [UILabel showStats:@"该界面数据未抓取" atView:weakSelf.view];
+            [weakSelf.navigationController pushViewController:[[XCFKitchenBuyViewController alloc] init] animated:YES];
         }
         // 买买买
         else if (clickedAction == viewDidClickedActionBuyButton) {
@@ -236,6 +264,8 @@ forHeaderFooterViewReuseIdentifier:recipeHeaderIdentifier]; // sectionHeader
         // 菜谱分类
         else if (clickedAction == viewDidClickedActionRecipeCategoryButton) {
             [weakSelf pushWebViewWithURL:XCFRequestKitchenRecipeCategory];
+        } else if (clickedAction == viewDidClickedActionCreate) {
+            [weakSelf createRecipe];
         }
         // 三餐
         else if (clickedAction == viewDidClickedActionBreakfast

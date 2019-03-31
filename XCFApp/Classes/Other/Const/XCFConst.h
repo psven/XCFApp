@@ -103,6 +103,8 @@ UIKIT_EXTERN CGFloat const XCFAuthorHeaderWidth;
 UIKIT_EXTERN CGFloat const XCFKitchenViewHeightTopNav;
 /** 下厨房 - 导航按钮高度（排行榜、看视频、买买买、菜谱分类） */
 UIKIT_EXTERN CGFloat const XCFKitchenViewHeightNavButton;
+UIKIT_EXTERN CGFloat const XCFKitchenViewHeightNavButton1;
+UIKIT_EXTERN CGFloat const XCFKitchenViewHeightCreateButton; 
 
 /** 下厨房 - 菜单 - 作者名字高度 */
 UIKIT_EXTERN CGFloat const XCFRecipeListViewHeightAuthorName;

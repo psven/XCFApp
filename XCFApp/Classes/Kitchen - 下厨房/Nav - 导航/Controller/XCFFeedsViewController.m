@@ -17,6 +17,7 @@
 #import <AFNetworking.h>
 #import <MJRefresh.h>
 #import <MJExtension.h>
+#import <SVProgressHUD.h>
 
 @interface XCFFeedsViewController () <UIActionSheetDelegate>
 @property (nonatomic, strong) AFHTTPSessionManager *mananger;
@@ -34,6 +35,13 @@ static NSString * const dishViewCellIdentifier = @"dishViewCell";
     [self setupTableView];
     [self setupRefresh];
     [self loadNewData];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [SVProgressHUD showErrorWithStatus:@"暂无作品"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [SVProgressHUD dismiss];
+        });
+    });
 }
 
 
@@ -181,12 +189,12 @@ static NSString * const dishViewCellIdentifier = @"dishViewCell";
                                                                                 target:self
                                                                                 action:@selector(messageSetting)];
     
-    [self.navigationItem setRightBarButtonItems:@[messageSetting, uploadDish]];
+    [self.navigationItem setRightBarButtonItems:@[uploadDish]];
     
 }
 
 - (void)setupTableView {
-    self.title = @"关注动态";
+    self.title = @"我的作品";
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor clearColor];
     self.view.backgroundColor = XCFGlobalBackgroundColor;

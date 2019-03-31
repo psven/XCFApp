@@ -44,7 +44,7 @@
     if (self = [super initWithFrame:frame]) {
     
         // 流行菜谱
-        _popRecipeView = [XCFTopNavImageView imageViewWithTitle:@"本周流行菜谱"
+        _popRecipeView = [XCFTopNavImageView imageViewWithTitle:@"流行菜谱"
                                                          target:self
                                                          action:@selector(popDidClicked)];
         [self addSubview:_popRecipeView];
@@ -57,7 +57,7 @@
         
         
         // 关注动态
-        _feedsView = [XCFTopNavImageView imageViewWithTitle:@"关注动态"
+        _feedsView = [XCFTopNavImageView imageViewWithTitle:@"我的作品"
                                                      target:self
                                                      action:@selector(feedsDidClicked)];
         [self addSubview:_feedsView];
@@ -87,7 +87,7 @@
             make.top.equalTo(self.navButtonView.mas_bottom);
             make.left.equalTo(self.mas_left);
             make.right.equalTo(self.mas_right);
-            make.height.equalTo(@(XCFKitchenViewHeightNavButton));
+            make.height.equalTo(@(XCFKitchenViewHeightNavButton1));
         }];
         
         
@@ -115,6 +115,21 @@
             make.centerY.equalTo(self.dishNavView.mas_bottom).offset(-10);
         }];
         
+        UIButton *createButton = [UIButton new];
+        createButton.layer.borderColor = XCFGlobalBackgroundColor.CGColor;
+        createButton.layer.borderWidth = 0.5;
+        [createButton setTitle:@"创建我的菜谱" forState:UIControlStateNormal];
+        [createButton setTitleColor:XCFThemeColor forState:UIControlStateNormal];
+        createButton.titleLabel.textAlignment = NSTextAlignmentCenter;
+        createButton.titleLabel.font = [UIFont systemFontOfSize:20 weight:UIFontWeightBold];
+        createButton.backgroundColor = [UIColor whiteColor];
+        [createButton addTarget:self action:@selector(createRecipe) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:createButton];
+        [createButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.dishNavView.mas_bottom);
+            make.left.right.equalTo(self);
+            make.height.mas_equalTo(XCFKitchenViewHeightCreateButton);
+        }];
     }
     return self;
 }
@@ -127,25 +142,31 @@
     // 流行菜谱图片
     [self.popRecipeView sd_setImageWithURL:[NSURL URLWithString:navContent.pop_recipe_picurl]];
     
+    XCFPopEvents *popEvents = navContent.pop_events;
+    XCFPopEvent *event = popEvents.events[0];
+    [self.feedsView sd_setImageWithURL:[NSURL URLWithString:event.thumbnail_280]];
+    
     
     // 添加4个导航按钮
     CGFloat x = 0;
     CGFloat y = 0;
-    CGFloat buttonWidth = self.navButtonView.frame.size.width / navContent.navs.count;
+    CGFloat buttonWidth = self.navButtonView.frame.size.width / 2;
+    CGFloat buttonHeight = self.navButtonView.frame.size.height / 2;
     for (NSInteger index = 0; index<navContent.navs.count; index++) {
         XCFNavButton *button = [XCFNavButton buttonWithNav:navContent.navs[index]
                                                     target:self
                                                     action:@selector(buttonDidClicked:)];
-        x = index * buttonWidth;
-        button.frame = CGRectMake(x, 0, buttonWidth, buttonWidth);
+        x = index % 2 * buttonWidth;
+        y = index / 2 * buttonHeight;
+        button.frame = CGRectMake(x, y, buttonWidth, buttonHeight);
         button.tag = index + 2;
         [self.navButtonView addSubview:button];
     }
     
     
     // 添加餐导航图片
-    XCFPopEvents *popEvents = navContent.pop_events;
     self.count = popEvents.count;
+    y = 0;
     
     CGFloat scrollViewWidth = self.scrollView.frame.size.width;
     CGFloat scrollViewheight = self.scrollView.frame.size.height;
@@ -180,6 +201,11 @@
 }
 
 #pragma mark - 事件处理
+
+- (void)createRecipe {
+    !self.clickBlock ? : self.clickBlock(viewDidClickedActionCreate);
+    
+}
 
 /**
  *  流行菜谱点击事件

@@ -21,10 +21,10 @@
     [super viewDidLoad];
     self.title = @"评价详情";
     self.view.backgroundColor = XCFGlobalBackgroundColor;
-    self.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonItemWithImageName:@"shareIcon"
-                                                                         imageEdgeInsets:UIEdgeInsetsMake(0, 8, 0, 0)
-                                                                                  target:self
-                                                                                  action:@selector(share)];
+//    self.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonItemWithImageName:@"shareIcon"
+//                                                                         imageEdgeInsets:UIEdgeInsetsMake(0, 8, 0, 0)
+//                                                                                  target:self
+//                                                                                  action:@selector(share)];
     [self setupHeader];
 }
 

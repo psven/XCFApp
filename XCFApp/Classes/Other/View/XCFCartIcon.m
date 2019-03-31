@@ -17,6 +17,7 @@
 @implementation XCFCartIcon
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
     // 监听“添加商品到购物车”的通知
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(cartDidAddedGoods:)
@@ -32,6 +33,9 @@
 
 }
 
+- (IBAction)buttonClick:(id)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"abc" object:nil];
+}
 
 
 - (void)cartDidAddedGoods:(NSNotification *)note {

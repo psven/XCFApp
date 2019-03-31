@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -18,34 +22,44 @@
                         <constraint firstAttribute="width" constant="25" id="q2H-EI-Xv9"/>
                     </constraints>
                 </imageView>
-                <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zdb-8C-pBn">
-                    <rect key="frame" x="59" y="21" width="20" height="20"/>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zdb-8C-pBn">
+                    <rect key="frame" x="58.5" y="20.5" width="20" height="20"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="20" id="oyy-94-F6C"/>
                         <constraint firstAttribute="height" constant="20" id="zDR-eC-4gA"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                     <state key="normal" backgroundImage="shot">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPf-Dm-ukw">
+                    <rect key="frame" x="0.0" y="0.0" width="117" height="81"/>
+                    <connections>
+                        <action selector="buttonClick:" destination="Mq8-mN-Le7" eventType="touchUpInside" id="dzq-Tw-VQa"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="XVa-Gr-r61" firstAttribute="centerY" secondItem="Mq8-mN-Le7" secondAttribute="centerY" id="DDy-Qp-FBA"/>
+                <constraint firstItem="QPf-Dm-ukw" firstAttribute="leading" secondItem="Mq8-mN-Le7" secondAttribute="leading" id="IHi-qS-8Mn"/>
                 <constraint firstItem="XVa-Gr-r61" firstAttribute="centerX" secondItem="Mq8-mN-Le7" secondAttribute="centerX" id="bd2-q6-vIR"/>
                 <constraint firstItem="Zdb-8C-pBn" firstAttribute="centerY" secondItem="Mq8-mN-Le7" secondAttribute="centerY" constant="-10" id="hbA-tr-jpj"/>
+                <constraint firstAttribute="trailing" secondItem="QPf-Dm-ukw" secondAttribute="trailing" id="j85-8M-u7v"/>
+                <constraint firstItem="QPf-Dm-ukw" firstAttribute="top" secondItem="Mq8-mN-Le7" secondAttribute="top" id="k09-4X-EJw"/>
+                <constraint firstAttribute="bottom" secondItem="QPf-Dm-ukw" secondAttribute="bottom" id="smD-f7-Y3V"/>
                 <constraint firstItem="Zdb-8C-pBn" firstAttribute="centerX" secondItem="Mq8-mN-Le7" secondAttribute="centerX" constant="10" id="xLb-gm-Jx1"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="countButton" destination="Zdb-8C-pBn" id="Ncl-NK-6kp"/>
             </connections>
-            <point key="canvasLocation" x="633.5" y="307.5"/>
+            <point key="canvasLocation" x="341.60000000000002" y="262.21889055472263"/>
         </view>
     </objects>
     <resources>
-        <image name="shoppingCart" width="22" height="22"/>
+        <image name="shoppingCart" width="44" height="44"/>
         <image name="shot" width="90" height="90"/>
     </resources>
 </document>

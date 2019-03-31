@@ -11,8 +11,10 @@
 
 #import "XCFKitchenViewController.h"
 #import "XCFBazaarController.h"
+#import "XCFKitchenBuyViewController.h"
 #import "XCFCommunityViewController.h"
 #import "XCFMeController.h"
+#import "XCFSettingViewController.h"
 
 @interface XCFTabBarController ()
 
@@ -39,15 +41,15 @@
                              title:@"下厨房"
                              image:@"tabADeselected"
                      selectedImage:@"tabASelected"];
-    [self setupChildViewController:[[XCFBazaarController alloc] init]
-                             title:@"市集"
+    [self setupChildViewController:[[XCFKitchenBuyViewController alloc] init]
+                             title:@"社区"
                              image:@"tabBDeselected"
                      selectedImage:@"tabBSelected"];
     [self setupChildViewController:[[XCFCommunityViewController alloc] init]
-                             title:@"社区"
+                             title:@"消息"
                              image:@"tabCDeselected"
                      selectedImage:@"tabCSelected"];
-    [self setupChildViewController:[[XCFMeController alloc] init]
+    [self setupChildViewController:[[XCFSettingViewController alloc] initWithStyle:UITableViewStyleGrouped]
                              title:@"我"
                              image:@"tabDDeselected"
                      selectedImage:@"tabDSelected"];

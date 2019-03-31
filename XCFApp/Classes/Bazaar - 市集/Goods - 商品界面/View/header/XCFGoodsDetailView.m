@@ -48,8 +48,8 @@
     
     // 测试
     NSMutableArray *array = [NSMutableArray arrayWithArray:goods.promotion_text_list];
-    [array addObject:@"哈哈哈"];
-    [array addObject:@"测试测试测试"];
+    [array addObject:@"新品上新"];
+    [array addObject:@"品质优选"];
     goods.promotion_text_list = array;
     
     // 如果有商品优惠信息
