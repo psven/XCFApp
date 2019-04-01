@@ -204,7 +204,7 @@ static NSString * const imageCellIdentifier = @"imageCell";
     self.showView.type = type;
 }
 
-- (void)setImageViewDidScrolledBlock:(void (^)())imageViewDidScrolledBlock {
+- (void)setImageViewDidScrolledBlock:(void (^)(CGFloat))imageViewDidScrolledBlock {
     _imageViewDidScrolledBlock = imageViewDidScrolledBlock;
     self.showView.imageViewDidScrolledBlock = imageViewDidScrolledBlock;
 }

@@ -67,6 +67,12 @@ static NSString * const headerIdentifier = @"header";
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(goToShoppingCart) name:@"abc" object:nil];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    finished = YES;
+}
+
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     

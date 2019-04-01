@@ -159,7 +159,7 @@ static NSString * const headerIdentifier = @"mealHeader";
                                progress:nil
                                 success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                                     self.mealDishArray = [XCFDish mj_objectArrayWithKeyValuesArray:responseObject[@"content"][@"dishes"]];
-                                    if (!self.mealDishArray.count) [UILabel showStats:@"接口已经失效，请重新抓取！" atView:self.view];
+//                                    if (!self.mealDishArray.count) [UILabel showStats:@"接口已经失效，请重新抓取！" atView:self.view];
                                     [self.collectionView reloadData];
                                 } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                                     

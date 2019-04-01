@@ -31,7 +31,7 @@ typedef NS_ENUM(NSInteger, DishViewAction) {
 /** 存储cell内图片轮播器滚动位置 */
 @property (nonatomic, assign) CGFloat imageViewCurrentLocation;
 /** cell滚动回调 */
-@property (nonatomic, copy) void (^imageViewDidScrolledBlock)();
+@property (nonatomic, copy) void (^imageViewDidScrolledBlock)(CGFloat);
 /** 评论button事件回调 */
 @property (nonatomic, copy) void (^actionBlock)();
 

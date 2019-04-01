@@ -1,13 +1,15 @@
 {
   "images" : [
     {
-      "idiom" : "iphone",
       "size" : "20x20",
+      "idiom" : "iphone",
+      "filename" : "Icon-Spotlight-40.png",
       "scale" : "2x"
     },
     {
-      "idiom" : "iphone",
       "size" : "20x20",
+      "idiom" : "iphone",
+      "filename" : "Icon-60.png",
       "scale" : "3x"
     },
     {
@@ -65,20 +67,16 @@
       "scale" : "3x"
     },
     {
-      "idiom" : "ios-marketing",
       "size" : "1024x1024",
+      "idiom" : "ios-marketing",
+      "filename" : "iTunesArtwork@2x.png",
       "scale" : "1x"
     },
     {
       "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "iTunesArtwork@2x.png",
+      "filename" : "iTunesArtwork@2x-1.png",
       "scale" : "2x"
-    },
-    {
-      "idiom" : "universal",
-      "filename" : "Icon-60.png",
-      "scale" : "1x"
     },
     {
       "idiom" : "universal",
@@ -105,12 +103,6 @@
     {
       "idiom" : "universal",
       "filename" : "Icon-Small-50.png",
-      "unassigned" : true,
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "filename" : "Icon-Spotlight-40.png",
       "unassigned" : true,
       "scale" : "1x"
     },

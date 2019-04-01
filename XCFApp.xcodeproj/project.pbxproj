@@ -271,6 +271,7 @@
 /* Begin PBXFileReference section */
 		1B943ADB34F2252CAF87BC38 /* libPods-XCFApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XCFApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D1F7A3E8237131B9B03F313 /* Pods-XCFApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCFApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XCFApp/Pods-XCFApp.debug.xcconfig"; sourceTree = "<group>"; };
+		2F73AB072251B01100B2DB32 /* XCFApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XCFApp.entitlements; sourceTree = "<group>"; };
 		9187FAEE9289B0E81FE92E6E /* Pods-XCFApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCFApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-XCFApp/Pods-XCFApp.release.xcconfig"; sourceTree = "<group>"; };
 		D4074F651CD207E200811CDF /* XCFApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XCFApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4074F7E1CD207E200811CDF /* XCFAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCFAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -773,6 +774,7 @@
 		D4074F671CD207E200811CDF /* XCFApp */ = {
 			isa = PBXGroup;
 			children = (
+				2F73AB072251B01100B2DB32 /* XCFApp.entitlements */,
 				D40752621CD2378000811CDF /* Classes */,
 				D4074F681CD207E200811CDF /* Supporting Files */,
 			);
@@ -2013,7 +2015,12 @@
 				TargetAttributes = {
 					D4074F641CD207E200811CDF = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 9FRZWYKNRJ;
+						DevelopmentTeam = JTKHSQH457;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					D4074F7D1CD207E200811CDF = {
 						CreatedOnToolsVersion = 7.2;
@@ -2030,6 +2037,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -2484,16 +2492,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = XCFApp/XCFApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 9FRZWYKNRJ;
+				DEVELOPMENT_TEAM = JTKHSQH457;
 				GCC_PREFIX_HEADER = XCFApp/Classes/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/XCFApp/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sven.XCFApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amizan.foodArch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -2503,16 +2513,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = XCFApp/XCFApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 9FRZWYKNRJ;
+				DEVELOPMENT_TEAM = JTKHSQH457;
 				GCC_PREFIX_HEADER = XCFApp/Classes/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/XCFApp/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sven.XCFApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amizan.foodArch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
