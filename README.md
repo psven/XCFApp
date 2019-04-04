@@ -9,7 +9,7 @@
 - 开发环境：Xcode 7.2，语言：Objective-C
 
 #项目讲解地址
-[我的博客地址](http://www.jianshu.com/p/a8f619a2c622)
+[我的博客地址]()
 
 
 #效果预览
