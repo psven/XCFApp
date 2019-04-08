@@ -19,7 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"草稿箱";
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.view.backgroundColor = XCFGlobalBackgroundColor;
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([XCFDraftRecipeCell class]) bundle:nil]

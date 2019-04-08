@@ -121,8 +121,10 @@
 }
 
 - (void)goToDraftBox {
-    [self.navigationController pushViewController:[[XCFDraftBoxViewController alloc]
-                                                   initWithStyle:UITableViewStylePlain] animated:YES];
+    XCFDraftBoxViewController *vc = [[XCFDraftBoxViewController alloc]
+                                     initWithStyle:UITableViewStylePlain];
+    vc.title = @"草稿箱";
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

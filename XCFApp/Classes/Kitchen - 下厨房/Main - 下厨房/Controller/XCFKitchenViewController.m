@@ -11,6 +11,7 @@
 #import "XCFSearchViewController.h"         // 搜索
 #import "XCFIngredientListViewController.h" // 菜篮子
 #import "XCFRecipeCreateController.h"       // 创建菜谱
+#import "XCFDraftBoxViewController.h"
 // topNav
 #import "XCFFeedsViewController.h"          // 关注动态
 //#import "XCFVideoViewController.h"        // 看视频
@@ -250,7 +251,12 @@ forHeaderFooterViewReuseIdentifier:recipeHeaderIdentifier]; // sectionHeader
         }
         // 排行榜
         else if (clickedAction == viewDidClickedActionTopListButton) {
-            [weakSelf pushWebViewWithURL:XCFRequestKitchenTopList];
+//            [weakSelf pushWebViewWithURL:XCFRequestKitchenTopList];
+            
+            XCFDraftBoxViewController *vc = [[XCFDraftBoxViewController alloc]
+                                             initWithStyle:UITableViewStylePlain];
+            vc.title = @"厨房好物";
+            [weakSelf.navigationController pushViewController:vc animated:YES];
         }
         // 看视频
         else if (clickedAction == viewDidClickedActionVideoButton) {
@@ -263,7 +269,13 @@ forHeaderFooterViewReuseIdentifier:recipeHeaderIdentifier]; // sectionHeader
         }
         // 菜谱分类
         else if (clickedAction == viewDidClickedActionRecipeCategoryButton) {
-            [weakSelf pushWebViewWithURL:XCFRequestKitchenRecipeCategory];
+//            [weakSelf pushWebViewWithURL:XCFRequestKitchenRecipeCategory];
+            
+            XCFDraftBoxViewController *vc = [[XCFDraftBoxViewController alloc]
+                                             initWithStyle:UITableViewStylePlain];
+            vc.title = @"菜谱分类";
+            [weakSelf.navigationController pushViewController:vc animated:YES];
+            
         } else if (clickedAction == viewDidClickedActionCreate) {
             [weakSelf createRecipe];
         }
